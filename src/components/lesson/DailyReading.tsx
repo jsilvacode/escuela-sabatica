@@ -10,12 +10,12 @@ type Props = {
   nextDay?: LessonDay;
 };
 
-// Bible name patterns for reference detection
-const BOOK = "(?:\\d?\\s*(?:de\\s+)?[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)";
+// Stricter book pattern: optional digit prefix + capitalized word(s)
+const BOOK_STRICT = "(?:(?:\\d+\\s+)?[A-ZÁÉÍÓÚ][a-záéíóúñü]+(?:\\s+[A-ZÁÉÍÓÚ][a-záéíóúñü]+)?)";
 // Matches: Book Chapter:Verse or Book Chapter:Verse-VerseEnd
-const REF_REGEX = new RegExp(`(${BOOK}\\s+\\d+:\\d+(?:\\s*[-–]\\s*\\d+)?(?:\\.\\s*\\d+)?)`, "g");
-// Matches: Book Chapter (no verse, like "1 Corintios 12")
-const CHAPTER_REGEX = new RegExp(`(?<![\\w])(${BOOK}\\s+\\d+)(?![\\w:.,]|\\s*:\\s*\\d)`, "gi");
+const REF_REGEX = new RegExp(`(?<![a-záéíóúñüA-Z])(\\(?${BOOK_STRICT}\\s+\\d+:\\d+(?:\\s*[-–]\\s*\\d+)?\\)?)`, "g");
+// Matches: Book Chapter (no verse). NOT preceded by digit+space. Ch num not followed by : or digit.
+const CHAPTER_REGEX = new RegExp(`(?<!\\d\\s)(?<![a-záéíóúñüA-Z])(\\(?${BOOK_STRICT}\\s+\\d{1,3}\\)?)(?![\\s]*[:\\d])`, "g");
 
 function parseRefDisplay(display: string): BibleReference | null {
   const cleaned = display.replace(/[()]/g, "").trim();
@@ -129,7 +129,7 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
             <span aria-hidden="true">☼</span>
             <div>
               <strong>Versículo clave</strong>
-              <blockquote>"{"day.keyVerse.text"}"</blockquote>
+              <blockquote>“{day.keyVerse.text}”</blockquote>
               <span className="muted">{day.keyVerse.reference.display}</span>
             </div>
           </div>
