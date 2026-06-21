@@ -111,7 +111,7 @@ export function BibleStudyModal({ reference, onClose }: Props) {
           {!status && activeTab === "bible" && passage && (
             <>
               <select className="version-select" aria-label="Versión bíblica" defaultValue={passage.version}>
-                <option value="RVR1960">Reina-Valera 1960</option>
+                <option value="rva2015">RVA2015</option>
               </select>
               <div className="passage">
                 {passage.verses.map((verse) => (
