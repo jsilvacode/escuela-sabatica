@@ -127,13 +127,22 @@ export function BibleStudyModal({ reference, onClose }: Props) {
           {!status && activeTab === "commentary" && (
             <div className="passage">
               {commentary.length > 0 ? (
-                commentary.map((entry) => (
-                  <article key={`${entry.reference.display}-${entry.title}`}>
-                    <h3>{entry.title ?? entry.reference.display}</h3>
-                    <p>{entry.content}</p>
-                    {entry.source && <p className="muted">{entry.source}</p>}
-                  </article>
-                ))
+                <>
+                  {commentary.length > 1 && (
+                    <p className="commentary-range-header">{reference.display}</p>
+                  )}
+                  {commentary.map((entry, i) => (
+                    <article key={`${entry.reference.display}-${reference.verseStart ?? 0 + i}`}>
+                      {commentary.length > 1 && (
+                        <span className="verse-number">{reference.verseStart ? reference.verseStart + i : ""}</span>
+                      )}
+                      <p>{entry.content}</p>
+                      {commentary.length === 1 && entry.source && (
+                        <p className="muted">{entry.source}</p>
+                      )}
+                    </article>
+                  ))}
+                </>
               ) : (
                 <p>No encontramos comentario disponible para esta referencia.</p>
               )}
