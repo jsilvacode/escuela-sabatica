@@ -20,7 +20,7 @@ const typeColors: Record<string, string> = {
 };
 ---
 
-<article class="resource-card" data-type={resource.type}>
+<article class="resource-card" data-type={resource.type} data-share-url={resource.url} data-share-title={resource.title}>
   <div class="resource-thumb">
     {resource.thumbnail ? (
       <img src={resource.thumbnail} alt={resource.title} loading="lazy" />

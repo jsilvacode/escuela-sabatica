@@ -17,35 +17,32 @@
 src/
 ├── components/
 │   ├── audio/AudioPlayer.tsx          ← Reproductor minimalista con progreso
-│   ├── bible/BibleStudyModal.tsx      ← Modal de estudio bíblico
+│   ├── bible/BibleStudyModal.tsx      ← Modal bíblico + comentario CBA
 │   ├── layout/
-│   │   ├── AppLayout.astro            ← Shell principal (header + sidebar + main + footer)
+│   │   ├── AppLayout.astro            ← Shell (header + sidebar + main + footer)
 │   │   ├── BaseLayout.astro           ← HTML shell + CSS global
 │   │   ├── Brand.astro                ← Ícono + título + divider dorado
 │   │   ├── Footer.astro               ← Enlaces destacados + copy
-│   │   ├── Header.astro               ← Barra superior navy con hamburguesa
+│   │   ├── Header.astro               ← Barra superior navy + hamburguesa
 │   │   ├── MobileBottomNav.astro      ← Navegación inferior móvil
 │   │   ├── PageHero.astro             ← Hero unificado (home/lección/página)
 │   │   ├── Sidebar.astro              ← Menú lateral navy + covers
 │   │   └── StudySidebar.astro         ← Widgets: EGW, Reavivados, PPT, recursos
 │   ├── lesson/
-│   │   ├── DailyReading.tsx           ← Visor de contenido con referencias bíblicas
+│   │   ├── DailyReading.tsx           ← Visor de contenido con detección de referencias
 │   │   ├── DayTabs.astro              ← Tabs de días + dropdown móvil
 │   │   ├── LessonCard.astro           ← Tarjeta con imagen de fondo
-│   │   ├── QuarterHero.astro          ← (legado, reemplazado por PageHero)
-│   │   └── WeekLessonHeader.astro     ← Metadatos de lección + tabs
+│   │   └── ManuscriptReader.tsx       ← React island para referencias en la intro
 │   └── resources/
 │       └── ResourceCard.astro         ← Tarjeta tipo galería con thumbnail
 ├── data/
 │   ├── navigation.ts                  ← Nav items (single source of truth)
 │   └── quarters/
-│       ├── 2026-q3.json               ← Contenido completo en español (13 lecciones)
-│       └── 2026-q3-en.json            ← Contenido en inglés (fuente Adventech)
+│       └── 2026-q3.json               ← Contenido completo en español (13 lecciones)
 ├── lib/
 │   ├── lessonAdapter.ts               ← Acceso a datos del trimestre
-│   ├── bibleAdapter.ts                ← Búsqueda de pasajes bíblicos
-│   ├── commentaryAdapter.ts           ← Comentario bíblico
-│   └── search.ts                      ← Búsqueda local (no usado actualmente)
+│   ├── bibleAdapter.ts                ← Fetch remoto de Biblia RVA2015 + alias
+│   └── commentaryAdapter.ts           ← Fetch remoto de comentario CBA
 ├── pages/
 │   ├── index.astro                    ← Landing: hero + intro manuscrita + lecciones
 │   ├── recursos.astro                 ← Galería con filtros PDF/Audio/PPT
@@ -65,7 +62,7 @@ src/
 
 ```
 Adventech GitHub (stage branch)
-  └── scripts/adventech_to_json.py     ← Fetch + parseo + traducción
+  └── scripts/adventech_to_json.py     ← Fetch + parseo + traducción al español
        └── src/data/quarters/2026-q3.json  ← 13 lecciones, 91 días, EGW, Reavivados
 ```
 
@@ -117,8 +114,10 @@ Adventech GitHub (stage branch)
 
 ```bash
 npm run dev        # Servidor desarrollo en :4321
-npm run build      # Build estático → dist/
+npm run build      # TypeScript check + build estático → dist/
 npm run check      # TypeScript check
+npm run clean      # Limpiar dist/ y .astro/
+npm test           # TypeScript validation
 ```
 
 ## Créditos

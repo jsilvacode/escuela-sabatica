@@ -23,6 +23,38 @@ const { title = "Escuela Sabática", activeSection = "home" } = Astro.props;
       <slot />
     </AppLayout>
     <script is:inline>
+      // Share on long-press / right-click (mobile)
+      (function() {
+        var pressTimer = null;
+        document.addEventListener("touchstart", function(e) {
+          var card = e.target.closest("[data-share-url]");
+          if (!card || !navigator.share) return;
+          pressTimer = setTimeout(function() {
+            navigator.share({
+              title: card.dataset.shareTitle || "",
+              url: card.dataset.shareUrl || "",
+            }).catch(function() {});
+          }, 600);
+        }, { passive: true });
+        document.addEventListener("touchend", function() {
+          if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
+        });
+        document.addEventListener("touchmove", function() {
+          if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
+        });
+        document.addEventListener("contextmenu", function(e) {
+          var card = e.target.closest("[data-share-url]");
+          if (!card || !navigator.share) return;
+          e.preventDefault();
+          navigator.share({
+            title: card.dataset.shareTitle || "",
+            url: card.dataset.shareUrl || "",
+          }).catch(function() {});
+        });
+      })();
+    </script>
+
+    <script is:inline>
       (function() {
         function highlightSection(section) {
           document.querySelectorAll("#sidebar a, .mobile-bottom-nav a").forEach(a => {

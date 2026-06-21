@@ -13,6 +13,8 @@ const isUpcoming = lesson.days.length === 0;
 <article
   class:list={["lesson-card", { active, upcoming: isUpcoming }]}
   style={!isUpcoming && lesson.image ? `background-image: url(${lesson.image})` : ""}
+  data-share-url={`/lecciones/${lesson.id}/${lesson.days[0]?.id ?? ""}`}
+  data-share-title={lesson.title}
 >
   <div class="lesson-card-overlay"></div>
   <div class="lesson-card-body">
