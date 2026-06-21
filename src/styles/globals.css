@@ -587,8 +587,8 @@ img {
   margin: 0;
   color: var(--color-slate-700);
   font-family: var(--font-reading);
-  font-size: 1.3rem;
-  line-height: 1.8;
+  font-size: 1.18rem;
+  line-height: 1.78;
   text-align: justify;
   hyphens: auto;
 }
@@ -1233,7 +1233,7 @@ img {
   margin-top: var(--space-3);
   margin-bottom: var(--space-4);
   color: var(--color-navy-900);
-  font-size: 3.3rem;
+  font-size: 2.8rem;
 }
 
 .daily-image {
@@ -1527,7 +1527,7 @@ img {
   margin: 0;
   color: var(--color-navy-900);
   font-family: var(--font-reading);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .modal-tabs {
@@ -1570,8 +1570,8 @@ img {
   gap: var(--space-3);
   color: var(--color-navy-900);
   font-family: var(--font-reading);
-  font-size: 1.35rem;
-  line-height: 1.55;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .passage p {
@@ -1929,6 +1929,23 @@ img {
     font-size: 1.65rem;
   }
 
+  .manuscript-inner {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .manuscript-inner h2 {
+    font-size: 1.6rem;
+  }
+
+  .manuscript-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .manuscript-inner p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
   .daily-image {
     height: 180px;
     border-radius: var(--radius-sm);
@@ -2017,32 +2034,63 @@ img {
   .modal-backdrop {
     align-items: end;
     padding: 0;
-    bottom: calc(64px + env(safe-area-inset-bottom));
+    bottom: 0;
   }
 
   .bible-modal {
     width: 100%;
-    max-height: 82vh;
+    max-height: 72vh;
     border-radius: var(--radius-xl) var(--radius-xl) 0 0;
   }
 
   .bible-modal::before {
     content: "";
-    width: 46px;
-    height: 5px;
-    margin: 10px auto 0;
+    width: 42px;
+    height: 4px;
+    margin: 8px auto 0;
     border-radius: var(--radius-pill);
     background: var(--color-border);
   }
 
+  .modal-header {
+    padding: var(--space-4) var(--space-4) var(--space-2);
+  }
+
+  .modal-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-body {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .passage {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    gap: var(--space-2);
+  }
+
+  .commentary-range-header {
+    font-size: 1rem;
+  }
+
+  .verse-number {
+    font-size: 0.72rem;
+  }
+
+  .modal-tabs button {
+    min-height: 44px;
+    font-size: 0.88rem;
+  }
+
   .modal-actions {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    padding: var(--space-3);
+    padding: var(--space-2) var(--space-3) var(--space-3);
   }
 
   .modal-actions button,
   .modal-actions a {
-    min-height: 54px;
-    font-size: 0.68rem;
+    min-height: 44px;
+    font-size: 0.66rem;
   }
 }
