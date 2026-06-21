@@ -1,0 +1,25 @@
+{
+  "reference": {
+    "book": "Génesis",
+    "chapter": 1,
+    "verseStart": 1,
+    "display": "Génesis 1:1",
+    "osis": "Gen.1.1"
+  },
+  "passage": {
+    "version": "RVR1960",
+    "verses": [
+      {
+        "number": 1,
+        "text": "En el principio creó Dios los cielos y la tierra."
+      }
+    ]
+  },
+  "commentary": [
+    {
+      "title": "Comentario sobre Génesis 1:1",
+      "source": "Comentario Bíblico Adventista",
+      "content": "Contenido del comentario asociado a la referencia. Reemplazar con el texto real desde la fuente de datos autorizada."
+    }
+  ]
+}

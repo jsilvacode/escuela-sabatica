@@ -1,0 +1,18 @@
+---
+import DayTabs from "./DayTabs.astro";
+import type { Lesson } from "@app-types/lesson";
+
+type Props = {
+  lesson: Lesson;
+};
+
+const { lesson } = Astro.props;
+---
+
+<section class="lesson-header" aria-labelledby="lesson-subtitle">
+  <div class="lesson-meta">
+    <p>{lesson.dateRange}</p>
+    {lesson.summary && <p>{lesson.summary}</p>}
+  </div>
+  <DayTabs lesson={lesson} />
+</section>

@@ -1,0 +1,86 @@
+---
+import type { Lesson, LessonDay } from "@app-types/lesson";
+import reavivadosData from "@data/quarters/2026-q3.json";
+
+type Props = {
+  lesson: Lesson;
+  activeDay?: LessonDay;
+};
+
+const { lesson, activeDay } = Astro.props;
+const lessonResources = lesson.resources ?? [];
+const pptResources = lessonResources.filter(r => r.type === "ppt");
+
+const todayReading = activeDay?.date
+  ? reavivadosData.reavivados?.find((r: { date: string }) => r.date === activeDay.date)?.reading
+  : null;
+
+const dayAbbr: Record<string, string> = {
+  Sábado: "Sáb", Domingo: "Dom", Lunes: "Lun", Martes: "Mar",
+  Miércoles: "Mié", Jueves: "Jue", Viernes: "Vie",
+};
+---
+
+<aside class="right-rail" aria-label="Material complementario">
+  <section class="study-widget">
+    <h3>Notas de Elena G. de White</h3>
+    {lesson.egwNotes ? (
+      <>
+        <p class="egw-text">{lesson.egwNotes}</p>
+        <div class="egw-source">
+          <a class="ghost-button" href={`/lecciones/${lesson.id}/viernes`}>
+            Leer completo en Viernes →
+          </a>
+        </div>
+      </>
+    ) : (
+      <p class="muted">Notas complementarias pronto disponibles.</p>
+    )}
+  </section>
+
+  <section class="study-widget">
+    <h3>Reavivados por su Palabra</h3>
+    <div class="reavivados-card">
+      <span class="reavivados-icon" aria-hidden="true">📖</span>
+      <div>
+        <strong>Lectura de hoy</strong>
+        <p>{todayReading ?? "Consulta el plan de lectura"}</p>
+        <span class="muted">Programa diario de estudio bíblico</span>
+      </div>
+    </div>
+  </section>
+
+  {pptResources.length > 0 && (
+    <section class="study-widget">
+      <h3>Material de la semana</h3>
+      <div class="resource-sidebar-list">
+        {pptResources.map((resource) => (
+          resource.url && resource.url !== "#" ? (
+            <a class="resource-sidebar-item" href={resource.url} download>
+              <span class="resource-badge">{resource.type.toUpperCase()}</span>
+              <div>
+                <strong>{resource.title}</strong>
+                <span class="muted">{resource.description}</span>
+              </div>
+              <span class="download-arrow">↓</span>
+            </a>
+          ) : (
+            <div class="resource-sidebar-item">
+              <span class="resource-badge">{resource.type.toUpperCase()}</span>
+              <div>
+                <strong>{resource.title}</strong>
+                <span class="muted">{resource.description}</span>
+              </div>
+            </div>
+          )
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="study-widget">
+    <a class="resource-all-link" href="/recursos">
+      Todos los recursos →
+    </a>
+  </section>
+</aside>

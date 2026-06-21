@@ -1,0 +1,34 @@
+---
+import Brand from "./Brand.astro";
+
+type Props = {
+  activeSection?: string;
+};
+
+const { activeSection = "home" } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <Brand />
+    <button class="hamburger" type="button" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+  document.getElementById("menu-toggle")?.addEventListener("click", () => {
+    const sidebar = document.getElementById("sidebar");
+    const isOpen = sidebar?.classList.contains("mobile-open");
+    if (isOpen) {
+      sidebar?.classList.remove("mobile-open");
+      const btn = document.getElementById("menu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    } else {
+      sidebar?.classList.add("mobile-open");
+      const btn = document.getElementById("menu-toggle");
+      if (btn) btn.setAttribute("aria-expanded", "true");
+    }
+  });
+</script>

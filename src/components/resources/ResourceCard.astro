@@ -1,0 +1,41 @@
+---
+import type { Resource } from "@app-types/resource";
+
+type Props = {
+  resource: Resource;
+};
+
+const { resource } = Astro.props;
+
+const labels: Record<string, string> = {
+  pdf: "PDF",
+  ppt: "PPT",
+  audio: "AUDIO",
+};
+
+const typeColors: Record<string, string> = {
+  pdf: "#a33b2b",
+  ppt: "#6b7f5e",
+  audio: "#316395",
+};
+---
+
+<article class="resource-card" data-type={resource.type}>
+  <div class="resource-thumb">
+    {resource.thumbnail ? (
+      <img src={resource.thumbnail} alt={resource.title} loading="lazy" />
+    ) : (
+      <span class="resource-thumb-icon">{resource.type === "audio" ? "♫" : resource.type === "ppt" ? "▣" : "□"}</span>
+    )}
+    <span class="resource-badge-top" style={`background: ${typeColors[resource.type] ?? "#334155"}`}>{labels[resource.type] ?? resource.type.toUpperCase()}</span>
+  </div>
+  <div class="resource-body">
+    <h3>{resource.title}</h3>
+    <p>{resource.description ?? "Material descargable"}</p>
+    {resource.external ? (
+      <a class="resource-link" href={resource.url} target="_blank" rel="noopener noreferrer">Abrir recurso →</a>
+    ) : (
+      <a class="resource-link" href={resource.url} download>Descargar →</a>
+    )}
+  </div>
+</article>

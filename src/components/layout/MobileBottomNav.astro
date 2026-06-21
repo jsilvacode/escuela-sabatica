@@ -1,0 +1,21 @@
+---
+import { navItems } from "@data/navigation";
+
+type Props = {
+  activeSection?: string;
+};
+
+const { activeSection = "home" } = Astro.props;
+const current = (section: string) => (activeSection === section ? "page" : undefined);
+---
+
+<nav class="mobile-bottom-nav" aria-label="Navegación móvil">
+  {
+    navItems.map((item) => (
+      <a href={item.href} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined} aria-current={!item.external ? current(item.section) : undefined}>
+        <span class="nav-icon" aria-hidden="true">{item.icon}</span>
+        <span>{item.label}</span>
+      </a>
+    ))
+  }
+</nav>

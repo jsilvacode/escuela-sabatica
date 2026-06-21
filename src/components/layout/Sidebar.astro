@@ -1,0 +1,51 @@
+---
+import { navItems } from "@data/navigation";
+
+type Props = {
+  activeSection?: string;
+};
+
+const { activeSection = "home" } = Astro.props;
+const current = (section: string) => (activeSection === section ? "page" : undefined);
+---
+
+<aside class="sidebar" id="sidebar" aria-label="Navegación lateral">
+  <div class="sidebar-brand">
+    <button class="sidebar-close" type="button" id="sidebar-close" aria-label="Cerrar menú">✕</button>
+  </div>
+  <nav>
+    {
+      navItems.map((item) => (
+        <a class="nav-item" href={item.href} target={item.external ? "_blank" : undefined} rel={item.external ? "noopener noreferrer" : undefined} aria-current={!item.external ? current(item.section) : undefined}>
+          <span class="nav-icon" aria-hidden="true">{item.icon}</span>
+          <span>{item.label}</span>
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="sidebar-covers">
+    <a class="sidebar-cover-card" href="https://sabbath-school.adventech.io/en/2026-03" target="_blank" rel="noopener noreferrer" title="Ver en Adventech">
+      <img src="/images/cover-2026-q3.png" alt="Folleto 3er Trimestre 2026" width="130" height="182" loading="lazy" />
+      <span class="cover-label">Folleto 3T 2026</span>
+    </a>
+    <a class="sidebar-cover-card sidebar-bible-cover" href="https://www.santabiblia.cloud" target="_blank" rel="noopener noreferrer" title="Ir a Santa Biblia">
+      <img src="https://www.google.com/s2/favicons?domain=santabiblia.cloud&sz=128" alt="Santa Biblia" width="64" height="64" loading="lazy" />
+      <span class="cover-label">santabiblia.cloud</span>
+    </a>
+  </div>
+</aside>
+
+<script>
+  function closeSidebar() {
+    document.getElementById("sidebar")?.classList.remove("mobile-open");
+    const btn = document.getElementById("menu-toggle");
+    if (btn) btn.setAttribute("aria-expanded", "false");
+  }
+
+  document.getElementById("sidebar-close")?.addEventListener("click", closeSidebar);
+
+  document.querySelectorAll("#sidebar nav a").forEach(link => {
+    link.addEventListener("click", closeSidebar);
+  });
+</script>

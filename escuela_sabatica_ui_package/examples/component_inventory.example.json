@@ -1,0 +1,17 @@
+{
+  "components": [
+    { "name": "AppLayout", "type": "layout", "priority": "high" },
+    { "name": "Header", "type": "navigation", "priority": "high" },
+    { "name": "Sidebar", "type": "navigation", "priority": "high" },
+    { "name": "MobileBottomNav", "type": "navigation", "priority": "high" },
+    { "name": "QuarterHero", "type": "content", "priority": "high" },
+    { "name": "LessonCard", "type": "content", "priority": "high" },
+    { "name": "DaySelector", "type": "interaction", "priority": "high" },
+    { "name": "DailyReading", "type": "content", "priority": "high" },
+    { "name": "BibleReferenceLink", "type": "interaction", "priority": "high" },
+    { "name": "BibleModal", "type": "interaction", "priority": "high" },
+    { "name": "AudioPlayer", "type": "media", "priority": "medium" },
+    { "name": "ResourceCard", "type": "content", "priority": "medium" },
+    { "name": "SearchOverlay", "type": "interaction", "priority": "medium" }
+  ]
+}

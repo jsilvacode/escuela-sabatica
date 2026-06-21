@@ -1,0 +1,77 @@
+---
+import AppLayout from "./AppLayout.astro";
+import "@styles/globals.css";
+
+type Props = {
+  title?: string;
+  activeSection?: "home" | "lessons" | "resources" | "bible";
+};
+
+const { title = "Escuela Sabática", activeSection = "home" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Plataforma moderna de lectura y estudio de Escuela Sabática Adventista." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <AppLayout activeSection={activeSection}>
+      <slot />
+    </AppLayout>
+    <script is:inline>
+      (function() {
+        function highlightSection(section) {
+          document.querySelectorAll("#sidebar a, .mobile-bottom-nav a").forEach(a => {
+            const h = a.getAttribute("href") || "";
+            if (a.getAttribute("target")) return;
+            let match = false;
+            if (section === "home" && h === "/") match = true;
+            if (section === "lessons" && (h.includes("lessons-heading") || h.includes("/lecciones/"))) match = true;
+            if (section === "resources" && (h === "/recursos" || h.includes("resources-heading"))) match = true;
+            if (match) {
+              a.setAttribute("aria-current", "page");
+            } else {
+              a.removeAttribute("aria-current");
+            }
+          });
+        }
+
+        function updateFromHash() {
+          const hash = window.location.hash.replace("#", "");
+          const map = { "lessons-heading": "lessons", "resources-heading": "resources" };
+          highlightSection(map[hash] || "home");
+        }
+
+        // Determine section from pathname
+        const path = window.location.pathname;
+        if (path === "/recursos") {
+          highlightSection("resources");
+        } else if (path.startsWith("/lecciones/")) {
+          highlightSection("lessons");
+        } else if (path === "/") {
+          updateFromHash();
+          window.addEventListener("hashchange", updateFromHash);
+
+          const observer = new IntersectionObserver((entries) => {
+            const visible = entries.filter(e => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+            if (visible.length > 0 && visible[0].target.id === "lessons-heading") {
+              highlightSection("lessons");
+            } else {
+              const lessonsEl = document.getElementById("lessons-heading");
+              if (window.scrollY < (lessonsEl?.offsetTop || 9999) - 100) {
+                highlightSection("home");
+              }
+            }
+          }, { rootMargin: "-80px 0px -70% 0px" });
+
+          const el = document.getElementById("lessons-heading");
+          if (el) observer.observe(el);
+        }
+      })();
+    </script>
+  </body>
+</html>

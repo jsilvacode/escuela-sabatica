@@ -1,0 +1,23 @@
+---
+import type { BibleRefContent } from "@app-types/bible";
+
+type Props = {
+  verse?: BibleRefContent;
+  label?: string;
+};
+
+const { verse, label = "Versículo clave" } = Astro.props;
+---
+
+{
+  verse && (
+    <div class="verse-block">
+      <span aria-hidden="true">☼</span>
+      <div>
+        <strong>{label}</strong>
+        <blockquote>“{verse.text}”</blockquote>
+        <span class="muted">{verse.reference.display}</span>
+      </div>
+    </div>
+  )
+}

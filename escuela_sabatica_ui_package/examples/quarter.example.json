@@ -1,0 +1,100 @@
+{
+  "id": "2025-q2",
+  "title": "En el principio",
+  "subtitle": "Estudiemos juntos la Palabra de Dios y crezcamos en gracia y conocimiento.",
+  "dateRange": "Abril – Junio 2025",
+  "year": 2025,
+  "quarterNumber": 2,
+  "description": "Este trimestre exploramos el libro de Génesis para descubrir los orígenes, los propósitos y el plan inagotable de Dios para la humanidad y la creación.",
+  "coverImage": "/images/quarters/2025-q2/cover.jpg",
+  "keyVerse": {
+    "reference": {
+      "book": "Génesis",
+      "chapter": 1,
+      "verseStart": 1,
+      "display": "Génesis 1:1",
+      "osis": "Gen.1.1"
+    },
+    "text": "En el principio creó Dios los cielos y la tierra."
+  },
+  "lessons": [
+    {
+      "id": "leccion-01-el-amor-de-dios",
+      "number": 1,
+      "title": "El amor de Dios",
+      "dateRange": "5–11 de abril",
+      "summary": "Una introducción al amor de Dios como fundamento de la creación y la redención.",
+      "image": "/images/lessons/lesson-01.jpg",
+      "keyVerse": {
+        "reference": {
+          "book": "Génesis",
+          "chapter": 1,
+          "verseStart": 1,
+          "display": "Génesis 1:1",
+          "osis": "Gen.1.1"
+        },
+        "text": "En el principio creó Dios los cielos y la tierra."
+      },
+      "days": [
+        {
+          "id": "sabado",
+          "dayName": "Sábado",
+          "date": "2025-04-05",
+          "title": "El amor de Dios",
+          "image": "/images/lessons/lesson-01/day-sabado.jpg",
+          "audio": {
+            "title": "El amor de Dios — Sábado",
+            "url": "/audio/2025-q2/leccion-01/sabado.mp3",
+            "duration": "12:48",
+            "narrator": "Voz Advenimiento"
+          },
+          "keyVerse": {
+            "reference": {
+              "book": "Génesis",
+              "chapter": 1,
+              "verseStart": 1,
+              "display": "Génesis 1:1",
+              "osis": "Gen.1.1"
+            },
+            "text": "En el principio creó Dios los cielos y la tierra."
+          },
+          "studyReferences": [
+            {
+              "book": "Juan",
+              "chapter": 1,
+              "verseStart": 1,
+              "verseEnd": 5,
+              "display": "Juan 1:1-5",
+              "osis": "John.1.1-John.1.5"
+            },
+            {
+              "book": "Génesis",
+              "chapter": 1,
+              "verseStart": 1,
+              "display": "Génesis 1:1",
+              "osis": "Gen.1.1"
+            }
+          ],
+          "contentMarkdown": "Desde el principio, Dios ha sido amor. La Biblia comienza con una declaración profunda: \"En el principio creó Dios los cielos y la tierra\" ([Génesis 1:1]). Este amor también se revela en la entrega de Cristo por la humanidad ([Juan 3:16]).",
+          "resources": []
+        }
+      ],
+      "resources": [
+        {
+          "id": "recurso-01-pdf",
+          "type": "pdf",
+          "title": "Guía de estudio — Lección 1",
+          "url": "/resources/2025-q2/leccion-01.pdf"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "trimestre-pdf",
+      "type": "pdf",
+      "title": "Lección completa en PDF",
+      "url": "/resources/2025-q2/leccion-completa.pdf"
+    }
+  ]
+}

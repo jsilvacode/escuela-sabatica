@@ -1,0 +1,32 @@
+---
+import type { Quarter, Lesson } from "@app-types/lesson";
+
+type Props = {
+  variant?: "home" | "page" | "lesson";
+  quarter?: Quarter;
+  title?: string;
+  subtitle?: string;
+  eyebrow?: string;
+  image?: string;
+  lesson?: Lesson;
+};
+
+const { variant = "page", quarter, title, subtitle, eyebrow, image } = Astro.props;
+
+const heroImage = image ?? quarter?.coverImage;
+const heroTitle = title ?? quarter?.title ?? "";
+const heroSubtitle = subtitle ?? quarter?.subtitle ?? "";
+const heroEyebrow = eyebrow ?? (quarter ? `Temas del trimestre · ${quarter.dateRange}` : "");
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  {heroImage && <img src={heroImage} alt={heroTitle} />}
+  <div class="hero-content">
+    {heroEyebrow && <span class="eyebrow">{heroEyebrow}</span>}
+    <h1 id="hero-title">{heroTitle}</h1>
+    {heroSubtitle && variant === "home" && (
+      <blockquote class="hero-verse">{heroSubtitle}</blockquote>
+    )}
+    {heroSubtitle && variant !== "home" && <p>{heroSubtitle}</p>}
+  </div>
+</section>

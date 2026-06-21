@@ -1,0 +1,64 @@
+---
+import BaseLayout from "@components/layout/BaseLayout.astro";
+import PageHero from "@components/layout/PageHero.astro";
+import ResourceCard from "@components/resources/ResourceCard.astro";
+import { getAllResources, getQuarter } from "@lib/lessonAdapter";
+
+const quarter = getQuarter();
+const resources = getAllResources();
+const types = ["Todos", "PDF", "Audio", "PPT"];
+---
+
+<BaseLayout title="Recursos | Escuela Sabática" activeSection="resources">
+  <div class="content-wrap">
+    <PageHero
+      variant="page"
+      quarter={quarter}
+      title="Recursos descargables"
+      eyebrow="Material complementario"
+      subtitle="Accede a guías, audios, y presentaciones"
+      image="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80"
+    />
+
+    <div class="section-heading">
+      <h2>Biblioteca del trimestre</h2>
+      <span class="muted" id="resource-count">{resources.length} recursos disponibles</span>
+    </div>
+    <nav class="resource-filters" aria-label="Filtros por tipo">
+      <a href="#resources-list" data-filter="todos" class="filter-active">Todos</a>
+      <a href="#resources-list" data-filter="pdf">PDF</a>
+      <a href="#resources-list" data-filter="audio">Audio</a>
+      <a href="#resources-list" data-filter="ppt">PPT</a>
+    </nav>
+    <div class="resources-grid" id="resources-list">
+      {resources.map((resource) => <ResourceCard resource={resource} />)}
+    </div>
+  </div>
+</BaseLayout>
+
+<script is:inline>
+  const filters = document.querySelectorAll(".resource-filters a");
+  const cards = document.querySelectorAll(".resource-card");
+  const countEl = document.getElementById("resource-count");
+
+  filters.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      filters.forEach(b => b.classList.remove("filter-active"));
+      btn.classList.add("filter-active");
+
+      const filter = btn.dataset.filter;
+      let visible = 0;
+      cards.forEach(card => {
+        const type = card.dataset.type;
+        if (filter === "todos" || type === filter) {
+          card.style.display = "";
+          visible++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+      if (countEl) countEl.textContent = visible + " recursos";
+    });
+  });
+</script>

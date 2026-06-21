@@ -1,0 +1,18 @@
+---
+// Redirect to first day (Sábado)
+import { getLesson, getLessons } from "@lib/lessonAdapter";
+
+export function getStaticPaths() {
+  return getLessons().filter(l => l.days.length > 0).map((lesson) => ({
+    params: { lessonId: lesson.id },
+  }));
+}
+
+const { lessonId } = Astro.params;
+const lesson = getLesson(lessonId ?? "");
+
+if (!lesson || lesson.days.length === 0) {
+  return Astro.redirect("/");
+}
+
+return Astro.redirect(`/lecciones/${lesson.id}/${lesson.days[0].id}`);

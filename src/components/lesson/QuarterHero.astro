@@ -1,0 +1,22 @@
+---
+import type { Quarter } from "@app-types/lesson";
+
+type Props = {
+  quarter: Quarter;
+};
+
+const { quarter } = Astro.props;
+---
+
+<section class="hero" aria-labelledby="quarter-title">
+  {quarter.coverImage && <img src={quarter.coverImage} alt={`Imagen del trimestre ${quarter.title}`} />}
+  <div class="hero-content">
+    <span class="eyebrow">Temas del trimestre · {quarter.dateRange}</span>
+    <h1 id="quarter-title">{quarter.title}</h1>
+    <p>{quarter.subtitle}</p>
+    <div class="hero-actions">
+      <a class="primary-button" href={`/lecciones/${quarter.lessons[0].id}/${quarter.lessons[0].days[0].id}`}>Comenzar estudio</a>
+      <a class="secondary-button" href="/recursos">Ver recursos</a>
+    </div>
+  </div>
+</section>

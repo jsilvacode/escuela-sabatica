@@ -1,0 +1,28 @@
+---
+import type { Lesson } from "@app-types/lesson";
+
+type Props = {
+  lesson: Lesson;
+  active?: boolean;
+};
+
+const { lesson, active = false } = Astro.props;
+const isUpcoming = lesson.days.length === 0;
+---
+
+<article
+  class:list={["lesson-card", { active, upcoming: isUpcoming }]}
+  style={!isUpcoming && lesson.image ? `background-image: url(${lesson.image})` : ""}
+>
+  <div class="lesson-card-overlay"></div>
+  <div class="lesson-card-body">
+    <span class="lesson-number">{lesson.number}</span>
+    <h3>{lesson.title}</h3>
+    <p>{lesson.dateRange}</p>
+    {isUpcoming ? (
+      <span class="card-link muted">Próximamente</span>
+    ) : (
+      <a class="card-link" href={`/lecciones/${lesson.id}/${lesson.days[0].id}`}>Leer lección</a>
+    )}
+  </div>
+</article>
