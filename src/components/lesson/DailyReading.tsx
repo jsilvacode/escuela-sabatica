@@ -10,29 +10,43 @@ type Props = {
   nextDay?: LessonDay;
 };
 
-// Generic Bible reference regex: catches patterns like "1 Corintios 1:17-31", "Gálatas 1:1", "(Hechos 18:1-3)", etc.
-const BOOK_PATTERN = "(?:\\d?\\s*(?:de\\s+)?[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)";
-const REF_REGEX = new RegExp(`(${BOOK_PATTERN}\\s+\\d+[:\\.,]\\s*\\d+(?:\\s*[-–]\\s*\\d+)?(?:\\s*[,;]\\s*\\d+)?)`, "g");
+// Bible name patterns for reference detection
+const BOOK = "(?:\\d?\\s*(?:de\\s+)?[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)";
+// Matches: Book Chapter:Verse or Book Chapter:Verse-VerseEnd
+const REF_REGEX = new RegExp(`(${BOOK}\\s+\\d+:\\d+(?:\\s*[-–]\\s*\\d+)?(?:\\.\\s*\\d+)?)`, "g");
+// Matches: Book Chapter (no verse, like "1 Corintios 12")
+const CHAPTER_REGEX = new RegExp(`(?<![\\w])(${BOOK}\\s+\\d+)(?![\\w:.,]|\\s*:\\s*\\d)`, "gi");
 
 function parseRefDisplay(display: string): BibleReference | null {
-  // Clean up: remove parens, normalize
   const cleaned = display.replace(/[()]/g, "").trim();
-  // Match: optional number + book name + chapter:verse(-verseEnd)?
-  const m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+):(\d+)(?:\s*[-–]\s*(\d+))?/);
-  if (!m) return null;
-  return {
-    book: m[1].trim(),
-    chapter: parseInt(m[2]),
-    verseStart: parseInt(m[3]),
-    verseEnd: m[4] ? parseInt(m[4]) : undefined,
-    display: cleaned,
-  };
+  // Try: Book Chapter:Verse(-VerseEnd)?
+  let m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+):(\d+)(?:\s*[-–]\s*(\d+))?/);
+  if (m) {
+    return {
+      book: m[1].trim(),
+      chapter: parseInt(m[2]),
+      verseStart: parseInt(m[3]),
+      verseEnd: m[4] ? parseInt(m[4]) : undefined,
+      display: cleaned,
+    };
+  }
+  // Try: Book Chapter (no verse, like "1 Corintios 12")
+  m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+)$/);
+  if (m) {
+    return {
+      book: m[1].trim(),
+      chapter: parseInt(m[2]),
+      verseStart: 0,
+      display: cleaned,
+    };
+  }
+  return null;
 }
 
 function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref: BibleReference) => void): React.ReactNode[] {
   const allMatches: { index: number; length: number; reference: BibleReference }[] = [];
 
-  // 1. Match known references (bracketed, parenthesized, bare)
+  // 1. Match known references
   for (const ref of knownRefs) {
     for (const form of [`[${ref.display}]`, `(${ref.display})`, ref.display]) {
       let idx = text.indexOf(form);
@@ -43,25 +57,41 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
     }
   }
 
-  // 2. Match generic references not covered by known refs
-  let genMatch: RegExpExecArray | null;
-  while ((genMatch = REF_REGEX.exec(text)) !== null) {
-    const m = genMatch;
-    const display = m[0];
+  // 2. Match generic verse references
+  let m: RegExpExecArray | null;
+  while ((m = REF_REGEX.exec(text)) !== null) {
+    const match = m;
+    const display = match[0];
     const overlaps = allMatches.some(am =>
-      m.index < am.index + am.length && m.index + display.length > am.index
+      match.index < am.index + am.length && match.index + display.length > am.index
     );
     if (!overlaps) {
       const parsed = parseRefDisplay(display);
       if (parsed) {
-        allMatches.push({ index: m.index, length: display.length, reference: parsed });
+        allMatches.push({ index: match.index, length: display.length, reference: parsed });
+      }
+    }
+  }
+
+  // 3. Match chapter-only references (Book Chapter without verse)
+  CHAPTER_REGEX.lastIndex = 0;
+  while ((m = CHAPTER_REGEX.exec(text)) !== null) {
+    const match = m;
+    const display = match[0];
+    const overlaps = allMatches.some(am =>
+      match.index < am.index + am.length && match.index + display.length > am.index
+    );
+    if (!overlaps) {
+      const parsed = parseRefDisplay(display);
+      if (parsed) {
+        allMatches.push({ index: match.index, length: display.length, reference: parsed });
       }
     }
   }
 
   if (allMatches.length === 0) return [text];
 
-  // Dedup overlapping, prefer longer matches
+  // Dedup overlapping, prefer longer
   allMatches.sort((a, b) => a.index - b.index || b.length - a.length);
   const filtered: typeof allMatches = [];
   for (const m of allMatches) {
@@ -76,9 +106,9 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
   for (const { index, length, reference } of filtered) {
     if (index > cursor) parts.push(text.slice(cursor, index));
     parts.push(
-      <button className="bible-inline" type="button" key={`${reference.display}-${index}`} onClick={() => onOpen(reference)}>
+      <span className="bible-inline" key={`${reference.display}-${index}`} onClick={() => onOpen(reference)}>
         {text.slice(index, index + length)}
-      </button>,
+      </span>,
     );
     cursor = index + length;
   }
@@ -99,7 +129,7 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
             <span aria-hidden="true">☼</span>
             <div>
               <strong>Versículo clave</strong>
-              <blockquote>“{day.keyVerse.text}”</blockquote>
+              <blockquote>"{"day.keyVerse.text"}"</blockquote>
               <span className="muted">{day.keyVerse.reference.display}</span>
             </div>
           </div>

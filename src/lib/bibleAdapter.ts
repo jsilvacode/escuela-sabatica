@@ -98,6 +98,11 @@ export async function getPassage(
 
   const book = await loadBook(bookMeta.file);
   const chapter = book.chapters.find(c => c.chapter === reference.chapter);
+  // Chapter-only reference: show all verses
+  if (!reference.verseStart || reference.verseStart === 0) {
+    const verses: BibleVerse[] = chapter?.verses.map(v => ({ number: v.verse, text: v.text })) ?? [];
+    return { reference, version, verses: verses.length > 0 ? verses : [{ number: 1, text: "Capítulo no disponible." }] };
+  }
   const verseEnd = reference.verseEnd ?? reference.verseStart;
 
   const verses: BibleVerse[] = chapter?.verses
