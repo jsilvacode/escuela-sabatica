@@ -1574,6 +1574,11 @@ img {
   line-height: 1.55;
 }
 
+.passage p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 .verse-number {
   margin-right: 8px;
   color: var(--color-blue-700);
