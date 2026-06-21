@@ -40,6 +40,22 @@ export async function getCommentary(reference: BibleReference): Promise<Commenta
 
   const entries: CommentaryEntry[] = [];
 
+  // Chapter-only reference: load all verses
+  if (!reference.verseStart || reference.verseStart === 0) {
+    const verseKeys = Object.keys(chapterData)
+      .map(Number)
+      .filter(n => !isNaN(n))
+      .sort((a, b) => a - b);
+    for (const v of verseKeys) {
+      entries.push({
+        reference,
+        content: chapterData[String(v)],
+        source: `CBA ${bookMeta.name} ${reference.chapter}:${v}`,
+      });
+    }
+    return entries;
+  }
+
   // Get commentary for the verse range
   const verseEnd = reference.verseEnd ?? reference.verseStart;
   for (let v = reference.verseStart; v <= verseEnd; v++) {
