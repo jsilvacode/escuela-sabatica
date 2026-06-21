@@ -2,6 +2,7 @@
 import BaseLayout from "@components/layout/BaseLayout.astro";
 import PageHero from "@components/layout/PageHero.astro";
 import LessonCard from "@components/lesson/LessonCard.astro";
+import { ManuscriptReader } from "@components/lesson/ManuscriptReader";
 import { getQuarter } from "@lib/lessonAdapter";
 
 const quarter = getQuarter();
@@ -20,7 +21,7 @@ const quarter = getQuarter();
         <h2>Introducción</h2>
         <h3 class="manuscript-subtitle">La Esencia de la Vida y el Testimonio Cristiano</h3>
         {quarter.description.split("\n\n").slice(0, -1).map((paragraph) => (
-          <p>{paragraph.trim()}</p>
+          <ManuscriptReader text={paragraph.trim()} client:load />
         ))}
         <p class="manuscript-author">{quarter.description.split("\n\n").pop()?.trim()}</p>
       </div>
