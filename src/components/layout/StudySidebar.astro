@@ -12,7 +12,14 @@ const lessonResources = lesson.resources ?? [];
 const pptResources = lessonResources.filter(r => r.type === "ppt");
 
 const todayReading = activeDay?.date
-  ? reavivadosData.reavivados?.find((r: { date: string }) => r.date === activeDay.date)?.reading
+  ? reavivadosData.reavivados?.find((r: { date: string }) => r.date === activeDay.date)
+  : null;
+
+const reavivadosReading = todayReading?.reading ?? null;
+const reavivadosBookId = todayReading && "bookId" in todayReading ? (todayReading as any).bookId : null;
+const reavivadosChapter = todayReading && "chapter" in todayReading ? (todayReading as any).chapter : null;
+const reavivadosUrl = reavivadosBookId && reavivadosChapter
+  ? `https://www.santabiblia.cloud/read/${reavivadosBookId}/${reavivadosChapter}`
   : null;
 
 const dayAbbr: Record<string, string> = {
@@ -44,7 +51,11 @@ const dayAbbr: Record<string, string> = {
       <span class="reavivados-icon" aria-hidden="true">📖</span>
       <div>
         <strong>Lectura de hoy</strong>
-        <p>{todayReading ?? "Consulta el plan de lectura"}</p>
+        {reavivadosUrl ? (
+          <p><a href={reavivadosUrl} target="_blank" rel="noopener noreferrer">{reavivadosReading}</a></p>
+        ) : (
+          <p>{reavivadosReading ?? "Consulta el plan de lectura"}</p>
+        )}
       </div>
     </div>
   </section>

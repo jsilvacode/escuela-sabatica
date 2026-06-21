@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { getPassage } from "@lib/bibleAdapter";
+import { getPassage, getBibleUrl } from "@lib/bibleAdapter";
 import { getCommentary } from "@lib/commentaryAdapter";
 import type { BiblePassage, BibleReference, CommentaryEntry } from "@app-types/bible";
 
@@ -13,6 +13,7 @@ export function BibleStudyModal({ reference, onClose }: Props) {
   const [passage, setPassage] = useState<BiblePassage | null>(null);
   const [commentary, setCommentary] = useState<CommentaryEntry[]>([]);
   const [status, setStatus] = useState("Cargando texto bíblico...");
+  const [bibleUrl, setBibleUrl] = useState("https://www.santabiblia.cloud");
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -24,6 +25,9 @@ export function BibleStudyModal({ reference, onClose }: Props) {
     setPassage(null);
     setCommentary([]);
     setStatus("Cargando texto bíblico...");
+    getBibleUrl(reference.book, reference.chapter).then((url: string) => {
+      if (mounted) setBibleUrl(url);
+    });
 
     Promise.all([getPassage(reference), getCommentary(reference)])
       .then(([nextPassage, nextCommentary]) => {
@@ -153,7 +157,7 @@ export function BibleStudyModal({ reference, onClose }: Props) {
         <footer className="modal-actions">
           <button type="button" onClick={copyPassage}>Copiar</button>
           <button type="button" onClick={sharePassage}>Compartir</button>
-          <a href="https://www.santabiblia.cloud" target="_blank" rel="noopener noreferrer">Abrir en Biblia</a>
+          <a href={bibleUrl} target="_blank" rel="noopener noreferrer">Abrir en Biblia</a>
         </footer>
       </section>
     </div>

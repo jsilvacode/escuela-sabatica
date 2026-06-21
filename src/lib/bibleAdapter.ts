@@ -121,6 +121,15 @@ export async function getPassage(
   };
 }
 
+// ---- Deep link to Bible PWA ----
+
+export async function getBibleUrl(bookName: string, chapter: number): Promise<string> {
+  const manifest = await fetchManifest();
+  const meta = getBookMeta(bookName, manifest);
+  if (!meta) return "https://www.santabiblia.cloud";
+  return `https://www.santabiblia.cloud/read/${meta.id}/${chapter}`;
+}
+
 export async function searchBible(query: string) {
   const value = normalize(query.trim());
   if (!value) return [];
