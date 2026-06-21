@@ -103,7 +103,10 @@ export async function getPassage(
     const verses: BibleVerse[] = chapter?.verses.map(v => ({ number: v.verse, text: v.text })) ?? [];
     return { reference, version, verses: verses.length > 0 ? verses : [{ number: 1, text: "Capítulo no disponible." }] };
   }
-  const verseEnd = reference.verseEnd ?? reference.verseStart;
+  // toEnd: show from verseStart to end of chapter
+  const verseEnd = reference.toEnd
+    ? (chapter?.verses.length ?? reference.verseStart)
+    : (reference.verseEnd ?? reference.verseStart);
 
   const verses: BibleVerse[] = chapter?.verses
     .filter(v => v.verse >= reference.verseStart && v.verse <= verseEnd)

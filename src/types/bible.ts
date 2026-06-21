@@ -5,6 +5,7 @@ export type BibleReference = {
   verseEnd?: number;
   display: string;
   osis?: string;
+  toEnd?: boolean;
 };
 
 export type BibleRefContent = {

@@ -143,7 +143,7 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
       const ch2 = parseInt(crossMatch[3]), vs2 = parseInt(crossMatch[4]);
       // First part: "10:31" — covers only chapter:verse before the dash
       const display1 = `${ch1}:${vs1}`;
-      const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, display: display1 };
+      const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, toEnd: true, display: display1 };
       allMatches.push({ index: matchStart, length: display1.length, reference: ref1 });
       // Second part: "11:1" — covers chapter:verse after the dash
       const display2 = `${ch2}:${vs2}`;
