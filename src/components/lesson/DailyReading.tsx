@@ -135,10 +135,25 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
       }
     }
     if (!prevMatch) continue;
-    // Try to join the new reference with the previous minus "10" → "1 Corintios 10:31"
-    const displayLong = ` ${display}`;
-    // Build the combined text: prevRef's book + continuation
-    const combinedDisplay = `${prevMatch.reference.book} ${display}`;
+    const book = prevMatch.reference.book;
+    // Check for cross-chapter range: "10:31-11:1" → split into two refs
+    const crossMatch = display.match(/^(\d+):(\d+)\s*[-–]\s*(\d+):(\d+)$/);
+    if (crossMatch) {
+      const ch1 = parseInt(crossMatch[1]), vs1 = parseInt(crossMatch[2]);
+      const ch2 = parseInt(crossMatch[3]), vs2 = parseInt(crossMatch[4]);
+      // First part: "10:31" — covers only chapter:verse before the dash
+      const display1 = `${ch1}:${vs1}`;
+      const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, display: display1 };
+      allMatches.push({ index: matchStart, length: display1.length, reference: ref1 });
+      // Second part: "11:1" — covers chapter:verse after the dash
+      const display2 = `${ch2}:${vs2}`;
+      const ref2: BibleReference = { book, chapter: ch2, verseStart: vs2, display: display2 };
+      const afterDash = display.substring(display.indexOf("-") + 1);
+      allMatches.push({ index: matchStart + display.length - afterDash.length, length: display2.length, reference: ref2 });
+      continue;
+    }
+    // Standard continuation: "10" or "10:31-11"
+    const combinedDisplay = `${book} ${display}`;
     const parsed = parseRefDisplay(combinedDisplay);
     if (parsed) {
       allMatches.push({ index: matchStart, length: display.length, reference: parsed });
