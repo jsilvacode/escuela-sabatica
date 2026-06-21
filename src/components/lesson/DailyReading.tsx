@@ -112,7 +112,38 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
     }
   }
 
-  if (allMatches.length === 0) return [text];
+  // 4. Continuation references: "1 Corintios 8; 10" or "1 Corintios 9:24-27; 10:31-11:1"
+  // Matches: ;\s*\d+:\d+(-\d+:\d+)?(-\d+)?(:\d+)? or ;\s*\d+(?![:])  (chapter-only continuation)
+  const CONT_REGEX = /;\s*(\d+:\d+(?:\s*[-–]\s*\d+(?::\d+)?)?)|;\s*(\d+)(?![:0-9])/g;
+  // Find all known matches for context
+  const allSorted = [...allMatches].sort((a, b) => a.index - b.index);
+  CONT_REGEX.lastIndex = 0;
+  let cm: RegExpExecArray | null;
+  while ((cm = CONT_REGEX.exec(text)) !== null) {
+    const display = cm[0].replace(/^;\s*/, ""); // strip "; "
+    const matchStart = cm.index + cm[0].indexOf(display); // position of the actual ref
+    const overlaps = allMatches.some(am =>
+      matchStart < am.index + am.length && matchStart + display.length > am.index
+    );
+    if (overlaps) continue;
+    // Find the most recent previous match to borrow its book name
+    let prevMatch: typeof allSorted[0] | null = null;
+    for (let i = allSorted.length - 1; i >= 0; i--) {
+      if (allSorted[i].index + allSorted[i].length <= cm.index) {
+        prevMatch = allSorted[i];
+        break;
+      }
+    }
+    if (!prevMatch) continue;
+    // Try to join the new reference with the previous minus "10" → "1 Corintios 10:31"
+    const displayLong = ` ${display}`;
+    // Build the combined text: prevRef's book + continuation
+    const combinedDisplay = `${prevMatch.reference.book} ${display}`;
+    const parsed = parseRefDisplay(combinedDisplay);
+    if (parsed) {
+      allMatches.push({ index: matchStart, length: display.length, reference: parsed });
+    }
+  }
 
   // Dedup overlapping, prefer longer
   allMatches.sort((a, b) => a.index - b.index || b.length - a.length);
