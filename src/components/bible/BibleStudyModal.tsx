@@ -144,9 +144,7 @@ export function BibleStudyModal({ reference, onClose }: Props) {
         <footer className="modal-actions">
           <button type="button" onClick={copyPassage}>Copiar</button>
           <button type="button" onClick={sharePassage}>Compartir</button>
-          <button type="button">Marcar</button>
-          <button type="button">Destacar</button>
-          <a href="/biblia">Abrir en Biblia</a>
+          <a href="https://www.santabiblia.cloud" target="_blank" rel="noopener noreferrer">Abrir en Biblia</a>
         </footer>
       </section>
     </div>
