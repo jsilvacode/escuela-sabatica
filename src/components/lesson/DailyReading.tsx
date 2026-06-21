@@ -17,11 +17,35 @@ const REF_REGEX = new RegExp(`(?<![a-záéíóúñüA-Z])(\\(?${BOOK_STRICT}\\s+
 // Matches: Book Chapter (no verse). NOT preceded by digit+space. Ch num not followed by : or digit.
 const CHAPTER_REGEX = new RegExp(`(?<!\\d\\s)(?<![a-záéíóúñüA-Z])(\\(?${BOOK_STRICT}\\s+\\d{1,3}\\)?)(?![\\s]*[:\\d])`, "g");
 
+// Valid Bible book names (lowercase, accent-stripped) for match validation
+const VALID_BOOKS = new Set([
+  "genesis", "exodo", "levitico", "numeros", "deuteronomio",
+  "josue", "jueces", "rut", "1 samuel", "2 samuel",
+  "1 reyes", "2 reyes", "1 cronicas", "2 cronicas",
+  "esdras", "nehemias", "ester", "job", "salmos", "proverbios",
+  "eclesiastes", "cantares", "isaias", "jeremias", "lamentaciones",
+  "ezequiel", "daniel", "oseas", "joel", "amos",
+  "abdias", "jonas", "miqueas", "nahum", "habacuc",
+  "sofonias", "hageo", "zacarias", "malaquias",
+  "mateo", "marcos", "lucas", "juan",
+  "hechos", "romanos", "1 corintios", "2 corintios",
+  "galatas", "efesios", "filipenses", "colosenses",
+  "1 tesalonicenses", "2 tesalonicenses", "1 timoteo", "2 timoteo",
+  "tito", "filemon", "hebreos", "santiago",
+  "1 pedro", "2 pedro", "1 juan", "2 juan", "3 juan",
+  "judas", "apocalipsis",
+]);
+
+const norm = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+
+function isValidBook(book: string): boolean {
+  return VALID_BOOKS.has(norm(book));
+}
+
 function parseRefDisplay(display: string): BibleReference | null {
   const cleaned = display.replace(/[()]/g, "").trim();
-  // Try: Book Chapter:Verse(-VerseEnd)?
   let m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+):(\d+)(?:\s*[-–]\s*(\d+))?/);
-  if (m) {
+  if (m && isValidBook(m[1].trim())) {
     return {
       book: m[1].trim(),
       chapter: parseInt(m[2]),
@@ -30,9 +54,8 @@ function parseRefDisplay(display: string): BibleReference | null {
       display: cleaned,
     };
   }
-  // Try: Book Chapter (no verse, like "1 Corintios 12")
   m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+)$/);
-  if (m) {
+  if (m && isValidBook(m[1].trim())) {
     return {
       book: m[1].trim(),
       chapter: parseInt(m[2]),

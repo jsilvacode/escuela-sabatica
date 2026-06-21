@@ -132,9 +132,9 @@ export function BibleStudyModal({ reference, onClose }: Props) {
                     <p className="commentary-range-header">{reference.display}</p>
                   )}
                   {commentary.map((entry, i) => (
-                    <article key={`${entry.reference.display}-${reference.verseStart ?? 0 + i}`}>
+                    <article key={`${reference.display}-${i}`}>
                       {commentary.length > 1 && (
-                        <span className="verse-number">{reference.verseStart ? reference.verseStart + i : ""}</span>
+                        <span className="verse-number">{reference.verseStart ? reference.verseStart + i : i + 1}</span>
                       )}
                       <p>{entry.content}</p>
                       {commentary.length === 1 && entry.source && (
