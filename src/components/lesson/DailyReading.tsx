@@ -10,28 +10,78 @@ type Props = {
   nextDay?: LessonDay;
 };
 
-function renderParagraph(text: string, references: BibleReference[], onOpen: (reference: BibleReference) => void) {
-  const matches = references
-    .map((reference) => ({ reference, index: text.indexOf(`[${reference.display}]`) }))
-    .filter((item) => item.index >= 0)
-    .sort((a, b) => a.index - b.index);
+// Generic Bible reference regex: catches patterns like "1 Corintios 1:17-31", "Gálatas 1:1", "(Hechos 18:1-3)", etc.
+const BOOK_PATTERN = "(?:\\d?\\s*(?:de\\s+)?[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)";
+const REF_REGEX = new RegExp(`(${BOOK_PATTERN}\\s+\\d+[:\\.,]\\s*\\d+(?:\\s*[-–]\\s*\\d+)?(?:\\s*[,;]\\s*\\d+)?)`, "g");
 
-  if (matches.length === 0) return text;
+function parseRefDisplay(display: string): BibleReference | null {
+  // Clean up: remove parens, normalize
+  const cleaned = display.replace(/[()]/g, "").trim();
+  // Match: optional number + book name + chapter:verse(-verseEnd)?
+  const m = cleaned.match(/^(\d?\s*[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+(?:\s+[A-Za-zÁÉÍÓÚáéíóúñÑüÜ]+)?)\s+(\d+):(\d+)(?:\s*[-–]\s*(\d+))?/);
+  if (!m) return null;
+  return {
+    book: m[1].trim(),
+    chapter: parseInt(m[2]),
+    verseStart: parseInt(m[3]),
+    verseEnd: m[4] ? parseInt(m[4]) : undefined,
+    display: cleaned,
+  };
+}
+
+function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref: BibleReference) => void): React.ReactNode[] {
+  const allMatches: { index: number; length: number; reference: BibleReference }[] = [];
+
+  // 1. Match known references (bracketed, parenthesized, bare)
+  for (const ref of knownRefs) {
+    for (const form of [`[${ref.display}]`, `(${ref.display})`, ref.display]) {
+      let idx = text.indexOf(form);
+      while (idx >= 0) {
+        allMatches.push({ index: idx, length: form.length, reference: ref });
+        idx = text.indexOf(form, idx + 1);
+      }
+    }
+  }
+
+  // 2. Match generic references not covered by known refs
+  let genMatch: RegExpExecArray | null;
+  while ((genMatch = REF_REGEX.exec(text)) !== null) {
+    const m = genMatch;
+    const display = m[0];
+    const overlaps = allMatches.some(am =>
+      m.index < am.index + am.length && m.index + display.length > am.index
+    );
+    if (!overlaps) {
+      const parsed = parseRefDisplay(display);
+      if (parsed) {
+        allMatches.push({ index: m.index, length: display.length, reference: parsed });
+      }
+    }
+  }
+
+  if (allMatches.length === 0) return [text];
+
+  // Dedup overlapping, prefer longer matches
+  allMatches.sort((a, b) => a.index - b.index || b.length - a.length);
+  const filtered: typeof allMatches = [];
+  for (const m of allMatches) {
+    const last = filtered[filtered.length - 1];
+    if (filtered.length === 0 || m.index >= last.index + last.length) {
+      filtered.push(m);
+    }
+  }
 
   const parts: React.ReactNode[] = [];
   let cursor = 0;
-
-  matches.forEach(({ reference, index }) => {
-    const token = `[${reference.display}]`;
+  for (const { index, length, reference } of filtered) {
     if (index > cursor) parts.push(text.slice(cursor, index));
     parts.push(
       <button className="bible-inline" type="button" key={`${reference.display}-${index}`} onClick={() => onOpen(reference)}>
-        {reference.display}
+        {text.slice(index, index + length)}
       </button>,
     );
-    cursor = index + token.length;
-  });
-
+    cursor = index + length;
+  }
   if (cursor < text.length) parts.push(text.slice(cursor));
   return parts;
 }
@@ -57,7 +107,7 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
 
         <div className="reading-body">
           {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{renderParagraph(paragraph, references, setActiveReference)}</p>
+            <p key={paragraph}>{findReferences(paragraph, references, setActiveReference)}</p>
           ))}
         </div>
 
