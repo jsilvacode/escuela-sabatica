@@ -685,30 +685,6 @@ img {
   margin-top: var(--space-3);
 }
 
-/* --- Audio placeholder (sin audio disponible) --- */
-.audio-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-verse-bg);
-}
-
-.audio-placeholder-badge {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--color-slate-500);
-}
-
-.audio-placeholder-credit {
-  font-size: 0.68rem;
-  color: var(--color-slate-500);
-  opacity: 0.7;
-}
-
 .reavivados-card {
   display: flex;
   align-items: flex-start;
@@ -1548,6 +1524,18 @@ img {
   transform: scale(1.06);
 }
 
+.play-btn:disabled {
+  background: radial-gradient(circle at 40% 35%, #8899aa, var(--color-slate-500));
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.skip-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
 .audio-body {
   flex: 1;
   min-width: 0;
@@ -1564,6 +1552,14 @@ img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.audio-credit {
+  font-size: 0.62rem;
+  color: var(--color-slate-500);
+  opacity: 0.6;
+  text-align: right;
+  margin-top: 2px;
 }
 
 .audio-bar {
@@ -2378,9 +2374,5 @@ img {
   .egw-text {
     font-size: 0.9rem;
     line-height: 1.55;
-  }
-
-  .audio-placeholder {
-    padding: var(--space-3);
   }
 }
