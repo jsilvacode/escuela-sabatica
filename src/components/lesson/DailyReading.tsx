@@ -224,20 +224,26 @@ export function DailyReading({ lesson, day: initialDay, previousDay: initialPrev
   const [currentNext, setCurrentNext] = useState(initialNext);
 
   const navigateToDay = (targetId: string) => {
-    const days = lesson.days;
-    const newDay = days.find(d => d.id === targetId);
-    if (!newDay) return;
-    const index = days.indexOf(newDay);
-    setCurrentDay(newDay);
-    setCurrentPrev(days[index - 1]);
-    setCurrentNext(days[index + 1]);
-    const newUrl = `/lecciones/${lesson.id}/${newDay.id}`;
-    history.pushState(null, "", newUrl);
+    if ((window as any).__navigateToDay) (window as any).__navigateToDay(targetId);
   };
 
   useEffect(() => {
-    // Expose navigator globally so DayTabs can also navigate without reload
-    (window as any).__navigateToDay = navigateToDay;
+    // Compose navigation: React state + any existing handler (inline script)
+    const prev = (window as any).__navigateToDay;
+    const nav = (dayId: string) => {
+      const days = lesson.days;
+      const newDay = days.find(d => d.id === dayId);
+      if (!newDay) return;
+      const index = days.indexOf(newDay);
+      setCurrentDay(newDay);
+      setCurrentPrev(days[index - 1]);
+      setCurrentNext(days[index + 1]);
+      const newUrl = `/lecciones/${lesson.id}/${newDay.id}`;
+      history.pushState(null, "", newUrl);
+    };
+    (window as any).__navigateToDay = prev
+      ? (dayId: string) => { nav(dayId); prev(dayId); }
+      : nav;
 
     const onPopState = () => {
       const match = location.pathname.match(/\/lecciones\/([^/]+)\/([^/]+)/);
@@ -256,7 +262,7 @@ export function DailyReading({ lesson, day: initialDay, previousDay: initialPrev
     window.addEventListener("popstate", onPopState);
     return () => {
       window.removeEventListener("popstate", onPopState);
-      delete (window as any).__navigateToDay;
+      (window as any).__navigateToDay = prev;
     };
   }, [lesson]);
 

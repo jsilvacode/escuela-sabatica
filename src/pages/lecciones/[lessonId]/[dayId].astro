@@ -77,7 +77,27 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  // Intercept clicks on day tabs and route through the DailyReading SPA navigator
+  function updateDayUI(dayId) {
+    document.querySelectorAll(".compact-day, .day-tab").forEach(function (el) {
+      el.classList.toggle("active", el.getAttribute("href") && el.getAttribute("href").endsWith("/" + dayId));
+      el.setAttribute("aria-current", el.classList.contains("active") ? "page" : "false");
+    });
+    var sel = document.querySelector(".day-select");
+    if (sel) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].value.endsWith("/" + dayId)) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+
+  var origNavigate = window.__navigateToDay;
+  window.__navigateToDay = function(dayId) {
+    if (origNavigate) origNavigate(dayId);
+    updateDayUI(dayId);
+    document.getElementById("audio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  // Intercept clicks on day tabs
   document.addEventListener("click", function (e) {
     var link = e.target.closest("a[href*='/lecciones/']");
     if (!link) return;
@@ -86,7 +106,6 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
     var match = href.match(/\/lecciones\/([^/]+)\/([^/]+)/);
     if (!match) return;
     e.preventDefault();
-    var dayId = match[2];
-    if (window.__navigateToDay) window.__navigateToDay(dayId);
+    if (window.__navigateToDay) window.__navigateToDay(match[2]);
   });
 </script>
