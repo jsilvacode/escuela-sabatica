@@ -79,7 +79,6 @@ export function AudioPlayer({ audio }: Props) {
         />
       </div>
       <span className="audio-time">{remaining > 0 ? `-${formatTime(remaining)}` : ""}</span>
-      <span className="audio-lang">Audio resume by <i>sabbath-school.adventech.io</i></span>
       {audio?.url && <audio ref={audioRef} src={audio.url} preload="none" />}
     </div>
   );
