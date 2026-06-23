@@ -70,31 +70,36 @@ export function AudioPlayer({ audio }: Props) {
   return (
     <div className="audio-player" id="audio">
       <div className="audio-controls">
-        <button className="audio-btn skip-btn" type="button" onClick={() => skip(-10)} aria-label="Retroceder 10 segundos" title="−10s">
+        <button className="audio-btn skip-btn" type="button" onClick={() => skip(-10)} aria-label="Retroceder 10s" title="−10s">
           ⟲
         </button>
         <button className="audio-btn play-btn" type="button" onClick={toggle} aria-label={playing ? "Pausar" : "Reproducir"}>
           {playing ? "Ⅱ" : "▶"}
         </button>
-        <button className="audio-btn skip-btn" type="button" onClick={() => skip(10)} aria-label="Adelantar 10 segundos" title="+10s">
+        <button className="audio-btn skip-btn" type="button" onClick={() => skip(10)} aria-label="Adelantar 10s" title="+10s">
           ⟳
         </button>
       </div>
-      <div className="audio-bar">
-        <span className="audio-time-current">{formatTime(currentTime)}</span>
-        <div className="audio-progress-wrap">
-          <div className="audio-progress-fill" style={{ width: `${pct}%` }}></div>
-          <input
-            className="audio-progress-input"
-            type="range"
-            min="0"
-            max={duration || 100}
-            value={currentTime}
-            onChange={seek}
-            aria-label="Progreso del audio"
-          />
+      <div className="audio-body">
+        <span className="audio-label">
+          {audio?.title ?? "Audio de la lectura"}
+        </span>
+        <div className="audio-bar">
+          <span className="audio-time-current">{formatTime(currentTime)}</span>
+          <div className="audio-progress-wrap">
+            <div className="audio-progress-fill" style={{ width: `${pct}%` }}></div>
+            <input
+              className="audio-progress-input"
+              type="range"
+              min="0"
+              max={duration || 100}
+              value={currentTime}
+              onChange={seek}
+              aria-label="Progreso del audio"
+            />
+          </div>
+          <span className="audio-time-remaining">−{formatTime(remaining)}</span>
         </div>
-        <span className="audio-time-remaining">−{formatTime(remaining)}</span>
       </div>
       {audio?.url && <audio ref={audioRef} src={audio.url} preload="none" />}
     </div>
