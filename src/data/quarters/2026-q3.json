@@ -180,12 +180,59 @@
           "url": "/recursos/2026-q3/leccion-01.pptx"
         },
         {
-          "id": "audio-lecc-01",
+          "id": "audio-lecc-01-sabado",
           "type": "audio",
-          "title": "Audio — Lección 1",
-          "description": "Estudio en inglés · Adventech",
-          "url": "https://sabbath-school.adventech.io/en/2026-03/01/01",
-          "thumbnail": "/images/lecciones/lecc1.jpg",
+          "title": "Lección 1 — Sábado",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-SABADO.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-domingo",
+          "type": "audio",
+          "title": "Lección 1 — Domingo",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-DOMINGO.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-lunes",
+          "type": "audio",
+          "title": "Lección 1 — Lunes",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-LUNES.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-martes",
+          "type": "audio",
+          "title": "Lección 1 — Martes",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-MARTES.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-miercoles",
+          "type": "audio",
+          "title": "Lección 1 — Miércoles",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-MIERCOLES.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-jueves",
+          "type": "audio",
+          "title": "Lección 1 — Jueves",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-JUEVES.mp3",
+          "external": true
+        },
+        {
+          "id": "audio-lecc-01-viernes",
+          "type": "audio",
+          "title": "Lección 1 — Viernes",
+          "description": "Audio resumen · Audio Escuela Sabática",
+          "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-VIERNES.mp3",
           "external": true
         }
       ],

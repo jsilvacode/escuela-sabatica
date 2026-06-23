@@ -22,11 +22,12 @@ const typeColors: Record<string, string> = {
 
 <article class="resource-card" data-type={resource.type} data-share-url={resource.url} data-share-title={resource.title}>
   <div class="resource-thumb">
-    {resource.thumbnail ? (
-      <img src={resource.thumbnail} alt={resource.title} loading="lazy" />
-    ) : (
-      <span class="resource-thumb-icon">{resource.type === "audio" ? "♫" : resource.type === "ppt" ? "▣" : "□"}</span>
-    )}
+    <img
+      class="resource-cover"
+      src={resource.type === "audio" ? "/images/covers/audio-cover.svg" : resource.type === "ppt" ? "/images/covers/ppt-cover.svg" : "/images/covers/pdf-cover.svg"}
+      alt={resource.type.toUpperCase()}
+      loading="lazy"
+    />
     <span class="resource-badge-top" style={`background: ${typeColors[resource.type] ?? "#334155"}`}>{labels[resource.type] ?? resource.type.toUpperCase()}</span>
   </div>
   <div class="resource-body">

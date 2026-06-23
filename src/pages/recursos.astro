@@ -5,8 +5,18 @@ import ResourceCard from "@components/resources/ResourceCard.astro";
 import { getAllResources, getQuarter } from "@lib/lessonAdapter";
 
 const quarter = getQuarter();
-const resources = getAllResources();
-const types = ["Todos", "PDF", "Audio", "PPT"];
+const allResources = getAllResources();
+
+// Solo recursos con URL real, sin placeholders (#) ni audio de Adventech
+const resources = allResources.filter(r => {
+  if (!r.url || r.url === "#") return false;
+  if (r.type === "audio" && r.url.includes("adventech.io")) return false;
+  return r.type === "pdf" || r.type === "ppt" || r.type === "audio";
+});
+
+const filterLabels: Record<string, string> = { pdf: "PDF", audio: "Audio", ppt: "PPT" };
+const availableTypes = [...new Set(resources.map(r => r.type))];
+const filterTypes = ["todos", ...availableTypes];
 ---
 
 <BaseLayout title="Recursos | Escuela Sabática" activeSection="resources">
@@ -25,10 +35,11 @@ const types = ["Todos", "PDF", "Audio", "PPT"];
       <span class="muted" id="resource-count">{resources.length} recursos disponibles</span>
     </div>
     <nav class="resource-filters" aria-label="Filtros por tipo">
-      <a href="#resources-list" data-filter="todos" class="filter-active">Todos</a>
-      <a href="#resources-list" data-filter="pdf">PDF</a>
-      <a href="#resources-list" data-filter="audio">Audio</a>
-      <a href="#resources-list" data-filter="ppt">PPT</a>
+      {filterTypes.map(t => (
+        t === "todos"
+          ? <a href="#resources-list" data-filter="todos" class="filter-active">Todos</a>
+          : <a href="#resources-list" data-filter={t}>{filterLabels[t] ?? t.toUpperCase()}</a>
+      ))}
     </nav>
     <div class="resources-grid" id="resources-list">
       {resources.map((resource) => <ResourceCard resource={resource} />)}

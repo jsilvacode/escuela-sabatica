@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none">
+  <defs>
+    <linearGradient id="audioBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1d33"/>
+      <stop offset="50%" stop-color="#132a4a"/>
+      <stop offset="100%" stop-color="#1a365d"/>
+    </linearGradient>
+    <linearGradient id="audioGlow" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="220" rx="8" fill="url(#audioBg)"/>
+  <ellipse cx="160" cy="120" rx="100" ry="80" fill="url(#audioGlow)"/>
+  <!-- Speaker body -->
+  <rect x="94" y="86" width="28" height="48" rx="4" fill="#d4af37"/>
+  <polygon points="122,86 150,68 150,152 122,134" fill="#c9a96e"/>
+  <!-- Sound waves -->
+  <path d="M162 94q8 16 0 32" stroke="#d4af37" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M174 84q14 26 0 52" stroke="#c9a96e" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <path d="M186 74q20 36 0 72" stroke="#d4af37" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <!-- Decorative dots -->
+  <circle cx="60" cy="40" r="2" fill="#d4af37" opacity="0.3"/>
+  <circle cx="270" cy="50" r="1.5" fill="#d4af37" opacity="0.2"/>
+  <circle cx="250" cy="180" r="2" fill="#d4af37" opacity="0.25"/>
+  <circle cx="80" cy="185" r="1.5" fill="#d4af37" opacity="0.15"/>
+</svg>

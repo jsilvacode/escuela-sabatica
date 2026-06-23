@@ -987,10 +987,10 @@ img {
   object-fit: cover;
 }
 
-.resource-thumb-icon {
-  font-size: 3rem;
-  color: var(--color-slate-500);
-  opacity: 0.35;
+.resource-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .resource-badge-top {
