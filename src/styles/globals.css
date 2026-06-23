@@ -1042,11 +1042,11 @@ img {
 .lesson-number {
   display: inline-block;
   font-family: var(--font-reading);
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-gold-500);
   background: rgba(11, 29, 51, 0.55);
-  padding: 3px 10px;
+  padding: 4px 12px;
   border-radius: var(--radius-pill);
   margin-bottom: var(--space-2);
 }

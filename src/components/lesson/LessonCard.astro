@@ -10,21 +10,35 @@ const { lesson, active = false } = Astro.props;
 const isUpcoming = lesson.days.length === 0;
 ---
 
-<article
-  class:list={["lesson-card", { active, upcoming: isUpcoming }]}
-  style={!isUpcoming && lesson.image ? `background-image: url(${lesson.image})` : ""}
-  data-share-url={`/lecciones/${lesson.id}/${lesson.days[0]?.id ?? ""}`}
-  data-share-title={lesson.title}
->
-  <div class="lesson-card-overlay"></div>
-  <div class="lesson-card-body">
-    <span class="lesson-number">{lesson.number}</span>
-    <h3>{lesson.title}</h3>
-    <p>{lesson.dateRange}</p>
-    {isUpcoming ? (
+{isUpcoming ? (
+  <article
+    class:list={["lesson-card", { active, upcoming: isUpcoming }]}
+    style={!isUpcoming && lesson.image ? `background-image: url(${lesson.image})` : ""}
+    data-share-url={`/lecciones/${lesson.id}/${lesson.days[0]?.id ?? ""}`}
+    data-share-title={lesson.title}
+  >
+    <div class="lesson-card-overlay"></div>
+    <div class="lesson-card-body">
+      <span class="lesson-number">{lesson.number}</span>
+      <h3>{lesson.title}</h3>
+      <p>{lesson.dateRange}</p>
       <span class="card-link muted">Próximamente</span>
-    ) : (
-      <a class="card-link" href={`/lecciones/${lesson.id}/${lesson.days[0].id}`}>Leer lección</a>
-    )}
-  </div>
-</article>
+    </div>
+  </article>
+) : (
+  <a
+    class:list={["lesson-card", { active }]}
+    href={`/lecciones/${lesson.id}/${lesson.days[0].id}`}
+    style={lesson.image ? `background-image: url(${lesson.image})` : ""}
+    data-share-url={`/lecciones/${lesson.id}/${lesson.days[0].id}`}
+    data-share-title={lesson.title}
+  >
+    <div class="lesson-card-overlay"></div>
+    <div class="lesson-card-body">
+      <span class="lesson-number">{lesson.number}</span>
+      <h3>{lesson.title}</h3>
+      <p>{lesson.dateRange}</p>
+      <span class="card-link">Leer lección</span>
+    </div>
+  </a>
+)}
