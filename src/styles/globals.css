@@ -440,7 +440,7 @@ img {
 
 .main-content {
   min-width: 0;
-  padding: var(--space-5) var(--space-6) var(--space-8);
+  padding: 28px 36px 56px;
 }
 
 .content-wrap {
@@ -473,7 +473,7 @@ img {
 
 .section-heading h2 {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
 }
 
 .lessons-title {
@@ -1235,14 +1235,23 @@ img {
 
 .bible-inline {
   display: inline;
-  color: var(--color-blue-700);
+  color: #1a5cc7;
   cursor: pointer;
-  transition: color 0.15s ease;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(26, 92, 199, 0.35);
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.bible-inline:visited {
+  color: #7c4d9e;
+  text-decoration-color: rgba(124, 77, 158, 0.35);
 }
 
 .bible-inline:hover {
   color: var(--color-navy-900);
-  text-decoration: underline;
+  text-decoration-color: var(--color-navy-900);
 }
 
 .daily-layout {
@@ -1569,8 +1578,8 @@ img {
 .reading-body {
   color: #1d2d44;
   font-family: var(--font-reading);
-  font-size: 1.18rem;
-  line-height: 1.78;
+  font-size: 1.22rem;
+  line-height: 1.82;
 }
 
 .reading-body p {
@@ -1722,8 +1731,8 @@ img {
   gap: var(--space-3);
   color: var(--color-navy-900);
   font-family: var(--font-reading);
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  line-height: 1.62;
 }
 
 .passage p {
@@ -1963,7 +1972,7 @@ img {
   }
 
   .main-content {
-    padding: var(--space-4);
+    padding: 20px;
   }
 
   .hero,
@@ -1976,7 +1985,7 @@ img {
   }
 
   .hero h1 {
-    font-size: 2.6rem;
+    font-size: 2.8rem;
   }
 
   .hero-verse {
@@ -1987,7 +1996,7 @@ img {
   }
 
   .daily-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 
   .daily-image {
@@ -2045,11 +2054,15 @@ img {
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .hero p {
-    font-size: 0.92rem;
+    font-size: 1rem;
+  }
+
+  .main-content {
+    padding: 20px 16px 28px;
   }
 
   .lessons-grid {
@@ -2065,7 +2078,7 @@ img {
   }
 
   .lesson-card h3 {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .resources-grid {
@@ -2085,11 +2098,11 @@ img {
   }
 
   .daily-title {
-    font-size: 1.65rem;
+    font-size: 1.8rem;
   }
 
   .manuscript-inner {
-    padding: var(--space-4) var(--space-4);
+    padding: 20px;
   }
 
   .manuscript-inner h2 {
@@ -2101,8 +2114,8 @@ img {
   }
 
   .manuscript-inner p {
-    font-size: 1rem;
-    line-height: 1.65;
+    font-size: 1.08rem;
+    line-height: 1.7;
   }
 
   .daily-image {
@@ -2120,7 +2133,7 @@ img {
 
   .reading-card,
   .weekly-preview {
-    padding: var(--space-3);
+    padding: 16px;
   }
 
   .audio-player {
@@ -2155,7 +2168,7 @@ img {
   }
 
   .section-heading h2 {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .eyebrow {
@@ -2164,8 +2177,8 @@ img {
   }
 
   .reading-body p {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 1.08rem;
+    line-height: 1.75;
     text-align: justify;
     hyphens: auto;
   }
@@ -2204,8 +2217,8 @@ img {
   }
 
   .passage {
-    font-size: 1.05rem;
-    line-height: 1.55;
+    font-size: 1.1rem;
+    line-height: 1.58;
     gap: var(--space-2);
   }
 
