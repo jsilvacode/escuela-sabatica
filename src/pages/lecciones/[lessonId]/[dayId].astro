@@ -77,17 +77,16 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  // Intercept clicks on day tabs and use client-side navigation (no page reload)
-  document.addEventListener("click", (e) => {
-    const link = (e.target as HTMLElement).closest("a[href*='/lecciones/']");
+  // Intercept clicks on day tabs and route through the DailyReading SPA navigator
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href*='/lecciones/']");
     if (!link) return;
-    const href = link.getAttribute("href");
+    var href = link.getAttribute("href");
     if (!href) return;
-    const match = href.match(/\/lecciones\/([^/]+)\/([^/]+)/);
+    var match = href.match(/\/lecciones\/([^/]+)\/([^/]+)/);
     if (!match) return;
     e.preventDefault();
-    const dayId = match[2];
-    const navFn = (window as any).__navigateToDay;
-    if (navFn) navFn(dayId);
+    var dayId = match[2];
+    if (window.__navigateToDay) window.__navigateToDay(dayId);
   });
 </script>
