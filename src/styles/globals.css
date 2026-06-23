@@ -2282,7 +2282,7 @@ img {
   }
 
   .audio-time-remaining {
-    display: none;
+    font-size: 0.62rem;
   }
 
   .site-footer {
