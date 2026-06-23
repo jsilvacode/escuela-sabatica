@@ -71,13 +71,13 @@ export function AudioPlayer({ audio }: Props) {
     <div className="audio-player" id="audio">
       <div className="audio-controls">
         <button className="audio-btn skip-btn" type="button" onClick={() => skip(-10)} aria-label="Retroceder 10s" title="−10s">
-          ⟲
+          ⏪
         </button>
         <button className="audio-btn play-btn" type="button" onClick={toggle} aria-label={playing ? "Pausar" : "Reproducir"}>
-          {playing ? "Ⅱ" : "▶"}
+          {playing ? "⏸" : "▶"}
         </button>
         <button className="audio-btn skip-btn" type="button" onClick={() => skip(10)} aria-label="Adelantar 10s" title="+10s">
-          ⟳
+          ⏩
         </button>
       </div>
       <div className="audio-body">
