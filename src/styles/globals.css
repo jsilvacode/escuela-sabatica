@@ -675,14 +675,38 @@ img {
 .egw-text {
   margin: 0;
   color: var(--color-slate-700);
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: 0.94rem;
+  line-height: 1.6;
   text-align: justify;
   hyphens: auto;
 }
 
 .egw-source {
   margin-top: var(--space-3);
+}
+
+/* --- Audio placeholder (sin audio disponible) --- */
+.audio-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-verse-bg);
+}
+
+.audio-placeholder-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-slate-500);
+}
+
+.audio-placeholder-credit {
+  font-size: 0.68rem;
+  color: var(--color-slate-500);
+  opacity: 0.7;
 }
 
 .reavivados-card {
@@ -2349,5 +2373,14 @@ img {
   .modal-actions a {
     min-height: 44px;
     font-size: 0.66rem;
+  }
+
+  .egw-text {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .audio-placeholder {
+    padding: var(--space-3);
   }
 }

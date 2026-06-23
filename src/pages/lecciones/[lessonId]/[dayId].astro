@@ -67,7 +67,14 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
         <h1 class="daily-title">{day.title}</h1>
         {day.image && <img class="daily-image" src={day.image} alt={`Imagen de lectura: ${day.title}`} />}
         <DayTabs lesson={lesson} activeDayId={day.id} compact />
-        <AudioPlayer client:load audio={day.audio} />
+        {day.audio?.url ? (
+          <AudioPlayer client:load audio={day.audio} />
+        ) : (
+          <div class="audio-placeholder">
+            <span class="audio-placeholder-badge">Próximamente</span>
+            <span class="audio-placeholder-credit">Audio gentileza de audioescuelasabatica.com</span>
+          </div>
+        )}
         <DailyReading client:load lesson={lesson} day={day} previousDay={previousDay} nextDay={nextDay} />
       </div>
 
