@@ -399,11 +399,30 @@ img {
   pointer-events: none;
 }
 
+.sidebar-complementos-heading {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-gold-500);
+  text-align: center;
+  letter-spacing: 0.4px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);
+}
+
 .cover-label {
   font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.52);
+  color: rgba(255, 255, 255, 0.64);
   font-weight: 600;
   text-align: center;
+}
+
+.cover-sublabel {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 400;
+  text-align: center;
+  margin-top: -3px;
 }
 
 .sidebar-bible-card {
