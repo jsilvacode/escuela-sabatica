@@ -2,7 +2,7 @@ import quarterData from "@data/quarters/2026-q3.json";
 import type { Lesson, LessonDay, Quarter } from "@app-types/lesson";
 import type { Resource } from "@app-types/resource";
 
-export const quarter = quarterData as Quarter;
+export const quarter = quarterData as unknown as Quarter;
 
 export function getQuarter(): Quarter {
   return quarter;
