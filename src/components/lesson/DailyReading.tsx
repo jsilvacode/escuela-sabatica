@@ -80,15 +80,22 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
     }
   }
 
-  // 2. Match generic verse references
+  // 2. Match generic verse references (may extend knownRefs that lack verse range)
   let m: RegExpExecArray | null;
   while ((m = REF_REGEX.exec(text)) !== null) {
     const match = m;
     const display = match[0];
-    const overlaps = allMatches.some(am =>
+    const overIdx = allMatches.findIndex(am =>
       match.index < am.index + am.length && match.index + display.length > am.index
     );
-    if (!overlaps) {
+    if (overIdx >= 0) {
+      if (display.length > allMatches[overIdx].length) {
+        const parsed = parseRefDisplay(display);
+        if (parsed) {
+          allMatches[overIdx] = { index: match.index, length: display.length, reference: parsed };
+        }
+      }
+    } else {
       const parsed = parseRefDisplay(display);
       if (parsed) {
         allMatches.push({ index: match.index, length: display.length, reference: parsed });
@@ -101,10 +108,17 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
   while ((m = CHAPTER_REGEX.exec(text)) !== null) {
     const match = m;
     const display = match[0];
-    const overlaps = allMatches.some(am =>
+    const overIdx = allMatches.findIndex(am =>
       match.index < am.index + am.length && match.index + display.length > am.index
     );
-    if (!overlaps) {
+    if (overIdx >= 0) {
+      if (display.length > allMatches[overIdx].length) {
+        const parsed = parseRefDisplay(display);
+        if (parsed) {
+          allMatches[overIdx] = { index: match.index, length: display.length, reference: parsed };
+        }
+      }
+    } else {
       const parsed = parseRefDisplay(display);
       if (parsed) {
         allMatches.push({ index: match.index, length: display.length, reference: parsed });
@@ -122,41 +136,59 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
   while ((cm = CONT_REGEX.exec(text)) !== null) {
     const display = cm[0].replace(/^;\s*/, ""); // strip "; "
     const matchStart = cm.index + cm[0].indexOf(display); // position of the actual ref
-    const overlaps = allMatches.some(am =>
+    const overIdx = allMatches.findIndex(am =>
       matchStart < am.index + am.length && matchStart + display.length > am.index
     );
-    if (overlaps) continue;
-    // Find the most recent previous match to borrow its book name
-    let prevMatch: typeof allSorted[0] | null = null;
-    for (let i = allSorted.length - 1; i >= 0; i--) {
-      if (allSorted[i].index + allSorted[i].length <= cm.index) {
-        prevMatch = allSorted[i];
-        break;
+    if (overIdx >= 0) {
+      if (display.length > allMatches[overIdx].length) {
+        const book = allMatches[overIdx].reference.book;
+        const crossMatch = display.match(/^(\d+):(\d+)\s*[-–]\s*(\d+):(\d+)$/);
+        if (crossMatch) {
+          const ch1 = parseInt(crossMatch[1]), vs1 = parseInt(crossMatch[2]);
+          const ch2 = parseInt(crossMatch[3]), vs2 = parseInt(crossMatch[4]);
+          const display1 = `${ch1}:${vs1}`;
+          const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, toEnd: true, display: display1 };
+          allMatches[overIdx] = { index: matchStart, length: display1.length, reference: ref1 };
+          const display2 = `${ch2}:${vs2}`;
+          const ref2: BibleReference = { book, chapter: ch2, verseStart: vs2, display: display2 };
+          const afterDash = display.substring(display.indexOf("-") + 1);
+          allMatches.push({ index: matchStart + display.length - afterDash.length, length: display2.length, reference: ref2 });
+        } else {
+          const combinedDisplay = `${book} ${display}`;
+          const parsed = parseRefDisplay(combinedDisplay);
+          if (parsed) {
+            allMatches[overIdx] = { index: matchStart, length: display.length, reference: parsed };
+          }
+        }
       }
-    }
-    if (!prevMatch) continue;
-    const book = prevMatch.reference.book;
-    // Check for cross-chapter range: "10:31-11:1" → split into two refs
-    const crossMatch = display.match(/^(\d+):(\d+)\s*[-–]\s*(\d+):(\d+)$/);
-    if (crossMatch) {
-      const ch1 = parseInt(crossMatch[1]), vs1 = parseInt(crossMatch[2]);
-      const ch2 = parseInt(crossMatch[3]), vs2 = parseInt(crossMatch[4]);
-      // First part: "10:31" — covers only chapter:verse before the dash
-      const display1 = `${ch1}:${vs1}`;
-      const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, toEnd: true, display: display1 };
-      allMatches.push({ index: matchStart, length: display1.length, reference: ref1 });
-      // Second part: "11:1" — covers chapter:verse after the dash
-      const display2 = `${ch2}:${vs2}`;
-      const ref2: BibleReference = { book, chapter: ch2, verseStart: vs2, display: display2 };
-      const afterDash = display.substring(display.indexOf("-") + 1);
-      allMatches.push({ index: matchStart + display.length - afterDash.length, length: display2.length, reference: ref2 });
-      continue;
-    }
-    // Standard continuation: "10" or "10:31-11"
-    const combinedDisplay = `${book} ${display}`;
-    const parsed = parseRefDisplay(combinedDisplay);
-    if (parsed) {
-      allMatches.push({ index: matchStart, length: display.length, reference: parsed });
+    } else {
+      let prevMatch: typeof allSorted[0] | null = null;
+      for (let i = allSorted.length - 1; i >= 0; i--) {
+        if (allSorted[i].index + allSorted[i].length <= cm.index) {
+          prevMatch = allSorted[i];
+          break;
+        }
+      }
+      if (!prevMatch) continue;
+      const book = prevMatch.reference.book;
+      const crossMatch = display.match(/^(\d+):(\d+)\s*[-–]\s*(\d+):(\d+)$/);
+      if (crossMatch) {
+        const ch1 = parseInt(crossMatch[1]), vs1 = parseInt(crossMatch[2]);
+        const ch2 = parseInt(crossMatch[3]), vs2 = parseInt(crossMatch[4]);
+        const display1 = `${ch1}:${vs1}`;
+        const ref1: BibleReference = { book, chapter: ch1, verseStart: vs1, toEnd: true, display: display1 };
+        allMatches.push({ index: matchStart, length: display1.length, reference: ref1 });
+        const display2 = `${ch2}:${vs2}`;
+        const ref2: BibleReference = { book, chapter: ch2, verseStart: vs2, display: display2 };
+        const afterDash = display.substring(display.indexOf("-") + 1);
+        allMatches.push({ index: matchStart + display.length - afterDash.length, length: display2.length, reference: ref2 });
+        continue;
+      }
+      const combinedDisplay = `${book} ${display}`;
+      const parsed = parseRefDisplay(combinedDisplay);
+      if (parsed) {
+        allMatches.push({ index: matchStart, length: display.length, reference: parsed });
+      }
     }
   }
 
