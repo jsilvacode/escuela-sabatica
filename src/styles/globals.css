@@ -2001,7 +2001,7 @@ img {
 
 @media (max-width: 1024px) {
   :root {
-    --header-height: 80px;
+    --header-height: 88px;
   }
 
   .lessons-grid {
