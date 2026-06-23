@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { BibleStudyModal } from "@components/bible/BibleStudyModal";
 import type { Lesson, LessonDay } from "@app-types/lesson";
 import type { BibleReference } from "@app-types/bible";
@@ -217,68 +217,21 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
   return parts;
 }
 
-export function DailyReading({ lesson, day: initialDay, previousDay: initialPrev, nextDay: initialNext }: Props) {
+export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
   const [activeReference, setActiveReference] = useState<BibleReference | null>(null);
-  const [currentDay, setCurrentDay] = useState(initialDay);
-  const [currentPrev, setCurrentPrev] = useState(initialPrev);
-  const [currentNext, setCurrentNext] = useState(initialNext);
-
-  const navigateToDay = (targetId: string) => {
-    if ((window as any).__navigateToDay) (window as any).__navigateToDay(targetId);
-  };
-
-  useEffect(() => {
-    // Compose navigation: React state + any existing handler (inline script)
-    const prev = (window as any).__navigateToDay;
-    const nav = (dayId: string) => {
-      const days = lesson.days;
-      const newDay = days.find(d => d.id === dayId);
-      if (!newDay) return;
-      const index = days.indexOf(newDay);
-      setCurrentDay(newDay);
-      setCurrentPrev(days[index - 1]);
-      setCurrentNext(days[index + 1]);
-      const newUrl = `/lecciones/${lesson.id}/${newDay.id}`;
-      history.pushState(null, "", newUrl);
-    };
-    (window as any).__navigateToDay = prev
-      ? (dayId: string) => { nav(dayId); prev(dayId); }
-      : nav;
-
-    const onPopState = () => {
-      const match = location.pathname.match(/\/lecciones\/([^/]+)\/([^/]+)/);
-      if (match) {
-        const dayId = match[2];
-        const days = lesson.days;
-        const newDay = days.find(d => d.id === dayId);
-        if (newDay) {
-          const index = days.indexOf(newDay);
-          setCurrentDay(newDay);
-          setCurrentPrev(days[index - 1]);
-          setCurrentNext(days[index + 1]);
-        }
-      }
-    };
-    window.addEventListener("popstate", onPopState);
-    return () => {
-      window.removeEventListener("popstate", onPopState);
-      (window as any).__navigateToDay = prev;
-    };
-  }, [lesson]);
-
-  const references = currentDay.studyReferences ?? [];
-  const paragraphs = useMemo(() => (currentDay.contentMarkdown ?? "").split("\n").filter(Boolean), [currentDay.contentMarkdown]);
+  const references = day.studyReferences ?? [];
+  const paragraphs = useMemo(() => (day.contentMarkdown ?? "").split("\n").filter(Boolean), [day.contentMarkdown]);
 
   return (
     <>
       <article className="reading-card">
-        {currentDay.keyVerse && (
+        {day.keyVerse && (
           <div className="verse-block">
             <span aria-hidden="true">☼</span>
             <div>
               <strong>Versículo clave</strong>
-              <blockquote>“{currentDay.keyVerse.text}”</blockquote>
-              <span className="muted">{currentDay.keyVerse.reference.display}</span>
+              <blockquote>“{day.keyVerse.text}”</blockquote>
+              <span className="muted">{day.keyVerse.reference.display}</span>
             </div>
           </div>
         )}
@@ -300,17 +253,17 @@ export function DailyReading({ lesson, day: initialDay, previousDay: initialPrev
         )}
 
         <nav className="daily-nav" aria-label="Navegación entre días">
-          {currentPrev ? (
-            <button className="ghost-button" type="button" onClick={() => navigateToDay(currentPrev.id)}>
-              ← {currentPrev.dayName}
-            </button>
+          {previousDay ? (
+            <a className="ghost-button" href={`/lecciones/${lesson.id}/${previousDay.id}`}>
+              ← {previousDay.dayName}
+            </a>
           ) : (
             <span />
           )}
-          {currentNext ? (
-            <button className="primary-button" type="button" onClick={() => navigateToDay(currentNext.id)}>
-              {currentNext.dayName} →
-            </button>
+          {nextDay ? (
+            <a className="primary-button" href={`/lecciones/${lesson.id}/${nextDay.id}`}>
+              {nextDay.dayName} →
+            </a>
           ) : (
             <a className="primary-button" href={`/lecciones/${lesson.id}`}>Volver a la semana</a>
           )}

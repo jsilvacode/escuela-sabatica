@@ -31,7 +31,7 @@ const { lesson, activeDayId = lesson.days[0]?.id, compact = false } = Astro.prop
   }
 </nav>
 
-<select class="day-select" aria-label="Seleccionar día" onchange="var m=this.value.match(/lecciones\/([^/]+)\/([^/]+)/);if(m&&window.__navigateToDay)window.__navigateToDay(m[2])">
+<select class="day-select" aria-label="Seleccionar día" onchange="location = this.value">
   {
     lesson.days.map((day, index) => (
       <option

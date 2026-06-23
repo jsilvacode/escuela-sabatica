@@ -6,14 +6,6 @@ import { DailyReading } from "@components/lesson/DailyReading";
 import { AudioPlayer } from "@components/audio/AudioPlayer";
 import StudySidebar from "@components/layout/StudySidebar.astro";
 import { getAdjacentDay, getDay, getLesson, getLessons, getQuarter } from "@lib/lessonAdapter";
-import reavivadosRaw from "@data/quarters/2026-q3.json";
-
-const reavivadosEntries = (reavivadosRaw as any).reavivados ?? [];
-
-const reavivadosByDate: Record<string, { reading: string; bookId?: number; chapter?: number }> = {};
-for (const e of reavivadosEntries) {
-  reavivadosByDate[e.date] = { reading: e.reading, bookId: (e as any).bookId, chapter: (e as any).chapter };
-}
 
 export function getStaticPaths() {
   return getLessons().filter(l => l.days.length > 0).flatMap((lesson) =>
@@ -84,62 +76,14 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
   </div>
 </BaseLayout>
 
-<div id="day-data" data-reavivados={JSON.stringify(reavivadosByDate)} data-lesson-days={JSON.stringify(lesson.days.map(d => ({id:d.id, date:d.date, dayName:d.dayName})))} hidden></div>
-
 <script is:inline>
-  var __dayData = document.getElementById("day-data");
-  var __reavivadosByDate = JSON.parse(__dayData.getAttribute("data-reavivados") || "{}");
-  var __lessonDays = JSON.parse(__dayData.getAttribute("data-lesson-days") || "[]");
-
-  function updateDayUI(dayId) {
-    // Update DayTabs
-    document.querySelectorAll(".compact-day, .day-tab").forEach(function (el) {
-      el.classList.toggle("active", el.getAttribute("href") && el.getAttribute("href").endsWith("/" + dayId));
-      el.setAttribute("aria-current", el.classList.contains("active") ? "page" : "false");
-    });
-    var sel = document.querySelector(".day-select");
-    if (sel) {
-      for (var i = 0; i < sel.options.length; i++) {
-        if (sel.options[i].value.endsWith("/" + dayId)) { sel.selectedIndex = i; break; }
-      }
-    }
-    // Update StudySidebar: Reavivados widget
-    var dayData = __lessonDays.find(function(d) { return d.id === dayId; });
-    if (dayData && dayData.date) {
-      var rr = __reavivadosByDate[dayData.date];
-      var widget = document.getElementById("reavivados-widget");
-      if (widget && rr) {
-        var readingEl = widget.querySelector(".reavivados-reading");
-        var linkEl = widget.querySelector(".reavivados-button");
-        if (readingEl) readingEl.textContent = rr.reading;
-        if (linkEl && rr.bookId && rr.chapter) {
-          linkEl.href = "https://www.santabiblia.cloud/read/" + rr.bookId + "/" + rr.chapter;
-          linkEl.style.display = "";
-        } else if (linkEl) {
-          linkEl.style.display = "none";
-        }
-        var fallbackEl = widget.querySelector(".reavivados-card");
-        if (fallbackEl) fallbackEl.style.display = rr ? "none" : "";
-      }
-    }
+  var saved = sessionStorage.getItem("__scrollY");
+  if (saved) {
+    window.scrollTo(0, parseInt(saved));
+    sessionStorage.removeItem("__scrollY");
   }
-
-  var origNavigate = window.__navigateToDay;
-  window.__navigateToDay = function(dayId) {
-    if (origNavigate) origNavigate(dayId);
-    updateDayUI(dayId);
-    document.getElementById("audio")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
-  // Intercept clicks on day tabs
   document.addEventListener("click", function (e) {
     var link = e.target.closest("a[href*='/lecciones/']");
-    if (!link) return;
-    var href = link.getAttribute("href");
-    if (!href) return;
-    var match = href.match(/\/lecciones\/([^/]+)\/([^/]+)/);
-    if (!match) return;
-    e.preventDefault();
-    if (window.__navigateToDay) window.__navigateToDay(match[2]);
+    if (link) sessionStorage.setItem("__scrollY", window.scrollY.toString());
   });
 </script>
