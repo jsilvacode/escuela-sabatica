@@ -79,9 +79,11 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 <script is:inline>
   (function () {
     var m = document.referrer.match(/\/lecciones\/([^/]+)\//);
-    if (m && m[1] === '{lesson.id}') {
-      var el = document.getElementById("daily-start");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (!m || m[1] !== '{lesson.id}') return;
+    var el = document.getElementById("daily-start");
+    if (!el) return;
+    var headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-height")) || 80;
+    var top = el.getBoundingClientRect().top + window.scrollY - headerH - 16;
+    window.scrollTo({ top: top, behavior: "smooth" });
   })();
 </script>
