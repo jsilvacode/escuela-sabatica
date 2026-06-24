@@ -77,6 +77,19 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  var el = document.getElementById("daily-start");
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  var prevLesson = sessionStorage.getItem("__lastLesson");
+  var currentLesson = '{lesson.id}';
+  var sameLesson = prevLesson === currentLesson;
+  sessionStorage.setItem("__lastLesson", currentLesson);
+
+  if (sameLesson) {
+    var el = document.getElementById("daily-start");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // Update __lastLesson before leaving to next day
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest("a[href*='/lecciones/']");
+    if (link) sessionStorage.setItem("__lastLesson", currentLesson);
+  });
 </script>
