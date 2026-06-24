@@ -77,24 +77,24 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  // Solo hacer scroll al título si vengo de otro día de la misma lección
-  if (sessionStorage.getItem("__sameLesson") === "1") {
-    sessionStorage.removeItem("__sameLesson");
-    requestAnimationFrame(function () {
-      var el = document.getElementById("daily-start");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
+  var lessonId = '{lesson.id}';
 
-  // Al hacer click en un link de día, marcar si es la misma lección
+  // Modificar links estáticos (DayTabs, breadcrumb)
+  document.querySelectorAll("a[href*='/lecciones/']").forEach(function (link) {
+    var m = link.pathname.match(/\/lecciones\/([^/]+)\/[^/]+/);
+    if (m && m[1] === lessonId) {
+      link.href = link.pathname + "#daily-start";
+    }
+  });
+
+  // Interceptar clicks para links dinámicos (React: prev/next)
   document.addEventListener("click", function (e) {
     var link = e.target.closest("a[href*='/lecciones/']");
-    if (!link) return;
+    if (!link || link.hash) return;
     var m = link.pathname.match(/\/lecciones\/([^/]+)\/[^/]+/);
-    if (m && m[1] === '{lesson.id}') {
-      sessionStorage.setItem("__sameLesson", "1");
-    } else {
-      sessionStorage.removeItem("__sameLesson");
+    if (m && m[1] === lessonId) {
+      e.preventDefault();
+      location.href = link.pathname + "#daily-start";
     }
   });
 </script>
