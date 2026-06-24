@@ -220,7 +220,7 @@ function findReferences(text: string, knownRefs: BibleReference[], onOpen: (ref:
 export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
   const [activeReference, setActiveReference] = useState<BibleReference | null>(null);
   const references = day.studyReferences ?? [];
-  const paragraphs = useMemo(() => (day.contentMarkdown ?? "").split("\n").filter(Boolean), [day.contentMarkdown]);
+  const lines = useMemo(() => (day.contentMarkdown ?? "").split("\n").filter(Boolean), [day.contentMarkdown]);
 
   return (
     <>
@@ -237,9 +237,38 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
         )}
 
         <div className="reading-body">
-          {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{findReferences(paragraph, references, setActiveReference)}</p>
-          ))}
+          {lines.map((line) => {
+            // Horizontal rule
+            if (line === "---" || line.trim() === "") return null;
+            // ### / #### Heading
+            if (line.startsWith("#### ")) {
+              return <h5 key={line}>{findReferences(line.slice(5).trim(), references, setActiveReference)}</h5>;
+            }
+            // ### Heading
+            if (line.startsWith("### ")) {
+              return <h4 key={line}>{findReferences(line.slice(4).trim(), references, setActiveReference)}</h4>;
+            }
+            // > Blockquote
+            if (line.startsWith("> ")) {
+              return (
+                <blockquote key={line}>
+                  {findReferences(line.slice(2).trim(), references, setActiveReference)}
+                </blockquote>
+              );
+            }
+            // Escaped backtick prompt: `text` → reading prompt
+            if (line.startsWith("`") && line.endsWith("`")) {
+              return (
+                <p className="reading-prompt" key={line}>
+                  <em>{findReferences(line.slice(1, -1).trim(), references, setActiveReference)}</em>
+                </p>
+              );
+            }
+            // Horizontal rule or empty
+            if (line === "---" || line.trim() === "") return null;
+            // Regular paragraph
+            return <p key={line}>{findReferences(line, references, setActiveReference)}</p>;
+          })}
         </div>
 
         {references.length > 0 && (

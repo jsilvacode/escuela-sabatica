@@ -1719,6 +1719,44 @@ img {
   hyphens: auto;
 }
 
+.reading-body h4 {
+  margin: 1.6em 0 0.6em;
+  color: var(--color-navy-900);
+  font-family: var(--font-reading);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.reading-body h5 {
+  margin: 1.4em 0 0.5em;
+  color: var(--color-navy-900);
+  font-family: var(--font-reading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.reading-body blockquote {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid rgba(212, 175, 55, 0.5);
+  background: var(--color-verse-bg);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--color-navy-900);
+  font-style: italic;
+}
+
+.reading-body blockquote p {
+  margin: 0;
+  text-align: left;
+}
+
+.reading-body .reading-prompt {
+  margin: var(--space-4) 0;
+  color: var(--color-blue-700);
+  font-weight: 500;
+  text-align: left;
+}
+
 .verse-block {
   display: grid;
   grid-template-columns: 42px 1fr;
