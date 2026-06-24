@@ -64,7 +64,7 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
           <span>{dayLabel}</span>
         </nav>
 
-        <h1 class="daily-title">{day.title}</h1>
+        <h1 class="daily-title" id="daily-start" style="scroll-margin-top: calc(var(--header-height) + 16px)">{day.title}</h1>
         {day.image && <img class="daily-image" src={day.image} alt={`Imagen de lectura: ${day.title}`} />}
         <DayTabs lesson={lesson} activeDayId={day.id} compact />
         <AudioPlayer client:load audio={day.audio} />
@@ -77,13 +77,6 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  var saved = sessionStorage.getItem("__scrollY");
-  if (saved) {
-    window.scrollTo(0, parseInt(saved));
-    sessionStorage.removeItem("__scrollY");
-  }
-  document.addEventListener("click", function (e) {
-    var link = e.target.closest("a[href*='/lecciones/']");
-    if (link) sessionStorage.setItem("__scrollY", window.scrollY.toString());
-  });
+  var el = document.getElementById("daily-start");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 </script>
