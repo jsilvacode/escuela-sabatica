@@ -80,17 +80,17 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
   // Solo hacer scroll al título si vengo de otro día de la misma lección
   if (sessionStorage.getItem("__sameLesson") === "1") {
     sessionStorage.removeItem("__sameLesson");
-    var el = document.getElementById("daily-start");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    requestAnimationFrame(function () {
+      var el = document.getElementById("daily-start");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
   }
 
   // Al hacer click en un link de día, marcar si es la misma lección
   document.addEventListener("click", function (e) {
     var link = e.target.closest("a[href*='/lecciones/']");
     if (!link) return;
-    var href = link.getAttribute("href");
-    if (!href) return;
-    var m = href.match(/\/lecciones\/([^/]+)\/[^/]+/);
+    var m = link.pathname.match(/\/lecciones\/([^/]+)\/[^/]+/);
     if (m && m[1] === '{lesson.id}') {
       sessionStorage.setItem("__sameLesson", "1");
     } else {
