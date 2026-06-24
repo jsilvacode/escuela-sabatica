@@ -77,24 +77,11 @@ const nextDay = getAdjacentDay(lesson, day.id, 1);
 </BaseLayout>
 
 <script is:inline>
-  var lessonId = '{lesson.id}';
-
-  // Modificar links estáticos (DayTabs, breadcrumb)
-  document.querySelectorAll("a[href*='/lecciones/']").forEach(function (link) {
-    var m = link.pathname.match(/\/lecciones\/([^/]+)\/[^/]+/);
-    if (m && m[1] === lessonId) {
-      link.href = link.pathname + "#daily-start";
+  (function () {
+    var m = document.referrer.match(/\/lecciones\/([^/]+)\//);
+    if (m && m[1] === '{lesson.id}') {
+      var el = document.getElementById("daily-start");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  });
-
-  // Interceptar clicks para links dinámicos (React: prev/next)
-  document.addEventListener("click", function (e) {
-    var link = e.target.closest("a[href*='/lecciones/']");
-    if (!link || link.hash) return;
-    var m = link.pathname.match(/\/lecciones\/([^/]+)\/[^/]+/);
-    if (m && m[1] === lessonId) {
-      e.preventDefault();
-      location.href = link.pathname + "#daily-start";
-    }
-  });
+  })();
 </script>
