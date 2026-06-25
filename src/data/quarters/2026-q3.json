@@ -25,39 +25,42 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 1:1; Gálatas 1:1; Hechos 17:16-34; 1 Corintios 5:9-11; Hechos 18:4-10; 2 Corintios 2:4.\n\n> Para memorizar\n> «Entonces el Señor dijo a Pablo en una visión nocturna: “No temas. Sigue hablando y no calles, que yo estoy contigo, y ninguno te podrá dañar; pues tengo mucho pueblo en esta ciudad”» (Hechos 18:9-10).\n\nEl gran misionero inglés William Carey solía decir que reparaba zapatos para pagar sus gastos, pero que su verdadera ocupación era ganar almas. Del mismo modo, Pablo fabricaba tiendas de campaña para ganarse la vida (Hechos 18:1-3), pero su verdadera ocupación era, por supuesto, ganar personas para Cristo.\n\nEsta semana analizaremos el ministerio de Pablo en favor de la comunidad cristiana de Corinto. La iglesia, como veremos, estaba repleta de problemas, muchos de los cuales no eran muy diferentes de los que enfrentan nuestras iglesias hoy, casi dos mil años después. De hecho, cualquier persona que haya sido cristiana durante algún tiempo sabe por experiencia que no existe un grupo cristiano que no tenga algún problema.\n\nPablo se enfrenta a desafíos en Corinto, pero lo hace con el mensaje de la cruz (1 Corintios 2:2). La fidelidad a este mensaje es también la forma de afrontar hoy nuestros desafíos. Como veremos esta semana y a lo largo de este trimestre, el mensaje de 1 y 2 Corintios se aplica también a nosotros.\n\n---\n\n#### Comentarios Elena G.W\n\nAunque Pablo se sentó como diligente alumno a los pies de Gamaliel, también aprendió un oficio. Era un educado fabricante de tiendas. Era costumbre entre los judíos, tanto ricos como pobres, preparar a sus hijos e hijas en un empleo útil, de manera que si sobrevenían circunstancias adversas no necesitaban depender de los demás, sino que disponían de capacidad y preparación a fin de proveer lo necesario para la satisfacción de sus propias necesidades. Debían ser instruidos en algún ramo literario, pero también debían ser preparados para desempeñar un oficio. Se consideraba que esto era parte indispensable de su educación.\n\nEl testimonio de Pablo y Aquila nos revela que su ocupación consistía en hacer tiendas. Mientras predicaban el evangelio, Pablo y sus compañeros se dedicaban a su oficio de fabricantes de tiendas, y al hacerlo podían impartir un conocimiento más cabal de Cristo a sus oyentes. Trabajaban a fin de obtener dinero para ganarse la vida…\n\nEn Corinto [Pablo] vivió y trabajó con Aquila y Priscila y les dio instrucción más definida acerca de la verdad. El gran apóstol no estaba avergonzado de su trabajo ni le tenía miedo, y no trató el asunto como si de alguna manera rebajara su labor en el ministerio…\n\nLa costumbre de sostener a hombres y mujeres que permanecen ociosos mediante donativos o dinero proveniente de la iglesia, promueve hábitos pecaminosos y debiera ser evitada concienzudamente. Todo hombre, mujer y niño deberían ser educados para desempeñar tareas prácticas y útiles. Todos deberían aprender algún oficio. Este podría ser fabricar tiendas o cualquier otro trabajo; pero todos deberían ser educados para usar los miembros de su cuerpo con algún propósito, y Dios está dispuesto a aumentar la adaptabilidad de los que quieran desarrollar hábitos de trabajo.\n\nSi un hombre goza de buena salud física y dispone de bienes, de manera que no necesita emplearse para ganarse la vida, debería trabajar para obtener medios que le permitan promover el progreso de la causa y la obra de Dios. No deben ser “perezosos” sino “fervientes en espíritu, sirviendo al Señor”. Romanos 12:11. Dios bendecirá a todos los que ejerzan influencia en este sentido sobre los demás (Cada día con Dios, 13 de julio, p. 201).\n\nDurante su estada en Corinto tuvo Pablo tiempo para vislumbrar nuevos y más dilatados campos de servicio. Pensaba especialmente en su proyectado viaje a Roma. Una de sus más caras esperanzas y acariciados planes era ver firmemente establecida la fe cristiana en la gran capital del mundo conocido. Ya había una iglesia en Roma y el apóstol deseaba obtener la cooperación de sus miembros para la obra que debía hacerse en Italia y otros países. A fin de preparar el camino para sus labores entre aquellos hermanos, muchos de los cuales le eran todavía desconocidos, les escribió una carta anunciándoles su propósito de visitar a Roma y su esperanza de enarbolar el estandarte de la cruz en España (Los hechos de los apóstoles, p. 299).",
           "studyReferences": [
             {
-              "book": "1 Corintios 1: 1",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 1,
+              "verseStart": 1,
               "display": "1 Corintios 1:1"
             },
             {
-              "book": "Gálatas 1: 1",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Gálatas",
+              "chapter": 1,
+              "verseStart": 1,
               "display": "Gálatas 1:1"
             },
             {
-              "book": "Hechos 17: 16-34",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Hechos",
+              "chapter": 17,
+              "verseStart": 16,
+              "verseEnd": 34,
               "display": "Hechos 17:16-34"
             },
             {
-              "book": "1 Corintios 5: 9-11",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 5,
+              "verseStart": 9,
+              "verseEnd": 11,
               "display": "1 Corintios 5:9-11"
             },
             {
-              "book": "Hechos 18: 4-10",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Hechos",
+              "chapter": 18,
+              "verseStart": 4,
+              "verseEnd": 10,
               "display": "Hechos 18:4-10"
             },
             {
-              "book": "2 Corintios 2: 4",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 2,
+              "verseStart": 4,
               "display": "2 Corintios 2:4"
             }
           ],
@@ -271,33 +274,36 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 1:17-31; Colosenses 1:20; 1 Pedro 2:24; Hechos 13:16-47; 1 Corintios 2:1-5.\n\n> Para memorizar\n> «El mensaje de la cruz es locura para los que se pierden; pero para los que se salvan es poder de Dios» (1 Corintios 1:18).\n\nCicerón, un escritor y orador romano pagano, había dicho al pueblo romano que mantuvieran lejos de sus mentes la idea de la cruz como método de ejecución. Aunque Cicerón murió aproximadamente medio siglo antes de que naciera Jesús, su declaración ilustra el desprecio que los romanos sentían por la cruz. Era para ellos algo tan detestable que ni siquiera debían pensar en ello.\n\nPor el contrario, Pablo escribiría: «El mensaje de la cruz [...] es poder de Dios» (1 Corintios 1:18). Para Pablo, la cruz es el instrumento de reconciliación entre Dios y el hombre (Efe. 2:16; Colosenses 1:20), el símbolo supremo de la humildad de Jesús (Filipenses 2:8) y el lugar donde se saldó nuestra inmensa deuda (Colosenses 2:14).\n\nLa cruz es la respuesta de Pablo a los problemas de Corinto. No hay que leer mucho en 1 Corintios para darse cuenta de que le preocupa mucho el importante tema de las divisiones en la iglesia. Pablo está tan perplejo que, justo después de los saludos (1 Corintios 1:1-3) y la sección de acción de gracias (1 Corintios 1:4-9), este es el primer tema que aborda (1 Corintios 1:10-17). Esta semana nos centraremos en el poderoso mensaje de la cruz como respuesta a este problema y a otras cuestiones en Corinto.\n\n---\n\n#### Comentarios Elena G.W\n\nDios me ha dado un mensaje para sus hijos… Habéis sido comprados por precio, y todo lo que tenéis y lo que sois ha de ser usado para la gloria de Dios y para el bien de vuestros semejantes. Cristo murió en la cruz para salvar al mundo que perece en el pecado. Él pide vuestra cooperación en esta obra. Habéis de ser su mano ayudadora. Con esfuerzo fervoroso e incansable habéis de tratar de salvar a los perdidos.\n\nEl poder transformador de la gracia de Cristo moldea a quien se entrega al servicio de Dios… Ya no puede ser indiferente a las almas que perecen alrededor suyo. Se eleva por encima del autoservicio. Cristo lo ha transformado en una nueva criatura y el egoísmo no haya lugar en su vida. Comprende que cada aspecto de su existencia pertenece a Cristo, quien lo ha redimido de la esclavitud del pecado; que cada momento de su vida futura ha sido comprado con la preciosa sangre del unigénito de Dios.\n\n¿Apreciáis tan profundamente el sacrificio hecho en el Calvario que estáis dispuestos a subordinar todo otro interés a la obra de salvar almas? El mismo intenso anhelo de salvar a los pecadores que señaló la vida del Salvador se nota en la de su verdadero discípulo. El cristiano no desea vivir para sí. Se deleita en consagrar al servicio del Maestro todo lo que posee y es. Le impulsa el deseo inefable de ganar almas para Cristo.\n\n¿Cómo puedo glorificar mejor a Aquel a quien pertenezco por creación y redención? Esta es la pregunta que deberíamos hacernos. La persona verdaderamente convertida tratará de rescatar con ansiosa solicitud a los que se hallan todavía bajo el poder de Satanás…\n\nYa nos queda muy poco tiempo para prepararnos para la eternidad… La gente necesita la verdad, y esta les ha de ser comunicada mediante esfuerzos fervientes y fieles. Hay que buscar a las almas, orar por ellas y trabajar en su favor…\n\nSobre nosotros descansa la pesada responsabilidad de amonestar al mundo acerca de su destrucción inminente… Dios pide a su iglesia que se levante y que se vista de poder. Deben ganarse las coronas inmortales, el reino de los cielos se debe conquistar; y ha de iluminarse un mundo que perece en la ignorancia (Maranata: el Señor viene, 2 de abril, p. 103).\n\nDiga a la gente: “Conozcan la doctrina por ustedes mismos”. No pronuncien sus labios ni una sentencia de duda. No se presente ante la gente con un sonido incierto. Conozca qué es la verdad y proclámela. La enseñanza de Cristo siempre fue de naturaleza positiva. Nunca, nunca exprese sentimientos de duda. Comunique con voz certera un mensaje afirmativo. Eleve al Hombre del Calvario, alto, cada vez más alto. Hay poder en la exaltación de la cruz de Cristo.\n\nLa divinidad de Cristo debe ser constantemente sustentada. Cuando el Salvador preguntó a sus discípulos: “Y vosotros, ¿quién decís que soy yo? Respondiendo Simón Pedro, dijo: Tú eres el Cristo, el Hijo del Dios viviente”. Mateo 16:15, 16. Dijo Cristo “sobre esta roca”, no sobre Pedro, sino sobre el Hijo de Dios, “edificaré mi iglesia; y las puertas del Hades no prevalecerán contra ella”. Vers. 18.\n\nGrande es el misterio de la piedad. Hay misterios en la vida de Cristo que deben ser creídos aun cuando no puedan ser explicados (Alza tus ojos, 13 de febrero, p. 56).",
           "studyReferences": [
             {
-              "book": "1 Corintios 1: 17-31",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 1,
+              "verseStart": 17,
+              "verseEnd": 31,
               "display": "1 Corintios 1:17-31"
             },
             {
-              "book": "Colosenses 1: 20",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Colosenses",
+              "chapter": 1,
+              "verseStart": 20,
               "display": "Colosenses 1:20"
             },
             {
-              "book": "1 Pedro 2: 24",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Pedro",
+              "chapter": 2,
+              "verseStart": 24,
               "display": "1 Pedro 2:24"
             },
             {
-              "book": "Hechos 13: 16-47",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Hechos",
+              "chapter": 13,
+              "verseStart": 16,
+              "verseEnd": 47,
               "display": "Hechos 13:16-47"
             },
             {
-              "book": "1 Corintios 2: 1-5",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 2,
+              "verseStart": 1,
+              "verseEnd": 5,
               "display": "1 Corintios 2:1-5"
             }
           ],
@@ -429,45 +435,49 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 1:12-17; Romanos 1:29; 1 Corintios 1:10; 3:1-4; Filipenses 2:5-8; 2 Corintios 11:23-28; Colosenses 1:24.\n\n> Para memorizar\n> «Les ruego hermanos, por el nombre de nuestro Señor Jesucristo, que hablen todos una misma cosa y que no haya entre ustedes divisiones. Antes, estén perfectamente unidos en una misma mente y un mismo parecer» (1 Corintios 1:10).\n\nQuienes observan la vida silvestre saben que algunas criaturas viven en grupos de diferentes tamaños. Desde los lobos hasta los delfines, e incluso las hormigas, estas criaturas permanecen juntas. Los chimpancés son especialmente conocidos por sus estrechos lazos sociales, y a veces viven en grupos de entre 15 y 150 individuos. Sin embargo, estas relaciones no siempre son armoniosas, y a veces los chimpancés luchan entre sí.\n\nLos seres humanos también son un poco así; es decir, no solo tienden a vivir en grupos, sino que a veces luchan unos con otros dentro de esos grupos, lo cual también ocurre, incluso en nuestras iglesias, cuando se forman facciones, a menudo en torno a algún líder carismático.\n\n¿Alguna vez has visto eso en tu iglesia?\n\nSi es así, entonces tienes una idea del problema al que se enfrentó Pablo en Corinto. Esta semana veremos 1 Corintios 1-4, donde el apóstol Pablo aborda el problema de las disputas en la iglesia y cómo superarlas, concretamente, por medio de la unidad en Cristo.\n\n---\n\n#### Comentarios Elena G.W\n\nInsto a nuestros hermanos a dejar de criticar y de hablar mal, y a acudir a Dios en ferviente oración, pidiéndole que ayude a los que se equivocan. Unanse unos con otros y con Cristo. Estudien el capítulo diecisiete de Juan, y aprendan cómo orar y cómo vivir la oración de Cristo. Él es el Consolador. Él morará en sus corazones, haciendo que su gozo sea cumplido. Sus palabras serán para ellos como el Pan de Vida, y con la fuerza así obtenida serán capacitados para desarrollar caracteres que serán una honra para Dios. Un perfecto compañerismo cristiano existirá entre ellos. Se verá en sus vidas el fruto que siempre aparece como resultado de la obediencia a la verdad.\n\nHagamos de la oración de Cristo la regla de nuestra vida, a fin de que podamos formar caracteres que revelen al mundo el poder de la gracia de Dios. Ha de haber menos charla acerca de pequeñas diferencias, y un estudio más diligente de lo que la oración de Cristo significa para quienes creen en su nombre. Hemos de orar por la unión, y entonces vivir de tal manera que Dios pueda responder nuestras oraciones.\n\nEs la perfecta unidad —una unidad tan estrecha como la unión que existe entre el Padre y el Hijo—, lo que dará éxito a los esfuerzos de los obreros de Dios.\n\nLa completa unión con Cristo y unos con otros es absolutamente necesaria para la perfección de los creyentes. La presencia de Cristo por la fe en los corazones de los creyentes es su poder, su vida. Produce unión con Cristo. “Tú en mí”. La unión con Dios por medio de Cristo hace perfecta a la iglesia.\n\nA quien busque servir a los demás con abnegación y sacrificio le serán dados los atributos de carácter que lo recomendarán ante Dios, y desarrollará sabiduría, verdadera paciencia, clemencia, bondad, compasión. Esto le da un lugar privilegiado en el reino de Dios.\n\nNada puede perfeccionar la perfecta unidad en la iglesia, sino el espíritu de una paciencia semejante a la de Cristo. Satanás puede sembrar discordia; solo Cristo puede armonizar los elementos discordantes… Cuando como obreros individuales de la iglesia amamos a Dios por sobre todo y al prójimo como a uno mismo, entonces no habrá trabajosos esfuerzos para unirnos; habrá una unidad en Cristo, los oídos estarán cerrados a los informes, y nadie hará reproches contra su vecino. Los miembros de la iglesia apreciarán el amor y la unidad, y serán como una gran familia. Entonces portaremos ante el mundo las credenciales que darán testimonio de que Dios ha enviado a su Hijo al mundo. Cristo dijo: “En esto conocerán todos que sois mis discípulos, si tuviereis amor los unos con los otros”. Juan 13:35 (Reflejemos a Jesús, 5 de julio, p. 192).",
           "studyReferences": [
             {
-              "book": "1 Corintios 1: 12-17",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 1,
+              "verseStart": 12,
+              "verseEnd": 17,
               "display": "1 Corintios 1:12-17"
             },
             {
-              "book": "Romanos 1: 29",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Romanos",
+              "chapter": 1,
+              "verseStart": 29,
               "display": "Romanos 1:29"
             },
             {
-              "book": "1 Corintios 1: 10",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 1,
+              "verseStart": 10,
               "display": "1 Corintios 1:10"
             },
             {
-              "book": "3: 1-4",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "3:1-4"
+              "book": "1 Corintios",
+              "chapter": 3,
+              "verseStart": 1,
+              "verseEnd": 4,
+              "display": "1 Corintios 3:1-4"
             },
             {
-              "book": "Filipenses 2: 5-8",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Filipenses",
+              "chapter": 2,
+              "verseStart": 5,
+              "verseEnd": 8,
               "display": "Filipenses 2:5-8"
             },
             {
-              "book": "2 Corintios 11: 23-28",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 11,
+              "verseStart": 23,
+              "verseEnd": 28,
               "display": "2 Corintios 11:23-28"
             },
             {
-              "book": "Colosenses 1: 24",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Colosenses",
+              "chapter": 1,
+              "verseStart": 24,
               "display": "Colosenses 1:24"
             }
           ],
@@ -599,34 +609,45 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 5:1-13; 2 Corintios 2:5-10; 1 Corintios 6:1-13; 1 Tesalonicenses 4:1-8; 1 Corintios 6:19-7:9.\n\n> Para memorizar\n> «¿No saben que su cuerpo es templo del Espíritu Santo, que está en ustedes, que tienen de Dios, y que no son sus propios dueños? Porque han sido comprados por precio; por tanto, glorifiquen a Dios en su cuerpo y en su espíritu, los cuales son de Dios» (1 Corintios 6:19-20).\n\nNuestro cerebro es como una esponja: todo lo que le llega a través de nuestros sentidos permanece en él. Puede que no seamos conscientes de la mayor parte de lo que ingresa en nuestra mente (sería imposible pensar con claridad si recordáramos todo), pero todo está allí e influye en cierta medida en lo que pensamos, sentimos y hacemos.\n\nPor eso somos tan vulnerables a la influencia de todo lo malo que nos rodea. La iglesia cristiana ha luchado desde sus inicios con este problema. Por ejemplo, ¿de dónde procede la observancia del domingo? ¿Se originó en la iglesia? No, sino que provino de la cultura circundante.\n\nPodemos ver cómo se manifestó este principio en Corinto. Después de una apelación contra las divisiones internas (1 Corintios 1-4), Pablo pasa ahora a cuestiones relacionadas con la inmoralidad sexual, los pleitos, la prostitución, el matrimonio y la soltería (1 Corintios 5-7). Las normas del mundo les afectaban enormemente. El sectarismo descrito en 1 Corintios 1-4 abrió la puerta al comportamiento inmoral denunciado en los capítulos siguientes. ¿Cómo trata Pablo este pecado en la iglesia y qué lecciones podemos extraer de lo que escribió?\n\n---\n\n#### Comentarios Elena G.W\n\nPablo sintió que los requisitos del Señor deben ser obedecidos y sus juicios evitados. Como él, debemos esforzamos al máximo para tener la corona de la vida, que dará eterno honor a cada vencedor. No debemos contentamos con vivir vidas inútiles.\n\n¿Qué es la humildad? Es ese sentimiento de pecaminosidad e indignidad que nos conduce al arrepentimiento. Necesitamos estar convencidos de la malignidad de una enfermedad antes de sentir la necesidad de ser curados. Aquellos que no captan la pecaminosidad del pecado no están en condiciones de apreciar el valor de la expiación y la necesidad de ser limpiados de todo pecado. El pecador se mide a sí mismo por sí mismo y por aquellos que, como él, son pecadores. No contempla la pureza y la santidad de Cristo. Pero, cuando la ley de Dios impone convicción a su corazón, dice con Pablo: “Y yo sin la ley vivía en un tiempo; pero venido el mandamiento, el pecado revivió y yo morí”. Romanos 7:9…\n\nDios creó al hombre para su gloria. No soportará, no puede soportar la presencia del pecado en su dominio. Si en la iglesia hay individuos que están pecando voluntariamente contra Dios, hay que echar mano de todo medio posible para llevarlos al arrepentimiento. Si no se hace esto se deshonra el nombre de Dios. Él es demasiado puro para aprobar la iniquidad…\n\nEl pecado de Adán podría ser considerado por las iglesias de hoy como un simple error, que debería ser perdonado inmediatamente y no pensarse más en él. Pero la norma de Dios es elevada y su Palabra inmutable, y por eso todas las prácticas egoístas y codiciosas son una abominación ante su vista. Los corazones de los creyentes necesitan ser purificados, santificados, refinados, ennoblecidos…\n\nMiren hacia arriba, mis hermanos. ¿Ha perdido el evangelio su poder para impresionar los corazones? ¿Es debido a que la influencia regeneradora del Espíritu de Cristo ha muerto, que los corazones no son purificados, santificados y preparados por el Espíritu Santo? No, la espada del Espíritu, la Palabra del Dios viviente, está todavía con nosotros; pero debe ser esgrimida con ahínco. Usémosla como lo hicieron antaño los santos de Dios. Mediante su poder viviente y vivificante se abrirá camino a los corazones…\n\nEl Señor nos invita a realizar una reforma en nuestras vidas… Cuando la iglesia despierte se harán cambios decididos. Los hombres y las mujeres se convertirán y estarán de tal manera llenos del Espíritu de Dios que irán de país en país, de ciudad en ciudad, proclamando el mensaje de verdad. Con los corazones rebosando de ferviente amor por las almas abrirán sus Biblias y presentarán la Palabra, el “escrito está” (Alza tus ojos, 2 de enero, p. 14).",
           "studyReferences": [
             {
-              "book": "1 Corintios 5: 1-13",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 5,
+              "verseStart": 1,
+              "verseEnd": 13,
               "display": "1 Corintios 5:1-13"
             },
             {
-              "book": "2 Corintios 2: 5-10",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 2,
+              "verseStart": 5,
+              "verseEnd": 10,
               "display": "2 Corintios 2:5-10"
             },
             {
-              "book": "1 Corintios 6: 1-13",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 6,
+              "verseStart": 1,
+              "verseEnd": 13,
               "display": "1 Corintios 6:1-13"
             },
             {
-              "book": "1 Tesalonicenses 4: 1-8",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Tesalonicenses",
+              "chapter": 4,
+              "verseStart": 1,
+              "verseEnd": 8,
               "display": "1 Tesalonicenses 4:1-8"
             },
             {
-              "book": "1 Corintios 6: 19-7: 9",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "1 Corintios 6:19-7:9"
+              "book": "1 Corintios",
+              "chapter": 6,
+              "verseStart": 19,
+              "toEnd": true,
+              "display": "1 Corintios 6:19"
+            },
+            {
+              "book": "1 Corintios",
+              "chapter": 7,
+              "verseStart": 9,
+              "display": "1 Corintios 7:9"
             }
           ],
           "keyVerse": {
@@ -757,39 +778,43 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 8; Hechos 15:20; 1 Corintios 9:1-6; 10:5-22; Deuteronomio 6:4-5; Marcos 12:28-31.\n\n> Para memorizar\n> «Así, si comen, o beben, o hacen otra cosa, háganlo todo para la gloria de Dios» (1 Corintios 10:31).\n\nLos capítulos 8 al 10 de 1 Corintios concluyen la discusión de los capítulos 5 y 6 acerca de la sexualidad y presenta al mismo tiempo las respuestas de Pablo a preguntas específicas formuladas en una carta que había recibido de los corintios (1 Corintios 7:1). Estas respuestas dominarán el resto de 1 Corintios.\n\nEl contenido y la naturaleza de 1 Corintios 7 indica que la inmoralidad sexual (caps. 5-7) y la idolatría (caps. 8-10) son temas relacionados. De hecho, a menudo son mencionados juntos en el Nuevo Testamento (ver Hechos 15:20, 29; 21:25; 1 Corintios 6:9; Efe. 5:5; Colosenses 3:5; Apocalipsis 21:8; 22:15).\n\nEn general, Pablo aborda el problema de la inmoralidad sexual en 1 Corintios 5 a 7, mientras que su principal preocupación en los capítulos 8 a 10 es la cuestión de la idolatría. El apóstol afirma que los cristianos deben huir de ambas (1 Corintios 6:18; 10:14).\n\nLa semana pasada vimos que el cristiano puede evitar la inmoralidad sexual pues es templo del Espíritu Santo (1 Corintios 6:19-20). Esta semana veremos que también puede huir de la idolatría al hacer «todo para la gloria de Dios» (1 Corintios 10:31).\n\n---\n\n#### Comentarios Elena G.W\n\nPor medio de Cristo había de revelarse la gloria oculta del santísimo. Había sufrido la muerte por cada hombre, y por esta ofrenda, los hijos de los hombres llegarían a ser hijos de Dios. Cara a cara, contemplando como en un espejo la gloria del Señor, los creyentes en Cristo serían mudados de gloria en gloria, a su misma imagen. El propiciatorio [trono de la gracia], sobre el cual descansaba la gloria de Dios en el santísimo, está abierto a todos aquellos que acepten a Cristo como propiciación por el pecado, y que por su medio se pongan en comunión con Dios. El velo está rasgado, derribado el muro de separación, cancelada la cédula de los ritos. La enemistad queda abolida en virtud de su sangre. Por medio de la fe en Cristo, el judío y el gentil pueden participar del Pan de vida.\n\nLa sencilla historia de la cruz de Cristo, su sufrimiento y muerte por el mundo, su resurrección y ascensión, su mediación en favor del pecador ante el Padre, subyuga y quebranta el duro corazón pecaminoso, e induce al arrepentimiento al pecador. El Espíritu Santo pone el problema bajo una nueva luz, y el pecador comprende que el pecado debe ser un mal tremendo ya que cuesta tal sacrificio expiarlo… ¡Cuán gravoso debe ser el pecado puesto que no se pudo emplear un remedio menor que la muerte del Hijo de Dios para salvar al hombre de sus consecuencias! ¿Por qué fue hecho esto en favor del hombre? Se debe a que Dios lo ama, y a que no quiere que nadie perezca, sino que todos procedan al arrepentimiento, crean en Jesús como en un Salvador personal, y tengan vida eterna (Hijos e hijas de Dios, 9 de agosto, p. 230).\n\nEl Espíritu Santo, como agente, no nos privará de la necesidad de ejercer todas las facultades y cada talento. En cambio, nos enseñará a utilizar todos los dones para la gloria de Dios. Cuando dichas virtudes estén bajo la gracia divina, su poseedor se pondrá en condiciones de utilizarlos para los mejores propósitos que existan en esta vida. La ignorancia no puede estimular ni la humildad ni la espiritualidad de ningún profeso seguidor de Cristo. Las verdades de la Palabra de Dios serán mejor apreciadas por un intelectual que sea creyente sincero. Cristo puede ser mejor glorificado por los que le sirven con inteligencia. El gran propósito de la educación es capacitarnos para utilizar las facultades que Dios nos ha concedido a fin de que podamos representar como corresponde la religión de la Biblia, y para promover la gloria de Dios (Recibiréis poder, 17 de mayo, p. 148).",
           "studyReferences": [
             {
-              "book": "1 Corintios 8",
-              "chapter": 0,
+              "book": "1 Corintios",
+              "chapter": 8,
               "verseStart": 0,
               "display": "1 Corintios 8"
             },
             {
-              "book": "Hechos 15: 20",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Hechos",
+              "chapter": 15,
+              "verseStart": 20,
               "display": "Hechos 15:20"
             },
             {
-              "book": "1 Corintios 9: 1-6",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 9,
+              "verseStart": 1,
+              "verseEnd": 6,
               "display": "1 Corintios 9:1-6"
             },
             {
-              "book": "10: 5-22",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "10:5-22"
+              "book": "1 Corintios",
+              "chapter": 10,
+              "verseStart": 5,
+              "verseEnd": 22,
+              "display": "1 Corintios 10:5-22"
             },
             {
-              "book": "Deuteronomio 6: 4-5",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Deuteronomio",
+              "chapter": 6,
+              "verseStart": 4,
+              "verseEnd": 5,
               "display": "Deuteronomio 6:4-5"
             },
             {
-              "book": "Marcos 12: 28-31",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Marcos",
+              "chapter": 12,
+              "verseStart": 28,
+              "verseEnd": 31,
               "display": "Marcos 12:28-31"
             }
           ],
@@ -921,39 +946,41 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 12; Efesios 4:11-13; 1 Corintios 13; 1 Pedro 4:8-11; 1 Corintios 14:27; Amós 3:7.\n\n> Para memorizar\n> «Sigan el amor, y procuren los dones espirituales, pero sobre todo que profeticen» (1 Corintios 14:1).\n\nAl igual que el cuerpo humano, la iglesia es una, pero tiene muchos miembros, cada uno con diferentes roles, funciones y dones. Empleados con amor, estos dones espirituales promueven un sentido de unidad que refleja el carácter del Dios trino.\n\nEsta semana examinaremos 1 Corintios 12-14 y su enseñanza acerca de los dones espirituales. Esta sección forma parte de una unidad un poco más amplia, en la que Pablo aborda el comportamiento cristiano esperado en el ámbito religioso (1 Corintios 11-14). La principal preocupación de Pablo tiene que ver con el problema de las reuniones desordenadas. Su respuesta a este problema es que la iglesia es un todo cuyas partes tienen diferentes funciones que contribuyen a «la edificación del cuerpo de Cristo» (Efe. 4:12). En resumen, Dios dio a la iglesia dones espirituales para promover la unidad a través de la diversidad.\n\nSin duda, Pablo sigue teniendo en mente el problema de las facciones abordado en los cuatro primeros capítulos de 1 Corintios, donde la respuesta a la falta de acuerdo entre los miembros de la iglesia es la unidad en Cristo. Ahora, desarrolla esa idea presentando su comprensión del papel de los dones espirituales. Según Pablo, la unidad en Cristo y en el Espíritu es el único medio de evitar las divisiones.\n\n---\n\n#### Comentarios Elena G.W\n\nEstudie esta escritura cuidadosamente. Dios no le ha dado a cada uno la misma línea de trabajo. Es su plan que haya unidad en la diversidad. Cuando se estudia y se sigue su plan, habrá muchos menos roces en el trabajo en la causa. “En un cuerpo tenemos muchos miembros, pero no todos los miembros tienen la misma función, pero cada uno es esencial para la perfección de la obra” ver Romanos 12:4 y Efesios 4:12. “El cuerpo no es un solo miembro, sino muchos. Si dijere el pie: Porque no soy mano, no soy del cuerpo, ¿por eso no será del cuerpo? Y si dijere la oreja: Porque no soy ojo, no soy del cuerpo, ¿por eso no será del cuerpo? Si todo el cuerpo fuese ojo, ¿dónde estaría el oído? Si todo fuese oído, ¿dónde estaría el olfato? Mas ahora Dios ha colocado los miembros cada uno de ellos en el cuerpo, como él quiso. Porque si todos fueran un solo miembro, ¿dónde estaría el cuerpo?” 1 Corintios 12:14-18.\n\n“Vosotros sois pues el cuerpo de Cristo, y miembros cada uno en particular. Y a unos puso Dios en la iglesia, primeramente apóstoles, luego profetas, lo tercero maestros, luego los que hacen milagros, después los que sanan, los que ayudan, los que administran, los que tienen don de lenguas”. 1 Corintios 12:27, 28.\n\nEl Señor desea que su iglesia respete cada don que ha otorgado a los diferentes miembros. Estemos en guardia, no vaya a ser que nuestra mente se fije en uno mismo, pensando que otras personas no pueden servir al Señor a menos que trabajen en las mismas líneas en las cuales trabajamos nosotros.\n\nNunca debe decir un obrero: “No quiero trabajar con uno así, porque no ve las cosas como yo las veo. Deseo trabajar con alguien que esté de acuerdo con todo lo que yo digo y que lleve a cabo todas mis ideas”. La persona con la que el obrero rehúsa conectarse puede tener verdades que presentar que aun no han sido presentadas. Y debido a la negativa del obrero en aceptar la ayuda que provee el Señor, la obra queda desequilibrada (Ser semejante a Jesús, 16 de marzo, p. 82).\n\nLos instrumentos del Señor son muchos. Pero todos los que se sienten inclinados a trabajar de acuerdo con los planes de Dios, están comprendidos en las palabras “porque… vosotros sois labranza de Dios, edificio de Dios”. 1 Corintios 3:9. Los siervos de Dios deben avanzar de manera que no se pierda ni uno solo de los dones del Señor. Su voluntad debe estar completamente sometida a Dios, de manera que cuando llegue el momento establecido por él, su vara reverdezca. Nadie sabe exactamente qué rumbo tomará la obra, pero los siervos del Altísimo deben estar siempre dispuestos, en condiciones de comprender los procedimientos y la voluntad de su Jefe (Cada día con Dios, 23 de enero, p. 29).",
           "studyReferences": [
             {
-              "book": "1 Corintios 12",
-              "chapter": 0,
+              "book": "1 Corintios",
+              "chapter": 12,
               "verseStart": 0,
               "display": "1 Corintios 12"
             },
             {
-              "book": "Efesios 4: 11-13",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Efesios",
+              "chapter": 4,
+              "verseStart": 11,
+              "verseEnd": 13,
               "display": "Efesios 4:11-13"
             },
             {
-              "book": "1 Corintios 13",
-              "chapter": 0,
+              "book": "1 Corintios",
+              "chapter": 13,
               "verseStart": 0,
               "display": "1 Corintios 13"
             },
             {
-              "book": "1 Pedro 4: 8-11",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Pedro",
+              "chapter": 4,
+              "verseStart": 8,
+              "verseEnd": 11,
               "display": "1 Pedro 4:8-11"
             },
             {
-              "book": "1 Corintios 14: 27",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 14,
+              "verseStart": 27,
               "display": "1 Corintios 14:27"
             },
             {
-              "book": "Amós 3: 7",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Amós",
+              "chapter": 3,
+              "verseStart": 7,
               "display": "Amós 3:7"
             }
           ],
@@ -1085,33 +1112,34 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 13; Mateo 24:12; Gálatas 5:22-23; 1 Timoteo 1:14; 1 Juan 4:8.\n\n> Para memorizar\n> «Ahora permanecen estos tres dones: la fe, la esperanza y el amor. Pero el mayor es el amor» (1 Corintios 13:13).\n\nEl amor conquista todo. Por eso Pablo tenía tanto que decir al respecto. La familia de términos emparentados con el verbo griego _agapaō_ —el más común en el Nuevo Testamento para expresar el concepto de amor— aparece más de 135 veces en sus cartas. Esto representa casi la mitad de todas las ocasiones en que dichos términos aparecen en el Nuevo Testamento. Esto debería decirnos algo acerca del tema central de la Carta de Pablo a la iglesia de Corinto. Existen muchos pasajes notables acerca del amor en el Nuevo Testamento, como Romanos 8:35-39; 1 Corintios 2:9; 8:3; Gálatas 2:20; Colosenses 1:13; 1 Tesalonicenses 3:12; etc. Pero ninguno es comparable con 1 Corintios 13.\n\nLa semana pasada vimos que todo carece de valor, incluso los dones espirituales, sin amor. Esta semana profundizaremos en 1 Corintios 13 y su maravilloso retrato del amor.\n\nComo veremos, el amor no es tanto una emoción como una actitud que debe manifestarse en la vida, en los hechos y en las palabras, pues, de lo contrario, no significa nada.\n\nLo que realmente es y hace el amor se ha revelado plenamente en la vida de Jesús.\n\n---\n\n#### Comentarios Elena G.W\n\nEn los tiempos patriarcales, el ofrecimiento de sacrificios relacionados con el culto divino recordaba perpetuamente el advenimiento de un Salvador; y lo mismo sucedía durante toda la historia de Israel con el ritual de los servicios en el Santuario. En el ministerio del tabernáculo, y más tarde en el templo que lo reemplazó, mediante figuras y sombras se enseñaban diariamente al pueblo las grandes verdades relativas a la venida de Cristo como redentor, sacerdote y rey; y una vez al año se le inducía a contemplar los acontecimientos finales de la gran controversia entre Cristo y Satanás, que eliminarán del universo el pecado y los pecadores.\n\nLos sacrificios y las ofrendas del ritual mosaico señalaban siempre hacia adelante, hacia un servicio mejor, el celestial. El Santuario terrenal “era figura de aquel tiempo presente, en el cual se ofrecían presentes y sacrificios”; y sus dos lugares santos eran “figuras de las cosas celestiales”; pues Cristo, nuestro gran Sumo Sacerdote, es hoy “Ministro del santuario, y de aquel verdadero tabernáculo que el Señor asentó, y no hombre”. Hebreos 9:9, 23; 8:2.\n\nDesde el día en que el Señor declaró a la serpiente en el Edén: “Enemistad pondré entre ti y la mujer, y entre tu simiente y la simiente suya” (Génesis 3:15), supo Satanás que nunca podría ejercer el dominio absoluto sobre los habitantes de este mundo. Cuando Adán y sus hijos comenzaron a ofrecer los sacrificios ceremoniales ordenados por Dios como figura del Redentor venidero, Satanás discernió en ellos un símbolo de la comunión entre la tierra y el cielo. Durante los largos siglos que siguieron, se esforzó constantemente para interceptar esa comunión. Incansablemente procuró calumniar a Dios y dar una falsa interpretación a los ritos que señalaban al Salvador…\n\nMientras Dios deseaba enseñar a los hombres que el don que los reconcilia consigo mismo proviene de él, el gran enemigo de la humanidad procuró representar a Dios como un ser que se deleita en destruirlos. De este modo los sacrificios y los ritos mediante los cuales el cielo quería revelar el amor divino fueron pervertidos.\n\nCon sus palabras y sus acciones, durante su ministerio terrenal, el Mesías iba a revelar a la humanidad la gloria de Dios el Padre. Cada acto de su vida, cada palabra que hablara, cada milagro que realizara, iba a dar a conocer a la humanidad caída el amor infinito de Dios.\n\nMediante los patriarcas y los profetas, así como mediante las figuras y los símbolos, Dios hablaba al mundo del advenimiento de quien lo libertaría del pecado (Exaltad a Jesús, 12 de enero, p. 20).",
           "studyReferences": [
             {
-              "book": "1 Corintios 13",
-              "chapter": 0,
+              "book": "1 Corintios",
+              "chapter": 13,
               "verseStart": 0,
               "display": "1 Corintios 13"
             },
             {
-              "book": "Mateo 24: 12",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Mateo",
+              "chapter": 24,
+              "verseStart": 12,
               "display": "Mateo 24:12"
             },
             {
-              "book": "Gálatas 5: 22-23",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Gálatas",
+              "chapter": 5,
+              "verseStart": 22,
+              "verseEnd": 23,
               "display": "Gálatas 5:22-23"
             },
             {
-              "book": "1 Timoteo 1: 14",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Timoteo",
+              "chapter": 1,
+              "verseStart": 14,
               "display": "1 Timoteo 1:14"
             },
             {
-              "book": "1 Juan 4: 8",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Juan",
+              "chapter": 4,
+              "verseStart": 8,
               "display": "1 Juan 4:8"
             }
           ],
@@ -1243,39 +1271,42 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n1 Corintios 15; Lucas 24:44-47; Apocalipsis 20:5-6; Colosenses 2:12; 2 Timoteo 1:12; 1 Tesalonicenses 4:13-17.\n\n> Para memorizar\n> «Y si Cristo no resucitó, nuestra predicación es vana y la fe de ustedes también es vana. [...] Y si Cristo no resucitó, la fe de ustedes es vana y aún están en sus pecados» (1 Corintios 15:14, 17).\n\nEs fascinante considerar que, incluso en su época, Pablo tuviera que lidiar con quienes negaban la resurrección de los muertos. La gente de entonces veía lo que la muerte le hacía al cuerpo humano. Sabían cómo el cadáver terminaba convirtiéndose en polvo. También sabían que las personas que habían muerto llevaban mucho tiempo en esa condición; en la mayoría de los casos, más tiempo que el que habían vivido.\n\nLa resurrección de los muertos no les parecía más plausible entonces que a la mayoría de las personas actualmente. Ese debe haber sido uno de los temas que Pablo estaba abordando. Y también era crucial, pues, si Jesús no resucitó, no es quien dijo ser, la cruz no tuvo ningún efecto y el precio de nuestros pecados no ha sido pagado. En ese caso, solo nos quedaría la desesperación. Pero nuestro Señor ha resucitado, ha ascendido al cielo y volverá para llevarnos a casa.\n\nEsta semana nos centraremos en 1 Corintios 15 y lo que enseña acerca de la resurrección de Cristo. Influenciados por la cosmovisión pagana que los rodeaba, algunos en Corinto decían que no hay resurrección. En respuesta, Pablo afirma la resurrección de Cristo como nuestra única esperanza de salvación.\n\n---\n\n#### Comentarios Elena G.W\n\nCuando el cristiano se somete al solemne rito del bautismo, los tres poderes más altos del universo: el Padre, el Hijo y el Espíritu Santo, dan su aprobación a ese acto, comprometiéndose a ejercer su poder en beneficio de él mientras él se esfuerza por honrar a Dios. Es sepultado, a semejanza de la muerte de Cristo, y es levantado a semejanza de su resurrección…\n\nLos tres grandes poderes del cielo se comprometen a proporcionar al cristiano toda la asistencia que requiera. El Espíritu cambia el corazón de piedra en un corazón de carne. Y al participar de la Palabra de Dios, los cristianos obtienen una experiencia que busca la semejanza divina. Cuando Cristo habita en el corazón por la fe, el cristiano es el templo de Dios. Cristo no habita en el corazón del pecador, sino en el corazón de quien es susceptible a las influencias del Cielo.\n\nEl resplandor que procede del verdadero cristiano testifica de su unión con Cristo. El yo está oculto a la vista y Cristo es revelado. El Cielo reconoce el cumplimiento de la promesa… “Amados, ahora somos hijos de Dios, y aún no se ha manifestado lo que hemos de ser; pero sabemos que cuando él se manifieste, seremos semejantes a él, porque le veremos tal como él es”. 1 Juan 3:2. Entonces aquellos cuyas vidas han estado ocultas en Cristo, quienes han peleado la buena batalla de la fe en esta tierra, resplandecerán con la gloria del Redentor en el reino de Dios.\n\nHermano mío, hermana mía, el propósito de Dios para usted es que viva una vida que haga mejor a otros; una vida que mostrará que Cristo, la esperanza de gloria, está formado en el interior. Es su propósito que usted pueda decir con el apóstol Pablo: “Ya no vivo yo, más vive Cristo en mí”. Plenamente satisfecho, descansando en el amor de Cristo, en que el Redentor y Dador de la vida obrará por usted la salvación de su alma, usted sabrá a medida que se acerca más y aún más a él, lo que significa resistir la visión del que es Invisible. El contentamiento que Cristo concede es un don infinitamente más valioso que el oro y la plata y las piedras preciosas…\n\nNuestras vidas son puras solo cuando estamos bajo el control de Dios, y son felices solo cuando mantenemos comunión con él. El esplendor que poseen quienes han ganado la más rica experiencia es solo el reflejo de la luz del Sol de justicia. Quien vive más cerca de Jesús resplandecerá con mayor fulgor (Reflejemos a Jesús, 3 de abril, p. 99).",
           "studyReferences": [
             {
-              "book": "1 Corintios 15",
-              "chapter": 0,
+              "book": "1 Corintios",
+              "chapter": 15,
               "verseStart": 0,
               "display": "1 Corintios 15"
             },
             {
-              "book": "Lucas 24: 44-47",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Lucas",
+              "chapter": 24,
+              "verseStart": 44,
+              "verseEnd": 47,
               "display": "Lucas 24:44-47"
             },
             {
-              "book": "Apocalipsis 20: 5-6",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Apocalipsis",
+              "chapter": 20,
+              "verseStart": 5,
+              "verseEnd": 6,
               "display": "Apocalipsis 20:5-6"
             },
             {
-              "book": "Colosenses 2: 12",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Colosenses",
+              "chapter": 2,
+              "verseStart": 12,
               "display": "Colosenses 2:12"
             },
             {
-              "book": "2 Timoteo 1: 12",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Timoteo",
+              "chapter": 1,
+              "verseStart": 12,
               "display": "2 Timoteo 1:12"
             },
             {
-              "book": "1 Tesalonicenses 4: 13-17",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Tesalonicenses",
+              "chapter": 4,
+              "verseStart": 13,
+              "verseEnd": 17,
               "display": "1 Tesalonicenses 4:13-17"
             }
           ],
@@ -1407,40 +1438,46 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n2 Corintios 1:3-14; 2:17; 4:2; 1 Corintios 16:5-7; 2 Corintios 7:5-13; 2:5-17.\n\n> Para memorizar\n> «Porque por la mucha tribulación y angustia del corazón les escribí con muchas lágrimas; no para que sean contristados, sino para que supiesen cuánto los amo» (2 Corintios 2:4).\n\nLa vida del apóstol Pablo no fue fácil. Además de la cárcel y las situaciones que pusieron en peligro su existencia, también escribió: «De los judíos cinco veces recibí cuarenta azotes menos uno. Tres veces fui azotado con varas; una vez, apedreado. Tres veces naufragué. Una noche y un día pasé a la deriva en alta mar. Anduve de viaje muchas veces. Estuve en peligro de ríos, en peligro de salteadores, en peligro de los de mi raza, en peligro de los gentiles. Peligros en la ciudad, peligros en el desierto, peligros en el mar, peligros entre falsos hermanos. En trabajo y fatiga, en muchos desvelos, en hambre y sed, en muchos ayunos, en frío y desnudez. Además de otras cosas, lo que sobre mí se agolpa cada día: la preocupación por todas las iglesias» (2 Corintios 11:24-28).\n\nLo que vemos en sus Cartas a los corintios es parte de la profunda «preocupación» que sentía por esta iglesia. Sin embargo, en medio de todo eso, su amor por ellos nunca decayó. Lo mismo ocurre con el amor de Cristo por nosotros. De hecho, Pablo aprendió de Jesús a amar a las iglesias de una manera que refleja el amor que Cristo siente por nosotros (2 Corintios 5:14; ver 1 Corintios 11:1).\n\n---\n\n#### Comentarios Elena G.W\n\n“Considerad los lirios”. Cada flor que abre sus pétalos al sol obedece las mismas grandes leyes que rigen las estrellas; y ¡cuán sencilla, dulce y hermosa es su vida! Por medio de las flores, Dios quiere llamarnos la atención a la belleza del carácter cristiano. El que dotó de tal belleza a las flores desea, muchísimo más, que el alma se vista con la hermosura del carácter de Cristo.\n\nConsiderad cómo crecen los lirios, dijo Cristo; cómo, al brotar del suelo frío y oscuro, o del fango en el cauce de un río, las plantas se desarrollan bellas y fragantes. ¿Quién imaginaría las posibilidades de belleza que se esconden en el bulbo áspero y oscuro del lirio? Pero cuando la vida de Dios, oculta en su interior, se desarrolla en respuesta a su llamamiento mediante la lluvia y el sol, maravilla a los hombres por su visión de gracia y belleza. Así también se desarrollará la vida de Dios en toda alma humana que se entregue al ministerio de su gracia, la que tan gratuitamente como la lluvia y el sol llega con su bendición para todos. Es la palabra de Dios la que crea las flores; y la misma palabra producirá en nosotros las gracias de su Espíritu.\n\nLa ley de Dios es una ley de amor. Él nos rodeó de hermosura para enseñarnos que no estamos en la tierra únicamente para mirar por nosotros mismos, para cavar y construir, para trabajar e hilar, sino para hacer la vida esplendorosa, alegre y bella por el amor de Cristo. Así como las flores, hemos de alegrar otras vidas con el ministerio del amor.\n\nPadres, dejad a vuestros hijos que aprendan de las flores. Llevadlos al jardín, a la huerta, al campo, bajo los árboles frondosos, y enseñadles a leer en la naturaleza el mensaje del amor de Dios. Vinculad su recuerdo con el espectáculo de los pájaros, las flores y los árboles. Inducidlos a considerar en cada cosa agradable y hermosa una expresión del amor que Dios siente por ellos. Hacedles apreciar vuestra religión por su índole agradable. Rija vuestros labios la ley de la bondad.\n\nEnseñad a los niños la lección de que mediante el gran amor de Dios su naturaleza puede transformarse y ponerse en armonía con la suya. Enseñadles que él quiere que sus vidas tengan la hermosura y la gracia de las flores. Mientras recogen las flores fragantes, hacedles saber que quien las creó es más bello que ellas. Así los zarcillos de sus corazones se aferrarán a él. El que es “todo… codiciable” llegará a ser para ellos un compañero constante y un amigo íntimo, y sus vidas se transformarán a la imagen de su pureza (El discurso maestro de Jesucristo, pp. 82, 83).",
           "studyReferences": [
             {
-              "book": "2 Corintios 1: 3-14",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 1,
+              "verseStart": 3,
+              "verseEnd": 14,
               "display": "2 Corintios 1:3-14"
             },
             {
-              "book": "2: 17",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "2:17"
+              "book": "2 Corintios",
+              "chapter": 2,
+              "verseStart": 17,
+              "verseEnd": null,
+              "display": "2 Corintios 2:17"
             },
             {
-              "book": "4: 2",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "4:2"
+              "book": "2 Corintios",
+              "chapter": 4,
+              "verseStart": 2,
+              "verseEnd": null,
+              "display": "2 Corintios 4:2"
             },
             {
-              "book": "1 Corintios 16: 5-7",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Corintios",
+              "chapter": 16,
+              "verseStart": 5,
+              "verseEnd": 7,
               "display": "1 Corintios 16:5-7"
             },
             {
-              "book": "2 Corintios 7: 5-13",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 7,
+              "verseStart": 5,
+              "verseEnd": 13,
               "display": "2 Corintios 7:5-13"
             },
             {
-              "book": "2: 5-17",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "2:5-17"
+              "book": "2 Corintios",
+              "chapter": 2,
+              "verseStart": 5,
+              "verseEnd": 17,
+              "display": "2 Corintios 2:5-17"
             }
           ],
           "keyVerse": {
@@ -1571,39 +1608,45 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n2 Corintios 3:1-9; 4:7-18; 5:11-15; Colosenses 1:19-23; Efesios 2:13-16; 2 Corintios 6:11-7.\n\n> Para memorizar\n> «Estamos atribulados en todo, pero no angustiados; en apuros, pero no desesperados; perseguidos, pero no desamparados; abatidos, pero no destruidos. Llevamos siempre en nuestro cuerpo la muerte de Jesús, para que también su vida se manifieste en nuestro cuerpo» (2 Corintios 4:8-10).\n\nLa semana pasada vimos que, al afirmar la pureza de sus motivaciones y su sinceridad, Pablo se defendió de las acusaciones de inconstancia y falta de amor para con los corintios. Siempre trabajó por el bien de sus hijos espirituales.\n\nEn 2 Corintios 2:12-17, el apóstol comenzó una línea de pensamiento que llega hasta 2 Corintios 7 y en la que reflexiona acerca de las características de un ministerio cristiano auténtico. Podemos extraer muchas lecciones de los pensamientos de Pablo al respecto.\n\nEsta semana estudiaremos 2 Corintios 3-7, donde Pablo habla de su ministerio como ganador de almas para Cristo. Elena G. de White dice: «La conversión de los pecadores y su santificación por la verdad es la prueba más poderosa que un ministro puede tener de que Dios lo ha llamado al ministerio. La evidencia de su apostolado está escrita en los corazones de sus conversos y testificada por sus vidas renovadas. Cristo se forma en ellos como la esperanza de gloria. Un ministro es fortalecido grandemente por estas pruebas de su ministerio» (Elena G. de White, Los hechos de los apóstoles, p. 244).\n\n---\n\n#### Comentarios Elena G.W\n\nMinisterio significa servicio, y a este ministerio somos llamados. Deshonra a Dios el que alguno escoja una vida de satisfacción propia. Mis hermanos y hermanas, ¿comprenden ustedes que cada año miles de almas están pereciendo, muriendo en sus pecados porque la luz de la verdad no alumbró su senda?…\n\nHay una gran obra que hacer en nuestro mundo. Los hombres y las mujeres han de ser convertidos, no por el don de lenguas ni por la operación de milagros, sino por la predicación de Cristo crucificado. ¿Por qué demorar el esfuerzo por mejorar el mundo? ¿Por qué esperar que se haga algo maravilloso, que se provea alguna estructura costosa? Por humilde que sea su esfera, por modesto que sea su trabajo, si usted trabaja en armonía con las enseñanzas del Salvador, él se revelará por intermedio de usted, y su influencia atraerá las almas a él. Él honrará a los mansos y humildes, los que sinceramente buscan servirle. En todo lo que hacemos, sea en el taller, en la chacra o en la oficina, hemos de esforzarnos por ganar almas.\n\nHemos de sembrar junto a todas las aguas, manteniendo nuestra alma en el amor de Dios, y trabajando mientras es de día, usando los medios confiados a nosotros en el servicio al Maestro. No importa qué encuentren nuestras manos para hacer, trabajando mientras es de día, hemos de hacerlo con alegría; cualquier sacrificio que seamos llamados a hacer, hemos de hacerlo alegremente. Al sembrar junto a todas las aguas, descubriremos la verdad de las palabras: “El que siembra generosamente, generosamente también segará”.\n\nDebemos todo a la gracia, a la gracia soberana. La gracia decretó nuestra redención, nuestra regeneración y nuestra adopción para ser herederos con Cristo Jesús. Revelemos esta gracia a otros.\n\nEl Salvador toma a los que encuentra que serán moldeados y los usa para la gloria de su propio nombre. Usa materiales que otros dejarían de lado, y trabaja en todos los que han de entregarse a él. Se goza en tomar material aparentemente inservible, aquellos que Satanás ha degradado y por medio de los cuales ha trabajado, y los somete a su gracia. Se goza en librarlos del sufrimiento, y de la ira que está a punto de caer sobre los desobedientes. Hace de sus hijos agentes para realizar esta obra, y en su éxito, aun en esta vida, encuentran una preciosa recompensa.\n\nPero ¿qué es esto comparado con el gozo que tendrán en el gran día de la revelación final? (Reflejemos a Jesús, 30 de agosto, p. 248).",
           "studyReferences": [
             {
-              "book": "2 Corintios 3: 1-9",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 3,
+              "verseStart": 1,
+              "verseEnd": 9,
               "display": "2 Corintios 3:1-9"
             },
             {
-              "book": "4: 7-18",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "4:7-18"
+              "book": "2 Corintios",
+              "chapter": 4,
+              "verseStart": 7,
+              "verseEnd": 18,
+              "display": "2 Corintios 4:7-18"
             },
             {
-              "book": "5: 11-15",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "5:11-15"
+              "book": "2 Corintios",
+              "chapter": 5,
+              "verseStart": 11,
+              "verseEnd": 15,
+              "display": "2 Corintios 5:11-15"
             },
             {
-              "book": "Colosenses 1: 19-23",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Colosenses",
+              "chapter": 1,
+              "verseStart": 19,
+              "verseEnd": 23,
               "display": "Colosenses 1:19-23"
             },
             {
-              "book": "Efesios 2: 13-16",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Efesios",
+              "chapter": 2,
+              "verseStart": 13,
+              "verseEnd": 16,
               "display": "Efesios 2:13-16"
             },
             {
-              "book": "2 Corintios 6: 11-7",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 6,
+              "verseStart": 11,
+              "verseEnd": 7,
               "display": "2 Corintios 6:11-7"
             }
           ],
@@ -1735,46 +1778,54 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n2 Corintios 8-9; Juan 3:16; 17:5; Lucas 9:58; Apocalipsis 13:8; Romanos 12:8; 15:26-27.\n\n> Para memorizar\n> «Porque ya conocen la gracia de nuestro Señor Jesucristo, que por amor a ustedes se hizo pobre, siendo rico; para que ustedes fuesen enriquecidos con su pobreza» (2 Corintios 8:9).\n\nLos capítulos 8 y 9 de 2 Corintios muestran que Pablo dio a los corintios la oportunidad de servir a sus hermanos y hermanas en Judea. Este pasaje muestra que dar es un privilegio que Dios nos concede para que imitemos el carácter abnegado de Cristo. La dadivosidad es el lenguaje del cielo. Nota cuán significativas son las siguientes palabras: «Porque de tal manera amó Dios al mundo, que dio a su Hijo único» (Juan 3:16; énfasis añadido).\n\nAdemás, Juan 3:16 expresa claramente el propósito de Dios al dar a Jesús: «Para que todo el que crea en él no perezca, sino que tenga vida eterna». La mayordomía y la misión van de la mano en este pasaje. Son tan inseparables como las dos caras de una moneda. No es de extrañar que Pablo se identificara a sí mismo y a sus compañeros de trabajo como «administradores de los secretos de Dios» (1 Corintios 4:1). Nosotros también somos mayordomos en el mismo sentido.\n\nEsta semana veremos que los conceptos de mayordomía y misión están profundamente arraigados en el ejemplo de Jesús. De hecho, son inseparables. La mayordomía proporciona a la iglesia los recursos financieros y humanos para cumplir la misión de Dios.\n\n---\n\n#### Comentarios Elena G.W\n\nEn cada acto de la vida, el verdadero cristiano es solo lo que desea que piensen que es los que lo rodean. Se guía por la verdad y la rectitud… Puede ser criticado, probado, pero a través de todo, su inflexible integridad resplandece como oro puro. Es un amigo y un benefactor de todos los que están relacionados con él, y sus semejantes tienen puesta su confianza en él porque es digno de crédito. ¿Emplea obreros para recoger su cosecha? No les escatima el dinero duramente ganado. ¿Tiene medios que no necesita ocupar de inmediato? Alivia las necesidades de sus hermanos menos afortunados.\n\nNo trata de agrandar sus posesiones aprovechándose de las circunstancias adversas de sus vecinos. Acepta solo el precio justo de lo que vende. Si hay defectos en los artículos vendidos, habla francamente al comprador, aun cuando con ello pueda parecerle que obra contra sus propios intereses pecuniarios…\n\nSatanás conoce muy bien qué poder para bien hay en la vida de un hombre de integridad inflexible, y hace ingentes esfuerzos para impedir que esos hombres vivan tales vidas. Se les acerca con seductoras tentaciones, prometiéndoles salud, posición, honor mundanal, si tan solo flaquean en los principios de justicia. Y tiene mucho éxito… En la triste historia de muchos que han caído aprendemos el peligro de la prosperidad. No son los que han perdido sus bienes los que están en mayor peligro sino aquellos que han conseguido una fortuna… La oración es a menudo pedida por hombres y mujeres que están en aflicción; y eso es correcto. Pero los que están en prosperidad tienen mayor necesidad de la oración de los siervos de Dios, porque están en mayor peligro de perder la salvación. En el valle de la humillación los hombres caminan seguros mientras reverencian a Dios y hacen de él su confianza. Sobre el alto pináculo, donde se escucha la alabanza, necesitan la ayuda del poder especial de lo alto (In Heavenly Places, p. 243; parcialmente en En los lugares celestiales, 24 de agosto, p. 245).\n\nLa obra de Dios debe ser sustentada mediante diezmos, donaciones y ofrendas. El Señor pide ahora los medios que ha confiado a sus mayordomos. Debiera fluir una corriente constante a la tesorería, a fin de que la obra no se vea obstaculizada. A algunos. Dios les ha confiado riquezas terrenales para ser tenidas en custodia y devueltas a él a medida que las requiera para llevar adelante su obra en la tierra. Requiere de sus mayordomos un diezmo fiel de todo su capital, y en adición al diezmo pide donaciones y ofrendas.\n\nEl Señor no requiere de sus seguidores nada más que lo que él realizó. Aquellos que practican la abnegación y se sacrifican por la causa de Dios, no están sino siguiendo su ejemplo. Él puso a un lado su manto real y su regia corona, y descendiendo de su alto puesto se hizo pobre, a fin de que mediante su pobreza pudiéramos llegar a estar en posesión de los tesoros eternos. Dio no solamente sus riquezas, sino su propia vida en abnegación y sacrificio, a fin de eliminar todo obstáculo a los que buscan entrar en el reino de Dios…\n\nEl Señor Jesús nos invita a ser obreros juntamente con él. Es el dueño de todo lo que poseemos y tiene derecho sobre ello. Mediante nuestra disposición de ayudar en su obra podemos mostrar ahora nuestro amor por él (Alza tus ojos, 9 de abril, p. 111).",
           "studyReferences": [
             {
-              "book": "2 Corintios 8-9",
-              "chapter": 0,
+              "book": "2 Corintios",
+              "chapter": 8,
               "verseStart": 0,
-              "display": "2 Corintios 8-9"
+              "display": "2 Corintios 8"
             },
             {
-              "book": "Juan 3: 16",
-              "chapter": 0,
+              "book": "2 Corintios",
+              "chapter": 9,
               "verseStart": 0,
+              "display": "2 Corintios 9"
+            },
+            {
+              "book": "Juan",
+              "chapter": 3,
+              "verseStart": 16,
               "display": "Juan 3:16"
             },
             {
-              "book": "17: 5",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "17:5"
+              "book": "Juan",
+              "chapter": 17,
+              "verseStart": 5,
+              "verseEnd": null,
+              "display": "Juan 17:5"
             },
             {
-              "book": "Lucas 9: 58",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Lucas",
+              "chapter": 9,
+              "verseStart": 58,
               "display": "Lucas 9:58"
             },
             {
-              "book": "Apocalipsis 13: 8",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Apocalipsis",
+              "chapter": 13,
+              "verseStart": 8,
               "display": "Apocalipsis 13:8"
             },
             {
-              "book": "Romanos 12: 8",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Romanos",
+              "chapter": 12,
+              "verseStart": 8,
               "display": "Romanos 12:8"
             },
             {
-              "book": "15: 26-27",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "15:26-27"
+              "book": "Romanos",
+              "chapter": 15,
+              "verseStart": 26,
+              "verseEnd": 27,
+              "display": "Romanos 15:26-27"
             }
           ],
           "keyVerse": {
@@ -1905,40 +1956,45 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n2 Corintios 10:1-17; Jeremías 9:24; 2 Corintios 11:1-15, 22-28; 12:20-21; 13:5.\n\n> Para memorizar\n> «Porque las armas de nuestra milicia no son mundanas, sino poderosas en Dios para destruir fortalezas» (2 Corintios 10:4).\n\nComo si Pablo no hubiera tenido ya suficientes problemas, surgió otro con el que también tuvo que lidiar: los falsos maestros en la iglesia. Estas personas se oponían a él, a su obra y a su ministerio. Peor aún, estos falsos maestros también habían seducido a los miembros de Corinto. El apóstol se refiere a su lucha contra este problema como una guerra espiritual.\n\n¿Era eso una exageración? En absoluto. Pablo sabía que, en última instancia, esas personas no se oponían a él, sino a Cristo. Pablo no era el tipo de líder narcisista preocupado por mantener su reputación como medio para legitimar su poder y su autoridad sobre sus subordinados. Sabía que el mensaje que se le había encomendado predicar era una cuestión de vida o muerte, con consecuencias eternas. Y sabía que había sido enviado por Dios mismo para ello. «Pablo, llamado a ser apóstol de Jesucristo por la voluntad de Dios» (1 Corintios 1:1).\n\nCuando se trata de falsas enseñanzas, se supone que la iglesia debe actuar con amor, pero con firmeza, basándose en la autoridad de las Escrituras. El mensaje del evangelio debe conservarse intacto y puro para dar a las almas la esperanza de la eternidad.\n\n---\n\n#### Comentarios Elena G.W\n\nEl primero y más alto deber de toda criatura racional es el de escudriñar la verdad en las Sagradas Escrituras y luego andar en la luz y exhortar a otros a que sigan su ejemplo. Día tras día deberíamos estudiar diligentemente la Biblia, pesando cada pensamiento y comparando texto con texto. Con la ayuda de Dios debemos formarnos nuestras propias opiniones ya que tenemos que responder a Dios por nosotros mismos.\n\nLas verdades que se encuentran explicadas con la mayor claridad en la Biblia han sido envueltas en dudas y oscuridad por hombres doctos, que con ínfulas de gran sabiduría enseñan que las Escrituras tienen un sentido místico, secreto y espiritual que no se echa de ver en el lenguaje empleado en ellas. Esos hombres son falsos maestros. Fue a personas semejantes a quienes Jesús declaró: “No conocéis las Escrituras, ni el poder de Dios”. Marcos 12:24 (VM). El lenguaje de la Biblia debe explicarse de acuerdo con su significado manifiesto, a no ser que se trate de un símbolo o figura. Cristo prometió: “Si alguno quisiere hacer su voluntad [del Padre], conocerá de mi enseñanza, si es de Dios”. Juan 7:17 (VM). Si los hombres quisieran tan solo aceptar lo que la Biblia dice, y si no hubiera falsos maestros para alucinar y confundir las inteligencias, se realizaría una obra que alegraría a los ángeles y que traería al rebaño de Cristo a miles y miles de almas actualmente sumidas en el error.\n\nDeberíamos ejercitar en el estudio de las Santas Escrituras todas las fuerzas del entendimiento y procurar comprender, hasta donde es posible a los mortales, las profundas enseñanzas de Dios; pero no debemos olvidar que la disposición del estudiante debe ser dócil y sumisa como la de un niño. Las dificultades bíblicas no pueden ser resueltas por los mismos métodos que se emplean cuando se trata de problemas filosóficos. No deberíamos ponernos a estudiar la Biblia con esa confianza en nosotros mismos con la cual tantos abordan los dominios de la ciencia, sino en el espíritu de oración y dependencia filial hacia Dios y con un deseo sincero de conocer su voluntad. Debemos acercarnos con espíritu humilde y dócil para obtener conocimiento del gran YO SOY. De lo contrario vendrán ángeles malos a oscurecer nuestras mentes y a endurecer nuestros corazones al punto que la verdad ya no nos impresionará.\n\nMás de una porción de las Sagradas Escrituras que los eruditos declaran ser un misterio o que estiman de poca importancia, está llena de consuelo e instrucción para el que estudió en la escuela de Cristo (El conflicto de los siglos, pp. 584, 585).",
           "studyReferences": [
             {
-              "book": "2 Corintios 10: 1-17",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 10,
+              "verseStart": 1,
+              "verseEnd": 17,
               "display": "2 Corintios 10:1-17"
             },
             {
-              "book": "Jeremías 9: 24",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Jeremías",
+              "chapter": 9,
+              "verseStart": 24,
               "display": "Jeremías 9:24"
             },
             {
-              "book": "2 Corintios 11: 1-15",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 11,
+              "verseStart": 1,
+              "verseEnd": 15,
               "display": "2 Corintios 11:1-15"
             },
             {
-              "book": "22-28",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "22-28"
+              "book": "2 Corintios",
+              "chapter": 11,
+              "verseStart": 22,
+              "verseEnd": 28,
+              "display": "2 Corintios 11:22-28"
             },
             {
-              "book": "12: 20-21",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "12:20-21"
+              "book": "2 Corintios",
+              "chapter": 12,
+              "verseStart": 20,
+              "verseEnd": 21,
+              "display": "2 Corintios 12:20-21"
             },
             {
-              "book": "13: 5",
-              "chapter": 0,
-              "verseStart": 0,
-              "display": "13:5"
+              "book": "2 Corintios",
+              "chapter": 13,
+              "verseStart": 5,
+              "verseEnd": null,
+              "display": "2 Corintios 13:5"
             }
           ],
           "keyVerse": {
@@ -2069,39 +2125,42 @@
           "contentMarkdown": "### Lee para el estudio de esta semana\n2 Corintios 8:9; Romanos 16:20; 1 Juan 4:8-11; 2 Corintios 13:11; Filipenses 2:1-2; Gálatas 4:4-6.\n\n> Para memorizar\n> «La gracia del Señor Jesucristo, el amor de Dios y la comunión del Espíritu Santo sean con todos ustedes» (2 Corintios 13:13).\n\nPablo concluye 2 Corintios destacando nuevamente los elementos esenciales abordados en sus Cartas. Lo hace por medio de cinco imperativos (2 Corintios 13:11).\n\nEl primero, «tengan gozo», recuerda textos anteriores de las Cartas.\n\nEl segundo imperativo, «busquen su restauración» (NVI), es la traducción de una sola palabra en griego (_katartizō_), que aparece aquí y en 1 Corintios 1:10.\n\nEl tercero, «anímense mutuamente», retoma 2 Corintios 1:3-7. Pablo comienza y termina su segunda Cartas con palabras de aliento. Recibimos ánimo de Dios para alentar a otros (2 Corintios 1:4, 6).\n\nLos imperativos cuarto y quinto, «Sean de un mismo sentir y vivan en paz» (2 Corintios 13:11), son un llamado a la unidad. Esta atmósfera de gozo, restauración, ánimo, unidad y paz es la condición para la presencia del «Dios de paz y amor» (2 Corintios 13:11) y el resultado de su obra en el corazón humano (2 Corintios 13:13).\n\nLa gracia, el amor y la comunión son el resultado de la obra del Dios trino por nosotros. Estas tres características cristianas promueven un ambiente caracterizado por la presencia de Dios.\n\n---\n\n#### Comentarios Elena G.W\n\nLa esencia y la sustancia de todo el tema de la gracia y la experiencia cristiana consisten en creer en Cristo, en conocer a Dios y a su Hijo a quien él ha enviado. Pero aquí es donde muchos fracasan porque les falta fe en Dios. En vez de desear entrar en compañerismo con Cristo en su abnegación y humillación, siempre procuran la supremacía del yo… Si tan solo apreciáramos el amor de Dios, cómo se expandirían nuestros corazones, cómo se agrandarían nuestras simpatías limitadas y se quebrantarían las barreras de hielo del egoísmo y nuestra comprensión sería más profunda de lo que es ahora…\n\nPorque no conocemos a Dios, porque no tenemos fe en Cristo, porque no estamos profundamente impresionados con la humillación que él sufrió en nuestro lugar, es por lo que su abatimiento no nos induce a la humillación del yo, a la exaltación de Jesús… ¡Oh, si amarais a Cristo como él os ha amado, no rehuiríais vivir los capítulos oscuros del sufrimiento del Hijo de Dios!\n\nA fin de participar con Cristo en sus sufrimientos, debemos contemplar al Cordero de Dios que quita los pecados del mundo. Cuando contemplamos la humillación de Cristo, contemplando su abnegación y sacrificio propio, nos llenamos de admiración ante la manifestación del amor divino para el hombre culpable. Cuando, por causa de Cristo, se nos llama a pasar por pruebas que son humillantes, si tenemos la mente de Cristo, las sufriremos con mansedumbre, sin resentirnos por las injurias ni resistiendo el mal. Manifestaremos el espíritu que mora en Cristo… Hemos de comprender que el sacrificio, los trabajos y los sufrimientos de Cristo existieron para que podamos cooperar con él para que se efectúe el gran plan de la redención (A fin de conocerle, 8 de abril, p. 104).\n\nLa iglesia es la sociedad cristiana formada por los miembros que la componen, para que cada uno goce de la ayuda de todas las gracias y talentos de los demás miembros, y también de la operación de Dios en su favor, de acuerdo con los diversos dones y habilidades que Dios les concedió. La iglesia está unida en los sagrados vínculos del compañerismo a fin de que cada miembro se beneficie de la influencia de los demás. Todos deben unirse al pacto de amor y armonía que existe. Los principios y las gracias cristianas de toda la sociedad de creyentes han de comunicar fortaleza y poder en una acción armoniosa. Cada creyente debe beneficiarse y progresar por la influencia refinadora y transformadora de las variadas capacidades de otros miembros, para que las cosas que falten en uno puedan ser más abundantemente desplegadas en otro. Todos los miembros deben acercarse el uno al otro, para que la iglesia llegue a ser un espectáculo ante el mundo, ante los ángeles y ante los hombres.\n\nEl compromiso que caracteriza el pacto de los miembros de la iglesia es que cada uno camine en los pasos de Cristo, que cada uno tome sobre sí el yugo de Cristo y aprenda de Aquel que es manso y humilde de corazón. Haciendo esto, “hallaréis —dice el amado Salvador— descanso para vuestras almas. Porque mi yugo es fácil, y ligera mi carga”. Mateo 11:29, 30.\n\nLos que llevan el yugo de Cristo marcharán unidos; cultivarán la simpatía y la tolerancia, y con santa imitación lucharán por mostrar a los demás la tierna simpatía y el amor que ellos mismos necesitan grandemente. El que es débil y carece de experiencia, aunque sea débil puede ser fortalecido por el que tiene más esperanza y por los que poseen una experiencia madura. Aunque sea el menor de todos es una piedra que debe brillar en el edificio. Es un miembro vital del cuerpo organizado, unido a Cristo, la cabeza viviente, y por medio de Cristo está identificado a tal punto con todas las excelencias del carácter del Señor, que este no se avergüenza de llamarlo hermano… Una iglesia separada y distinta del mundo es, en la estima del cielo, el objeto de más valor en toda la tierra… La iglesia debe ser lo que Dios ordenó que fuera: un representante de la familia de Dios en otro mundo (Exaltad a Jesús, 8 de octubre, p. 289).",
           "studyReferences": [
             {
-              "book": "2 Corintios 8: 9",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 8,
+              "verseStart": 9,
               "display": "2 Corintios 8:9"
             },
             {
-              "book": "Romanos 16: 20",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Romanos",
+              "chapter": 16,
+              "verseStart": 20,
               "display": "Romanos 16:20"
             },
             {
-              "book": "1 Juan 4: 8-11",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "1 Juan",
+              "chapter": 4,
+              "verseStart": 8,
+              "verseEnd": 11,
               "display": "1 Juan 4:8-11"
             },
             {
-              "book": "2 Corintios 13: 11",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "2 Corintios",
+              "chapter": 13,
+              "verseStart": 11,
               "display": "2 Corintios 13:11"
             },
             {
-              "book": "Filipenses 2: 1-2",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Filipenses",
+              "chapter": 2,
+              "verseStart": 1,
+              "verseEnd": 2,
               "display": "Filipenses 2:1-2"
             },
             {
-              "book": "Gálatas 4: 4-6",
-              "chapter": 0,
-              "verseStart": 0,
+              "book": "Gálatas",
+              "chapter": 4,
+              "verseStart": 4,
+              "verseEnd": 6,
               "display": "Gálatas 4:4-6"
             }
           ],
