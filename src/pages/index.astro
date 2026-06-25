@@ -19,7 +19,7 @@ const quarter = getQuarter();
     <section class="manuscript" aria-label="Resumen del trimestre">
       <div class="manuscript-inner">
         <h2>Introducción</h2>
-        <h3 class="manuscript-subtitle">La Esencia de la Vida y el Testimonio Cristiano</h3>
+        <h3 class="manuscript-subtitle">Primera y Segunda a los Corintios</h3>
         {quarter.description.split("\n\n").slice(0, -1).map((paragraph) => (
           <ManuscriptReader text={paragraph.trim()} client:load />
         ))}
