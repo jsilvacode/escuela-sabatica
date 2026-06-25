@@ -231,6 +231,14 @@
           "description": "Audio resumen · Audio Escuela Sabática",
           "url": "https://www.audioescuelasabatica.com/wp-content/uploads/2026/06/LECCION-1-VIERNES.mp3",
           "external": true
+        },
+        {
+          "id": "pdf-lecc-01",
+          "type": "pdf",
+          "title": "PDF — Lección 1: El ministerio de Pablo en Corinto",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/01/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -380,6 +388,14 @@
           "description": "Estudio en inglés · Adventech",
           "url": "https://sabbath-school.adventech.io/en/2026-03/02/01",
           "thumbnail": "/images/lecciones/lecc2.jpg",
+          "external": true
+        },
+        {
+          "id": "pdf-lecc-02",
+          "type": "pdf",
+          "title": "PDF — Lección 2: El mensaje de la cruz",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/02/01",
           "external": true
         }
       ],
@@ -543,6 +559,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/03/01",
           "thumbnail": "/images/lecciones/lecc3.jpg",
           "external": true
+        },
+        {
+          "id": "pdf-lecc-03",
+          "type": "pdf",
+          "title": "PDF — Lección 3: Unidad en Cristo",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/03/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -692,6 +716,14 @@
           "description": "Estudio en inglés · Adventech",
           "url": "https://sabbath-school.adventech.io/en/2026-03/04/01",
           "thumbnail": "/images/lecciones/lecc4.jpg",
+          "external": true
+        },
+        {
+          "id": "pdf-lecc-04",
+          "type": "pdf",
+          "title": "PDF — Lección 4: El pecado en la iglesia",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/04/01",
           "external": true
         }
       ],
@@ -849,6 +881,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/05/01",
           "thumbnail": "/images/lecciones/lecc5.jpg",
           "external": true
+        },
+        {
+          "id": "pdf-lecc-05",
+          "type": "pdf",
+          "title": "PDF — Lección 5: «Todo para la gloria de Dios»",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/05/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -1005,6 +1045,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/06/01",
           "thumbnail": "/images/lecciones/lecc6.jpg",
           "external": true
+        },
+        {
+          "id": "pdf-lecc-06",
+          "type": "pdf",
+          "title": "PDF — Lección 6: Dones espirituales",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/06/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -1154,6 +1202,14 @@
           "description": "Estudio en inglés · Adventech",
           "url": "https://sabbath-school.adventech.io/en/2026-03/07/01",
           "thumbnail": null,
+          "external": true
+        },
+        {
+          "id": "pdf-lecc-07",
+          "type": "pdf",
+          "title": "PDF — Lección 7: Un retrato del amor",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/07/01",
           "external": true
         }
       ],
@@ -1311,6 +1367,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/08/01",
           "thumbnail": null,
           "external": true
+        },
+        {
+          "id": "pdf-lecc-08",
+          "type": "pdf",
+          "title": "PDF — Lección 8: El poder de la resurrección de Cristo",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/08/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -1467,6 +1531,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/09/01",
           "thumbnail": null,
           "external": true
+        },
+        {
+          "id": "pdf-lecc-09",
+          "type": "pdf",
+          "title": "PDF — Lección 9: Un ministerio impulsado por el amor",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/09/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -1622,6 +1694,14 @@
           "description": "Estudio en inglés · Adventech",
           "url": "https://sabbath-school.adventech.io/en/2026-03/10/01",
           "thumbnail": null,
+          "external": true
+        },
+        {
+          "id": "pdf-lecc-10",
+          "type": "pdf",
+          "title": "PDF — Lección 10: El ministerio cristiano auténtico",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/10/01",
           "external": true
         }
       ],
@@ -1785,6 +1865,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/11/01",
           "thumbnail": null,
           "external": true
+        },
+        {
+          "id": "pdf-lecc-11",
+          "type": "pdf",
+          "title": "PDF — Lección 11: Mayordomía y misión",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/11/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -1940,6 +2028,14 @@
           "description": "Estudio en inglés · Adventech",
           "url": "https://sabbath-school.adventech.io/en/2026-03/12/01",
           "thumbnail": null,
+          "external": true
+        },
+        {
+          "id": "pdf-lecc-12",
+          "type": "pdf",
+          "title": "PDF — Lección 12: Cómo lidiar con falsos maestros",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/12/01",
           "external": true
         }
       ],
@@ -2097,6 +2193,14 @@
           "url": "https://sabbath-school.adventech.io/en/2026-03/13/01",
           "thumbnail": null,
           "external": true
+        },
+        {
+          "id": "pdf-lecc-13",
+          "type": "pdf",
+          "title": "PDF — Lección 13: Gracia, amor y comunión",
+          "description": "Descargar PDF de la lección en Adventech",
+          "url": "https://sabbath-school.adventech.io/es/2026-03/13/01",
+          "external": true
         }
       ],
       "keyVerse": {
@@ -2115,12 +2219,12 @@
   ],
   "resources": [
     {
-      "id": "folleto-pdf",
+      "id": "folleto-completo",
       "type": "pdf",
-      "title": "Folleto 3er Trimestre 2026",
-      "description": "PDF completo del folleto",
-      "url": "/recursos/2026-q3/folleto.pdf",
-      "thumbnail": "/images/cover-2026-q3.png"
+      "title": "Folleto Completo 3er Trimestre 2026",
+      "description": "Descargar folleto completo en Adventech",
+      "url": "https://sabbath-school.adventech.io/es/2026-03",
+      "external": true
     }
   ],
   "keyVerse": {
