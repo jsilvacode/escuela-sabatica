@@ -643,6 +643,21 @@ img {
   text-align: left !important;
 }
 
+/* ── Video introductorio ── */
+.intro-video {
+  margin: var(--space-6) 0;
+}
+
+.intro-video-player {
+  width: 100%;
+  max-width: 820px;
+  display: block;
+  margin: var(--space-4) auto 0;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  background: #000;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
