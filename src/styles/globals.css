@@ -2439,4 +2439,8 @@ img {
     font-size: 0.9rem;
     line-height: 1.55;
   }
+
+  .section-separator {
+    margin: var(--space-4) 0;
+  }
 }
