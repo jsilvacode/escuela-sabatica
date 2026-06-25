@@ -656,6 +656,8 @@ img {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   background: #000;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .hero-actions {
