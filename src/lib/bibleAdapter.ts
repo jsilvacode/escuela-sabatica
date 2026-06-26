@@ -104,13 +104,28 @@ export async function getPassage(
     return { reference, version, verses: verses.length > 0 ? verses : [{ number: 1, text: "Capítulo no disponible." }] };
   }
   // toEnd: show from verseStart to end of chapter
-  const verseEnd = reference.toEnd
-    ? (chapter?.verses.length ?? reference.verseStart)
-    : (reference.verseEnd ?? reference.verseStart);
+  // crossChapter: show from verseStart to end of first chapter + start of next chapter to crossChapter.verseEnd
+  let verseEnd: number;
+  if (reference.toEnd) {
+    verseEnd = chapter?.verses.length ?? reference.verseStart;
+  } else {
+    verseEnd = reference.verseEnd ?? reference.verseStart;
+  }
 
-  const verses: BibleVerse[] = chapter?.verses
+  let verses: BibleVerse[] = chapter?.verses
     .filter(v => v.verse >= reference.verseStart && v.verse <= verseEnd)
     .map(v => ({ number: v.verse, text: v.text })) ?? [];
+
+  // Append cross-chapter verses if present
+  if (reference.crossChapter) {
+    const nextChapter = book.chapters.find(c => c.chapter === reference.crossChapter!.chapter);
+    if (nextChapter) {
+      const crossVerses = nextChapter.verses
+        .filter(v => v.verse <= reference.crossChapter!.verseEnd)
+        .map(v => ({ number: v.verse, text: v.text }));
+      verses = verses.concat(crossVerses);
+    }
+  }
 
   return {
     reference,

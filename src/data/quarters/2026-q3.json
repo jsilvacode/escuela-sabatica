@@ -28,12 +28,14 @@
               "book": "1 Corintios",
               "chapter": 1,
               "verseStart": 1,
+              "verseEnd": null,
               "display": "1 Corintios 1:1"
             },
             {
               "book": "Gálatas",
               "chapter": 1,
               "verseStart": 1,
+              "verseEnd": null,
               "display": "Gálatas 1:1"
             },
             {
@@ -61,6 +63,7 @@
               "book": "2 Corintios",
               "chapter": 2,
               "verseStart": 4,
+              "verseEnd": null,
               "display": "2 Corintios 2:4"
             }
           ],
@@ -284,12 +287,14 @@
               "book": "Colosenses",
               "chapter": 1,
               "verseStart": 20,
+              "verseEnd": null,
               "display": "Colosenses 1:20"
             },
             {
               "book": "1 Pedro",
               "chapter": 2,
               "verseStart": 24,
+              "verseEnd": null,
               "display": "1 Pedro 2:24"
             },
             {
@@ -445,12 +450,14 @@
               "book": "Romanos",
               "chapter": 1,
               "verseStart": 29,
+              "verseEnd": null,
               "display": "Romanos 1:29"
             },
             {
               "book": "1 Corintios",
               "chapter": 1,
               "verseStart": 10,
+              "verseEnd": null,
               "display": "1 Corintios 1:10"
             },
             {
@@ -478,6 +485,7 @@
               "book": "Colosenses",
               "chapter": 1,
               "verseStart": 24,
+              "verseEnd": null,
               "display": "Colosenses 1:24"
             }
           ],
@@ -640,14 +648,13 @@
               "book": "1 Corintios",
               "chapter": 6,
               "verseStart": 19,
+              "verseEnd": null,
               "toEnd": true,
-              "display": "1 Corintios 6:19"
-            },
-            {
-              "book": "1 Corintios",
-              "chapter": 7,
-              "verseStart": 9,
-              "display": "1 Corintios 7:9"
+              "crossChapter": {
+                "chapter": 7,
+                "verseEnd": 9
+              },
+              "display": "1 Corintios 6:19-7:9"
             }
           ],
           "keyVerse": {
@@ -787,6 +794,7 @@
               "book": "Hechos",
               "chapter": 15,
               "verseStart": 20,
+              "verseEnd": null,
               "display": "Hechos 15:20"
             },
             {
@@ -975,12 +983,14 @@
               "book": "1 Corintios",
               "chapter": 14,
               "verseStart": 27,
+              "verseEnd": null,
               "display": "1 Corintios 14:27"
             },
             {
               "book": "Amós",
               "chapter": 3,
               "verseStart": 7,
+              "verseEnd": null,
               "display": "Amós 3:7"
             }
           ],
@@ -1121,6 +1131,7 @@
               "book": "Mateo",
               "chapter": 24,
               "verseStart": 12,
+              "verseEnd": null,
               "display": "Mateo 24:12"
             },
             {
@@ -1134,12 +1145,14 @@
               "book": "1 Timoteo",
               "chapter": 1,
               "verseStart": 14,
+              "verseEnd": null,
               "display": "1 Timoteo 1:14"
             },
             {
               "book": "1 Juan",
               "chapter": 4,
               "verseStart": 8,
+              "verseEnd": null,
               "display": "1 Juan 4:8"
             }
           ],
@@ -1294,12 +1307,14 @@
               "book": "Colosenses",
               "chapter": 2,
               "verseStart": 12,
+              "verseEnd": null,
               "display": "Colosenses 2:12"
             },
             {
               "book": "2 Timoteo",
               "chapter": 1,
               "verseStart": 12,
+              "verseEnd": null,
               "display": "2 Timoteo 1:12"
             },
             {
@@ -1793,6 +1808,7 @@
               "book": "Juan",
               "chapter": 3,
               "verseStart": 16,
+              "verseEnd": null,
               "display": "Juan 3:16"
             },
             {
@@ -1806,18 +1822,21 @@
               "book": "Lucas",
               "chapter": 9,
               "verseStart": 58,
+              "verseEnd": null,
               "display": "Lucas 9:58"
             },
             {
               "book": "Apocalipsis",
               "chapter": 13,
               "verseStart": 8,
+              "verseEnd": null,
               "display": "Apocalipsis 13:8"
             },
             {
               "book": "Romanos",
               "chapter": 12,
               "verseStart": 8,
+              "verseEnd": null,
               "display": "Romanos 12:8"
             },
             {
@@ -1966,6 +1985,7 @@
               "book": "Jeremías",
               "chapter": 9,
               "verseStart": 24,
+              "verseEnd": null,
               "display": "Jeremías 9:24"
             },
             {
@@ -2128,12 +2148,14 @@
               "book": "2 Corintios",
               "chapter": 8,
               "verseStart": 9,
+              "verseEnd": null,
               "display": "2 Corintios 8:9"
             },
             {
               "book": "Romanos",
               "chapter": 16,
               "verseStart": 20,
+              "verseEnd": null,
               "display": "Romanos 16:20"
             },
             {
@@ -2147,6 +2169,7 @@
               "book": "2 Corintios",
               "chapter": 13,
               "verseStart": 11,
+              "verseEnd": null,
               "display": "2 Corintios 13:11"
             },
             {

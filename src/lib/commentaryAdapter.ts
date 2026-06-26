@@ -56,8 +56,13 @@ export async function getCommentary(reference: BibleReference): Promise<Commenta
     return entries;
   }
 
-  // Get commentary for the verse range
-  const verseEnd = reference.verseEnd ?? reference.verseStart;
+  // Get commentary for the verse range (including toEnd + crossChapter)
+  const maxVerse = Object.keys(chapterData)
+    .map(Number).filter(n => !isNaN(n))
+    .reduce((max, n) => n > max ? n : max, 0);
+  const verseEnd = reference.toEnd
+    ? maxVerse
+    : (reference.verseEnd ?? reference.verseStart);
   for (let v = reference.verseStart; v <= verseEnd; v++) {
     const text = chapterData[String(v)];
     if (text) {
@@ -66,6 +71,26 @@ export async function getCommentary(reference: BibleReference): Promise<Commenta
         content: text,
         source: `CBA ${bookMeta.name} ${reference.chapter}:${v}`,
       });
+    }
+  }
+
+  // Append cross-chapter commentary if present
+  if (reference.crossChapter) {
+    const nextChapterData = await getChapterCommentary(bookMeta.id, reference.crossChapter.chapter);
+    if (nextChapterData) {
+      const nextKeys = Object.keys(nextChapterData)
+        .map(Number).filter(n => !isNaN(n) && n <= reference.crossChapter!.verseEnd)
+        .sort((a, b) => a - b);
+      for (const v of nextKeys) {
+        const text = nextChapterData[String(v)];
+        if (text) {
+          entries.push({
+            reference,
+            content: text,
+            source: `CBA ${bookMeta.name} ${reference.crossChapter!.chapter}:${v}`,
+          });
+        }
+      }
     }
   }
 
