@@ -19,10 +19,7 @@ const { lesson, activeDayId = lesson.days[0]?.id, compact = false } = Astro.prop
         aria-current={day.id === activeDayId ? "page" : undefined}
       >
         {compact ? (
-          <>
-            Día {index + 1}
-            <span>{day.dayName}</span>
-          </>
+          day.dayName
         ) : (
           day.dayName
         )}
@@ -38,7 +35,7 @@ const { lesson, activeDayId = lesson.days[0]?.id, compact = false } = Astro.prop
         value={`/lecciones/${lesson.id}/${day.id}`}
         selected={day.id === activeDayId}
       >
-        Día {index + 1} — {day.dayName}
+        {day.dayName}
       </option>
     ))
   }

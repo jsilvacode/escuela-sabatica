@@ -1416,38 +1416,30 @@ img {
 
 .compact-days {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-2);
   overflow-x: auto;
   padding: var(--space-4) 0;
 }
 
 .compact-day {
+  flex: 1;
   display: grid;
   place-items: center;
-  min-width: 86px;
   min-height: 50px;
-  padding: 0 14px;
+  padding: 0 8px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-white-warm);
   color: var(--color-navy-900);
-  font-size: 0.86rem;
+  font-size: 0.82rem;
   font-weight: 800;
-}
-
-.compact-day span {
-  display: block;
-  color: var(--color-slate-500);
-  font-size: 0.72rem;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .compact-day.active {
   color: #ffffff;
   background: var(--color-navy-900);
-}
-
-.compact-day.active span {
-  color: rgba(255, 255, 255, 0.72);
 }
 
 .day-select {
