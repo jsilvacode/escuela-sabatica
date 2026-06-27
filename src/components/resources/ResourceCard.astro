@@ -11,20 +11,22 @@ const labels: Record<string, string> = {
   pdf: "PDF",
   ppt: "PPT",
   audio: "AUDIO",
+  article: "ARTÍCULO",
 };
 
 const typeColors: Record<string, string> = {
   pdf: "#a33b2b",
   ppt: "#6b7f5e",
   audio: "#316395",
+  article: "#5b4a9e",
 };
 ---
 
-<article class="resource-card" data-type={resource.type} data-share-url={resource.url} data-share-title={resource.title}>
+<article class="resource-card" data-type={resource.type} data-share-url={resource.url} data-share-title={resource.title} {...(resource.type === "article" ? { "data-article-url": resource.url, "data-article-title": resource.title } : {})}>
   <div class="resource-thumb">
     <img
       class="resource-cover"
-      src={resource.type === "audio" ? "/images/covers/audio-cover.svg" : resource.type === "ppt" ? "/images/covers/ppt-cover.svg" : "/images/covers/pdf-cover.svg"}
+      src={resource.type === "audio" ? "/images/covers/audio-cover.svg" : resource.type === "ppt" ? "/images/covers/ppt-cover.svg" : resource.type === "article" ? "/images/covers/article-cover.svg" : "/images/covers/pdf-cover.svg"}
       alt={resource.type.toUpperCase()}
       loading="lazy"
     />
@@ -33,7 +35,9 @@ const typeColors: Record<string, string> = {
   <div class="resource-body">
     <h3>{resource.title}</h3>
     <p>{resource.description ?? "Material descargable"}</p>
-    {resource.external ? (
+    {resource.type === "article" ? (
+      <button class="resource-link" type="button" data-article-url={resource.url} data-article-title={resource.title}>Leer artículo →</button>
+    ) : resource.external ? (
       <a class="resource-link" href={resource.url} target="_blank" rel="noopener noreferrer">Abrir recurso →</a>
     ) : (
       <a class="resource-link" href={resource.url} download>Descargar →</a>

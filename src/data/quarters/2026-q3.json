@@ -2178,7 +2178,99 @@
       "description": ""
     }
   ],
-  "resources": [],
+  "resources": [
+    {
+      "id": "cb-intro-1cor",
+      "type": "article",
+      "title": "Introducción a 1 Corintios",
+      "description": "Contexto histórico y literario de la primera carta a los Corintios",
+      "url": "/material/cb_intro_1cor.html"
+    },
+    {
+      "id": "res-cap5",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 5",
+      "description": "Resumen del capítulo 5: Inmoralidad en la iglesia",
+      "url": "/material/res_cap5.html"
+    },
+    {
+      "id": "res-cap6",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 6",
+      "description": "Resumen del capítulo 6: Pleitos y pureza sexual",
+      "url": "/material/res_cap6.html"
+    },
+    {
+      "id": "res-cap7",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 7",
+      "description": "Resumen del capítulo 7: Matrimonio y soltería",
+      "url": "/material/res_cap7.html"
+    },
+    {
+      "id": "res-cap8",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 8",
+      "description": "Resumen del capítulo 8: Lo sacrificado a los ídolos",
+      "url": "/material/res_cap8.html"
+    },
+    {
+      "id": "res-cap9",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 9",
+      "description": "Resumen del capítulo 9: Los derechos del apóstol",
+      "url": "/material/res_cap9.html"
+    },
+    {
+      "id": "res-cap10",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 10",
+      "description": "Resumen del capítulo 10: Advertencias contra la idolatría",
+      "url": "/material/res_cap10.html"
+    },
+    {
+      "id": "res-cap11",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 11",
+      "description": "Resumen del capítulo 11: La Cena del Señor",
+      "url": "/material/res_cap11.html"
+    },
+    {
+      "id": "res-cap12",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 12",
+      "description": "Resumen del capítulo 12: Dones espirituales",
+      "url": "/material/res_cap12.html"
+    },
+    {
+      "id": "res-cap13",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 13",
+      "description": "Resumen del capítulo 13: El amor",
+      "url": "/material/res_cap13.html"
+    },
+    {
+      "id": "res-cap14",
+      "type": "article",
+      "title": "Resumen — 1 Corintios 14",
+      "description": "Resumen del capítulo 14: Profecía y lenguas",
+      "url": "/material/res_cap14.html"
+    },
+    {
+      "id": "viernes1",
+      "type": "article",
+      "title": "Complemento — Lección 1",
+      "description": "Recurso adicional para el estudio del Viernes",
+      "url": "/material/viernes1.html"
+    },
+    {
+      "id": "viernes2",
+      "type": "article",
+      "title": "Complemento — Lección 2",
+      "description": "Recurso adicional para el estudio del Viernes",
+      "url": "/material/viernes2.html"
+    }
+  ],
   "keyVerse": {
     "reference": {
       "book": "Hechos",
