@@ -10,7 +10,6 @@ type Props = {
 const { lesson, activeDay } = Astro.props;
 const lessonResources = lesson.resources ?? [];
 const pptResources = lessonResources.filter(r => r.type === "ppt");
-const pdfResources = lessonResources.filter(r => r.type === "pdf");
 
 const todayReading = activeDay?.date
   ? reavivadosData.reavivados?.find((r: { date: string }) => r.date === activeDay.date)
@@ -65,20 +64,6 @@ const dayAbbr: Record<string, string> = {
             <span class="sidebar-ppt-action">
               {resource.url && resource.url !== "#" ? "Descargar ↓" : "Próximamente"}
             </span>
-          </a>
-        ))}
-        {pdfResources.map((resource) => (
-          <a
-            class="sidebar-ppt-card"
-            href={resource.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="sidebar-ppt-cover">
-              <img src="/images/covers/pdf-cover.svg" alt="PDF" width="72" height="88" loading="lazy" />
-            </span>
-            <strong class="sidebar-ppt-title">PDF de la lección</strong>
-            <span class="sidebar-ppt-action">Descargar en Adventech →</span>
           </a>
         ))}
       </div>
