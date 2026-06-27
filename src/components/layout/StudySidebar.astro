@@ -29,24 +29,7 @@ const dayAbbr: Record<string, string> = {
 ---
 
 <aside class="right-rail" aria-label="Material complementario">
-  <!-- 1. Elena de White -->
-  <section class="study-widget">
-    <h3>Notas de Elena G. de White</h3>
-    {lesson.egwNotes ? (
-      <>
-        <p class="egw-text">{lesson.egwNotes}</p>
-        <div class="egw-source">
-          <a class="ghost-button" href={`/lecciones/${lesson.id}/viernes`}>
-            Leer completo en Viernes →
-          </a>
-        </div>
-      </>
-    ) : (
-      <p class="muted">Notas complementarias pronto disponibles.</p>
-    )}
-  </section>
-
-  <!-- 2. Material de la semana (PPT) -->
+  <!-- Material de la semana (PPT) -->
   <section class="study-widget">
     <h3>Material de la semana</h3>
     {pptResources.length > 0 ? (
@@ -72,7 +55,7 @@ const dayAbbr: Record<string, string> = {
     )}
   </section>
 
-  <!-- 3. Reavivados por su Palabra -->
+  <!-- Reavivados por su Palabra -->
   <section class="study-widget">
     <h3>Reavivados por su Palabra</h3>
     {reavivadosUrl ? (

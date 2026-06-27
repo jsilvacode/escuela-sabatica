@@ -1382,7 +1382,7 @@ img {
 
 .daily-layout {
   display: grid;
-  grid-template-columns: minmax(0, 820px) minmax(300px, 360px);
+  grid-template-columns: minmax(0, 900px) minmax(270px, 300px);
   gap: var(--space-6);
   align-items: start;
   justify-content: center;
