@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/(.*)", "has": [{ "type": "host", "value": "www.escuelasabatica.cl" }], "destination": "https://escuelasabatica.cl/$1", "permanent": true }
+  ]
+}
