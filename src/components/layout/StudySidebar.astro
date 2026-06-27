@@ -81,13 +81,13 @@ const dayAbbr: Record<string, string> = {
   {viernesFile && (
     <section class="study-widget">
       <h3>Complemento del Viernes</h3>
-      <a class="sidebar-ppt-card" href={viernesFile} target="_blank" rel="noopener noreferrer">
+       <button type="button" class="sidebar-ppt-card" data-article-url={viernesFile} data-article-title="Comentario de la semana">
         <span class="sidebar-ppt-cover">
           <img src="/images/covers/article-cover.svg" alt="Artículo" width="72" height="88" loading="lazy" />
         </span>
         <strong class="sidebar-ppt-title">Lectura complementaria</strong>
         <span class="sidebar-ppt-action">Leer →</span>
-      </a>
+      </button>
     </section>
   )}
 

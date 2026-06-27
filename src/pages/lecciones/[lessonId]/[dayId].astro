@@ -5,6 +5,7 @@ import DayTabs from "@components/lesson/DayTabs.astro";
 import { DailyReading } from "@components/lesson/DailyReading";
 import { AudioPlayer } from "@components/audio/AudioPlayer";
 import StudySidebar from "@components/layout/StudySidebar.astro";
+import { ArticleModal } from "@components/resources/ArticleModal";
 import { getAdjacentDay, getDay, getLesson, getLessons, getQuarter } from "@lib/lessonAdapter";
 
 export function getStaticPaths() {
@@ -71,9 +72,22 @@ const pageUrl = `/lecciones/${lesson.id}/${day.id}`;
         <DayTabs lesson={lesson} activeDayId={day.id} compact />
         <AudioPlayer client:load audio={day.audio} />
         <DailyReading client:load lesson={lesson} day={day} previousDay={previousDay} nextDay={nextDay} />
+        <ArticleModal client:load />
       </div>
 
       <StudySidebar lesson={lesson} activeDay={day} />
     </div>
   </div>
 </BaseLayout>
+
+<script is:inline>
+  // Open article modal on click (viernes complement + sidebar)
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest("[data-article-url]");
+    if (!btn) return;
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent("open-article", {
+      detail: { url: btn.dataset.articleUrl, title: btn.dataset.articleTitle }
+    }));
+  });
+</script>

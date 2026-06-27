@@ -285,11 +285,11 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
           <div className="viernes-complement">
             <div className="section-separator" style={{ margin: "var(--space-4) 0" }}></div>
             {lesson.number <= 2 ? (
-              <a
+              <button
+                type="button"
                 className="viernes-complement-link"
-                href={`/material/viernes${lesson.number}.html`}
-                target="_blank"
-                rel="noopener noreferrer"
+                data-article-url={`/material/viernes${lesson.number}.html`}
+                data-article-title={`Comentario de la semana — Lección ${lesson.number}`}
               >
                 <span className="viernes-complement-icon">
                   <img src="/images/covers/article-cover.svg" alt="" width="64" height="80" loading="lazy" />
@@ -299,7 +299,7 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
                   <span>Material de estudio complementario</span>
                 </div>
                 <span className="viernes-complement-arrow">Leer →</span>
-              </a>
+              </button>
             ) : (
               <div className="viernes-complement-link viernes-complement-disabled">
                 <span className="viernes-complement-icon">
