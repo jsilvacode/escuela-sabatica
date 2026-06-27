@@ -64,13 +64,15 @@ export function BibleStudyModal({ reference, onClose }: Props) {
   if (!reference) return null;
 
   const copyPassage = async () => {
-    await navigator.clipboard?.writeText(`${reference.display}\n${passageText}`);
+    await navigator.clipboard?.writeText(
+      `${reference.display}\n${passageText}\n\n🔗 Escuela Sabática\nhttps://escuelasabatica.cl`
+    );
   };
 
   const sharePassage = async () => {
     const data = {
       title: reference.display,
-      text: passageText,
+      text: `${passageText}\n\n📖 Escuela Sabática`,
       url: `https://escuelasabatica.cl`,
     };
     if (navigator.share) await navigator.share(data);
