@@ -56,7 +56,7 @@ export function ArticleModal(_props: Props) {
             Descargar HTML ↓
           </a>
           <button type="button" className="ghost-button" onClick={() => window.print()}>
-            Imprimir
+            Descargar PDF
           </button>
           <button type="button" className="ghost-button" onClick={onClose}>
             Cerrar

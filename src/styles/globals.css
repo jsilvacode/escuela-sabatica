@@ -2546,3 +2546,40 @@ button.sidebar-ppt-card {
     margin: var(--space-4) 0;
   }
 }
+
+/* ── Print / PDF export ── */
+@media print {
+  .app-shell,
+  .modal-backdrop,
+  .modal-header,
+  .modal-actions,
+  .sidebar,
+  .mobile-bottom-nav,
+  .site-header,
+  .header-inner,
+  .hamburger,
+  .layout-frame aside {
+    display: none !important;
+  }
+  .bible-modal {
+    position: static !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    width: 100% !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+  }
+  .modal-body {
+    overflow: visible !important;
+    padding: 0 20px !important;
+  }
+  .article-content {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
+  }
+  .article-content h1 { font-size: 18pt !important; }
+  .article-content h2 { font-size: 15pt !important; }
+  .article-content h3 { font-size: 13pt !important; }
+}
