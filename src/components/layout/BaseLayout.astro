@@ -47,12 +47,11 @@ const pageUrl = url ? `${SITE_URL}${url}` : SITE_URL;
     <script is:inline>
       // Share on long-press / right-click (mobile)
       (function() {
-        var SITE = "https://escuelasabatica.cl";
         var pressTimer = null;
         function shareCard(card) {
           if (!navigator.share) return;
           var path = card.dataset.shareUrl || "";
-          var absUrl = path.startsWith("http") ? path : SITE + (path.startsWith("/") ? path : "/" + path);
+          var absUrl = path.startsWith("http") ? path : location.origin + (path.startsWith("/") ? path : "/" + path);
           navigator.share({
             title: card.dataset.shareTitle || "",
             text: card.dataset.shareText || "",

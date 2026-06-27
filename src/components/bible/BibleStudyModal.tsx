@@ -65,7 +65,7 @@ export function BibleStudyModal({ reference, onClose }: Props) {
 
   const copyPassage = async () => {
     await navigator.clipboard?.writeText(
-      `${reference.display}\n${passageText}\n\n🔗 Escuela Sabática\nhttps://escuelasabatica.cl`
+      `${reference.display}\n${passageText}\n\n🔗 Escuela Sabática\n${location.origin}`
     );
   };
 
@@ -73,10 +73,10 @@ export function BibleStudyModal({ reference, onClose }: Props) {
     const data = {
       title: reference.display,
       text: `${passageText}\n\n📖 Escuela Sabática`,
-      url: `https://escuelasabatica.cl`,
+      url: location.origin,
     };
     if (navigator.share) await navigator.share(data);
-    else await navigator.clipboard?.writeText(`${data.title}\n${data.text}\n${data.url}`);
+    else await navigator.clipboard?.writeText(`${data.title}\n${data.text}\n${location.origin}`);
   };
 
   return (
