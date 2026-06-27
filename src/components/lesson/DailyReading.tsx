@@ -281,6 +281,39 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
           </div>
         )}
 
+        {day.id === "viernes" && (
+          <div className="viernes-complement">
+            <div className="section-separator" style={{ margin: "var(--space-4) 0" }}></div>
+            {lesson.number <= 2 ? (
+              <a
+                className="viernes-complement-link"
+                href={`/material/viernes${lesson.number}.html`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="viernes-complement-icon">
+                  <img src="/images/covers/article-cover.svg" alt="" width="64" height="80" loading="lazy" />
+                </span>
+                <div>
+                  <strong>Comentario de la semana</strong>
+                  <span>Material de estudio complementario</span>
+                </div>
+                <span className="viernes-complement-arrow">Leer →</span>
+              </a>
+            ) : (
+              <div className="viernes-complement-link viernes-complement-disabled">
+                <span className="viernes-complement-icon">
+                  <img src="/images/covers/article-cover.svg" alt="" width="64" height="80" loading="lazy" style={{ opacity: 0.35 }} />
+                </span>
+                <div>
+                  <strong>Comentario de la semana</strong>
+                  <span>Material de estudio — Próximamente</span>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
         <nav className="daily-nav" aria-label="Navegación entre días">
           {previousDay ? (
             <a className="ghost-button" href={`/lecciones/${lesson.id}/${previousDay.id}`}>
