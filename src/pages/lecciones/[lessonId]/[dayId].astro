@@ -42,9 +42,11 @@ const dayLabel = `${day.dayName} ${formatDate(day.date ?? "")}`;
 const heroEyebrow = `Lección ${lesson.number}, para el ${formatEndDate(lesson.endDate ?? "")}`;
 const previousDay = getAdjacentDay(lesson, day.id, -1);
 const nextDay = getAdjacentDay(lesson, day.id, 1);
+const pageDesc = `${day.dayName} — ${day.title}. Lección ${lesson.number}: ${lesson.title}.`;
+const pageUrl = `/lecciones/${lesson.id}/${day.id}`;
 ---
 
-<BaseLayout title={`${day.title} | ${lesson.title}`} activeSection="lessons">
+<BaseLayout title={`${day.title} | ${lesson.title}`} activeSection="lessons" description={pageDesc} image={lesson.image} url={pageUrl}>
   <div class="content-wrap">
     <PageHero
       variant="lesson"

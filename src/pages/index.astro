@@ -6,9 +6,10 @@ import { ManuscriptReader } from "@components/lesson/ManuscriptReader";
 import { getQuarter } from "@lib/lessonAdapter";
 
 const quarter = getQuarter();
+const pageDesc = quarter.description?.split("\n\n")[0]?.slice(0, 200) ?? undefined;
 ---
 
-<BaseLayout title="Escuela Sabática | Inicio" activeSection="home">
+<BaseLayout title="Escuela Sabática | Inicio" activeSection="home" description={pageDesc} image="/images/og-cover.svg" url="/">
   <div class="content-wrap">
     <PageHero
       variant="home"

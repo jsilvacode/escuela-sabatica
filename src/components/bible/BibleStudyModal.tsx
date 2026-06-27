@@ -68,9 +68,13 @@ export function BibleStudyModal({ reference, onClose }: Props) {
   };
 
   const sharePassage = async () => {
-    const data = { title: reference.display, text: passageText };
+    const data = {
+      title: reference.display,
+      text: passageText,
+      url: `https://escuelasabatica.cl`,
+    };
     if (navigator.share) await navigator.share(data);
-    else await navigator.clipboard?.writeText(`${data.title}\n${data.text}`);
+    else await navigator.clipboard?.writeText(`${data.title}\n${data.text}\n${data.url}`);
   };
 
   return (

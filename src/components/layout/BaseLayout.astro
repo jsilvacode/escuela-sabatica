@@ -5,18 +5,40 @@ import "@styles/globals.css";
 type Props = {
   title?: string;
   activeSection?: "home" | "lessons" | "resources" | "bible";
+  description?: string;
+  image?: string;
+  url?: string;
 };
 
-const { title = "Escuela Sabática", activeSection = "home" } = Astro.props;
+const { title = "Escuela Sabática", activeSection = "home", description, image, url } = Astro.props;
+const SITE_URL = "https://escuelasabatica.cl";
+const defaultDesc = "Plataforma de lectura y estudio bíblico de la Escuela Sabática Adventista.";
+const defaultImage = "/images/og-cover.svg";
+const pageDesc = description || defaultDesc;
+const pageImage = image || defaultImage;
+const pageUrl = url ? `${SITE_URL}${url}` : SITE_URL;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Plataforma moderna de lectura y estudio de Escuela Sabática Adventista." />
+    <meta name="description" content={pageDesc} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:image" content={pageImage.startsWith("http") ? pageImage : `${SITE_URL}${pageImage}`} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Escuela Sabática" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={pageDesc} />
+    <meta name="twitter:image" content={pageImage.startsWith("http") ? pageImage : `${SITE_URL}${pageImage}`} />
   </head>
   <body>
     <AppLayout activeSection={activeSection}>
@@ -25,16 +47,22 @@ const { title = "Escuela Sabática", activeSection = "home" } = Astro.props;
     <script is:inline>
       // Share on long-press / right-click (mobile)
       (function() {
+        var SITE = "https://escuelasabatica.cl";
         var pressTimer = null;
+        function shareCard(card) {
+          if (!navigator.share) return;
+          var path = card.dataset.shareUrl || "";
+          var absUrl = path.startsWith("http") ? path : SITE + (path.startsWith("/") ? path : "/" + path);
+          navigator.share({
+            title: card.dataset.shareTitle || "",
+            text: card.dataset.shareText || "",
+            url: absUrl,
+          }).catch(function() {});
+        }
         document.addEventListener("touchstart", function(e) {
           var card = e.target.closest("[data-share-url]");
           if (!card || !navigator.share) return;
-          pressTimer = setTimeout(function() {
-            navigator.share({
-              title: card.dataset.shareTitle || "",
-              url: card.dataset.shareUrl || "",
-            }).catch(function() {});
-          }, 600);
+          pressTimer = setTimeout(function() { shareCard(card); }, 600);
         }, { passive: true });
         document.addEventListener("touchend", function() {
           if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; }
@@ -46,10 +74,7 @@ const { title = "Escuela Sabática", activeSection = "home" } = Astro.props;
           var card = e.target.closest("[data-share-url]");
           if (!card || !navigator.share) return;
           e.preventDefault();
-          navigator.share({
-            title: card.dataset.shareTitle || "",
-            url: card.dataset.shareUrl || "",
-          }).catch(function() {});
+          shareCard(card);
         });
       })();
     </script>

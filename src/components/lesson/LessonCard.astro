@@ -16,6 +16,7 @@ const isUpcoming = lesson.days.length === 0;
     style={!isUpcoming && lesson.image ? `background-image: url(${lesson.image})` : ""}
     data-share-url={`/lecciones/${lesson.id}/${lesson.days[0]?.id ?? ""}`}
     data-share-title={lesson.title}
+    data-share-text={`Lección ${lesson.number}: ${lesson.title} — ${lesson.dateRange}`}
   >
     <div class="lesson-card-overlay"></div>
     <div class="lesson-card-body">
@@ -32,6 +33,7 @@ const isUpcoming = lesson.days.length === 0;
     style={lesson.image ? `background-image: url(${lesson.image})` : ""}
     data-share-url={`/lecciones/${lesson.id}/${lesson.days[0].id}`}
     data-share-title={lesson.title}
+    data-share-text={`Lección ${lesson.number}: ${lesson.title} — ${lesson.dateRange}`}
   >
     <div class="lesson-card-overlay"></div>
     <div class="lesson-card-body">
