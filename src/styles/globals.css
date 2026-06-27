@@ -448,7 +448,7 @@ img {
 }
 
 .content-wrap {
-  width: min(100%, 1100px);
+  width: min(100%, 1200px);
   margin: 0 auto;
 }
 
@@ -1382,7 +1382,7 @@ img {
 
 .daily-layout {
   display: grid;
-  grid-template-columns: minmax(0, 900px) minmax(270px, 300px);
+  grid-template-columns: minmax(0, 960px) minmax(250px, 280px);
   gap: var(--space-6);
   align-items: start;
   justify-content: center;
