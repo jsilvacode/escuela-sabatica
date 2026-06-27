@@ -11,6 +11,12 @@ const mimeTypes = {
 export default defineConfig({
   integrations: [react()],
   vite: {
+    ssr: {
+      noExternal: ["html2pdf.js"],
+    },
+    optimizeDeps: {
+      include: ["html2pdf.js"],
+    },
     plugins: [
       {
         name: "set-mime-types",
