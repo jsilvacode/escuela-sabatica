@@ -3,9 +3,6 @@ dist/
 .astro/
 .DS_Store
 *.log
-AGENTS.md
-docs/
-scripts/
+.bak
 .vscode/
-*.bak
 Material escuelasabatica.cl/
