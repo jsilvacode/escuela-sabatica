@@ -6,3 +6,7 @@ dist/
 .bak
 .vscode/
 Material escuelasabatica.cl/
+AGENTS.md
+PROMPT_MAESTRO.md
+docs/
+scripts/
