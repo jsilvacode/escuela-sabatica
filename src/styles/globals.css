@@ -1867,6 +1867,23 @@ button.sidebar-ppt-card {
   background: var(--color-white-warm);
 }
 
+/* ── EGW reading link inside Viernes text ── */
+.viernes-egw-link {
+  background: none;
+  border: none;
+  color: #1a5cc7;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: italic;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.viernes-egw-link:hover {
+  color: var(--color-navy-900);
+}
+
 .verse-block {
   display: grid;
   grid-template-columns: 42px 1fr;

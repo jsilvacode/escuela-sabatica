@@ -257,10 +257,39 @@ export function DailyReading({ lesson, day, previousDay, nextDay }: Props) {
               );
             }
             // Escaped backtick prompt: `text` → reading prompt
-            if (line.startsWith("`") && line.endsWith("`")) {
+            const promptText = line.startsWith("`") && line.endsWith("`") ? line.slice(1, -1).trim() : line;
+            const isPrompt = line.startsWith("`") && line.endsWith("`");
+            
+            // Viernes EGW reading link: «Chapter», de Book (pp. N-M)
+            const egwMatch = promptText.match(
+              /(Lee (?:el capítulo|los capítulos) )?«([^»]+)», de (.+?) \(pp\. (\d+)[–-](\d+)\)/
+            );
+            if (egwMatch && day.id === "viernes") {
+              const prefix = egwMatch[1] || "";
+              const chapter = egwMatch[2];
+              const book = egwMatch[3];
+              const pp = `${egwMatch[4]}–${egwMatch[5]}`;
+              const suffix = promptText.slice(egwMatch.index! + egwMatch[0].length);
+              return (
+                <p className={isPrompt ? "reading-prompt" : ""} key={line}>
+                  {isPrompt ? <em>{prefix}</em> : prefix}
+                  <button
+                    type="button"
+                    className="viernes-egw-link"
+                    data-article-url={`/material/viernes${lesson.number}.html`}
+                    data-article-title={`${chapter}, de ${book} (pp. ${pp})`}
+                  >
+                    «{chapter}», de {book} (pp. {pp})
+                  </button>
+                  {isPrompt ? <em>{suffix}</em> : suffix}
+                </p>
+              );
+            }
+
+            if (isPrompt) {
               return (
                 <p className="reading-prompt" key={line}>
-                  <em>{findReferences(line.slice(1, -1).trim(), references, setActiveReference)}</em>
+                  <em>{findReferences(promptText, references, setActiveReference)}</em>
                 </p>
               );
             }
