@@ -783,13 +783,6 @@
           "id": "ppt-lecc-04",
           "type": "ppt",
           "title": "Presentación PPT — Lección 4",
-          "description": "Próximamente",
-          "url": "#"
-        },
-        {
-          "id": "ppt-lecc-04",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 4",
           "description": "Diapositivas para la lección 4",
           "url": "/recursos/2026-q3/leccion-04.pptx"
         }
@@ -937,15 +930,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-05",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 5",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1088,15 +1073,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-06",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 6",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1233,15 +1210,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-07",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 7",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1385,15 +1354,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-08",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 8",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1538,15 +1499,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-09",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 9",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1691,15 +1644,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-10",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 10",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -1856,15 +1801,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-11",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 11",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -2009,15 +1946,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-12",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 12",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
@@ -2162,15 +2091,7 @@
           "audio": null
         }
       ],
-      "resources": [
-        {
-          "id": "ppt-lecc-13",
-          "type": "ppt",
-          "title": "Presentación PPT — Lección 13",
-          "description": "Próximamente",
-          "url": "#"
-        }
-      ],
+      "resources": [],
       "keyVerse": {
         "reference": {
           "book": "",
