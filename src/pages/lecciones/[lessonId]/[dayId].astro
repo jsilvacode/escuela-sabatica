@@ -33,14 +33,16 @@ function formatDate(dateStr: string) {
   return `${parseInt(d)} de ${months[parseInt(m)]}`;
 }
 
-function formatEndDate(dateStr: string) {
+function formatNextSaturday(dateStr: string) {
   if (!dateStr) return "";
-  const [y, m, d] = dateStr.split("-");
-  return `${parseInt(d)} de ${months[parseInt(m)]}`;
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const date = new Date(y, m - 1, d);
+  date.setDate(date.getDate() + 1);
+  return `${date.getDate()} de ${months[date.getMonth() + 1]}`;
 }
 
 const dayLabel = `${day.dayName} ${formatDate(day.date ?? "")}`;
-const heroEyebrow = `Lección ${lesson.number}, para el ${formatEndDate(lesson.endDate ?? "")}`;
+const heroEyebrow = `Lección ${lesson.number}, para el ${formatNextSaturday(lesson.endDate ?? "")}`;
 const previousDay = getAdjacentDay(lesson, day.id, -1);
 const nextDay = getAdjacentDay(lesson, day.id, 1);
 const pageDesc = `${day.dayName} — ${day.title}. Lección ${lesson.number}: ${lesson.title}.`;
